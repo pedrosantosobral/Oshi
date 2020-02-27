@@ -1,0 +1,122 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Trap : MonoBehaviour
+{
+    //public float hitDistance = 3;
+
+    public LayerMask whatIsLight;
+    public bool _isActive;
+    public GameObject activactedTrap;
+    public GameObject shotFeedBack;
+
+    private bool _isWasted = false;
+    public Collider2D triggerToBeActivated;
+    public Collider2D triggerToBeActivated2;
+    private float _pickLightRadius = 1f;
+
+    private bool doOnce = false;
+
+    private LevelGenerator     lvlGeneratorReference;
+    private PlayerInteractions playerReference;
+
+    private void Start()
+    {
+        shotFeedBack.SetActive(false);
+        activactedTrap.SetActive(false);
+        lvlGeneratorReference = GameObject.Find("LevelGenerator").GetComponent<LevelGenerator>();
+        triggerToBeActivated.enabled = false;
+       // triggerToBeActivated2.enabled = false;
+    }
+
+    private void Update()
+    {
+
+        if (lvlGeneratorReference.readyToPlayer == true && doOnce == false)
+        {
+            Invoke("GetPlayerCollider", 0.1f);
+            doOnce = true;
+        }
+
+
+        _isActive = Physics2D.OverlapCircle(gameObject.transform.position, _pickLightRadius, whatIsLight);
+
+        if (_isActive == true && _isWasted == false)
+        {
+            triggerToBeActivated.enabled = true;
+            // triggerToBeActivated2.enabled = true;
+            activactedTrap.SetActive(true);
+
+          // RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right,hitDistance);
+
+        }
+        else 
+        {
+            triggerToBeActivated.enabled = false;
+            // triggerToBeActivated2.enabled = false;
+            activactedTrap.SetActive(false);
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        if (other.CompareTag("PatrolEnemy"))
+        {
+            Debug.Log("sdfsed");
+            shotFeedBack.SetActive(true);
+            _isWasted = true;
+            Invoke("DelayedAnim", 1f);
+            Destroy(other.gameObject);
+        }
+        
+
+        if (!other.isTrigger) 
+        {
+
+            if (other.CompareTag("FlyEnemy"))
+            {
+                shotFeedBack.SetActive(true);
+                _isWasted = true;
+                Invoke("DelayedAnim", 1f);
+                Destroy(other.gameObject);
+            }
+
+          
+            if (other.CompareTag("Player"))
+            {
+                shotFeedBack.SetActive(true);
+                _isWasted = true;
+                Invoke("DelayedAnim", 1f);
+            }
+        }
+
+        /*
+        if(other == playerReference.lightCollider)
+        {
+            _isActive = true;
+        }
+        */
+    }
+    /*
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other == playerReference.lightCollider)
+        {
+            _isActive = false;
+        }
+    }
+    */
+    private void GetPlayerCollider()
+    {
+        playerReference = GameObject.Find("Player(Clone)").GetComponent<PlayerInteractions>();
+    }
+
+    private void DelayedAnim()
+    {
+        shotFeedBack.SetActive(false);
+    }
+
+
+}
