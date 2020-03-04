@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class PaintLight : MonoBehaviour
 {
+    private InputManager _inputManagerReference;
+
     //size of player light size variables;
     public float                maxPlayerLight;         //recomended as default 1f
     public float                damagedMaxLight;        //recomended as default 0.7f
@@ -42,6 +44,7 @@ public class PaintLight : MonoBehaviour
     }
     void FixedUpdate()
     {
+        FindInputManager();
         FindPlayer();
 
         if(_playerMaskReference != null)
@@ -68,25 +71,30 @@ public class PaintLight : MonoBehaviour
             //if player mask is bigger then the minimum light size
             if (_playerMaskReference.transform.localScale.x > minPlayerLight && _playerMaskReference.transform.localScale.y > minPlayerLight)
             {
-                if (Input.touchCount > 0)
+                if (_inputManagerReference.touchingRight == false && _inputManagerReference.touchingLeft == false)
                 {
-
-                    Touch touch = Input.GetTouch(0);
-                    Vector3 touchPosition = new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane);
-                    touchPosition = Camera.main.ScreenToWorldPoint(touchPosition);
-                    touchPosition.z = 0f;
-
-                    if (!EventSystem.current.currentSelectedGameObject)
+                    if (Input.touchCount > 0)
                     {
-                        //Add new spawned light to the queue and instantiate it
-                        lightQueue.Enqueue(_savedLight = Instantiate(lightToSpawn, touchPosition, Quaternion.identity));
-                        //wait for light to check his colisions and then add it after check
-                        Invoke("Wait", 0.001f);
 
-                        //decrease player mask size
-                        _playerMaskReference.transform.localScale -= new Vector3(ammountOfLightToPaint, ammountOfLightToPaint, 0);
+                        Touch touch = Input.GetTouch(0);
+                        Vector3 touchPosition = new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane);
+                        touchPosition = Camera.main.ScreenToWorldPoint(touchPosition);
+                        touchPosition.z = 0f;
+
+                        if (!EventSystem.current.currentSelectedGameObject)
+                        {
+                            //Add new spawned light to the queue and instantiate it
+                            lightQueue.Enqueue(_savedLight = Instantiate(lightToSpawn, touchPosition, Quaternion.identity));
+                            //wait for light to check his colisions and then add it after check
+                            Invoke("Wait", 0.001f);
+
+                            //decrease player mask size
+                            _playerMaskReference.transform.localScale -= new Vector3(ammountOfLightToPaint, ammountOfLightToPaint, 0);
+                        }
                     }
                 }
+
+                
             }
             //if its painted light left
             if (lightQueue.Count > 0)
@@ -133,6 +141,15 @@ public class PaintLight : MonoBehaviour
         
     }
 
+    private void FindInputManager()
+    {
+        if (_inputManagerReference == null)
+        {
+            _inputManagerReference = GameObject.Find("InputManager").GetComponent<InputManager>();
+        }
+
+    }
+
     private void Wait()
     {
         
@@ -150,4 +167,6 @@ public class PaintLight : MonoBehaviour
         }
         
     }
+
+   
 }

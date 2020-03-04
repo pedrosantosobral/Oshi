@@ -5,6 +5,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
+    private InputManager _inputManagerReference;
+
     //speed variables
     public float        runspeed;
     public float        jumpforce;
@@ -19,7 +21,7 @@ public class PlayerController : MonoBehaviour
     //player rigidbody instance
     private Rigidbody2D rb;
     //move input variable
-    public float        _horizontalmove;
+    public float        _horizontalmove, verticalmove;
     //ground bool
     private bool        _isGrounded;
 
@@ -40,15 +42,50 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        FindInputManager();
+
+        //TODO STOP PLAYER WHEN TOUCH ENDS AND ADD JUMP SWIPE
+        if (_inputManagerReference.touchingLeft == true)
+        {
+            _horizontalmove = -1 * runspeed;
+            
+            if(_inputManagerReference.swipeUp == true)
+            {
+                verticalmove = 1 * runspeed;
+            }
+        }
+
+
+        if (_inputManagerReference.touchingRight == true)
+        {
+            _horizontalmove = 1 * runspeed;
+
+            if (_inputManagerReference.swipeUp == true)
+            {
+                verticalmove = 1 * runspeed; 
+            }
+        }
+
+        if(Input.touchCount == 0)
+        {
+
+            _horizontalmove = 0;
+            verticalmove = 0;
+        }
+
+
+
         //define groundcheck radius from the player feet
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        _horizontalmove = CrossPlatformInputManager.GetAxis("Horizontal") * runspeed;
+
+        //_horizontalmove = CrossPlatformInputManager.GetAxis("Horizontal") * runspeed;
 
         //add velocity to the player rigidbody, move player
         rb.velocity = new Vector2(_horizontalmove, rb.velocity.y);
 
         //get jump vertical input from joysick
-       float verticalmove = CrossPlatformInputManager.GetAxis("Vertical") * runspeed;
+       // float verticalmove = CrossPlatformInputManager.GetAxis("Vertical") * runspeed;
 
         //timer to groundcheck
         _groundedRemember -= Time.deltaTime;
@@ -67,5 +104,14 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.up * jumpforce;
         }
         
+    }
+
+    private void FindInputManager()
+    {
+        if (_inputManagerReference == null)
+        {
+            _inputManagerReference = GameObject.Find("InputManager").GetComponent<InputManager>();
+        }
+
     }
 }
