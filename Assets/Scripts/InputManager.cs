@@ -33,11 +33,11 @@ public class InputManager : MonoBehaviour
 
     [SerializeField] private float _deadZone = 100.0f;
     [SerializeField] private float _doubleTapDelta = 0.5f;
-    private static int sideAreasSize = 7;
+    private static int sideAreasSize = 6;
 
     [Header("Logic")]
 
-    public bool tap, doubleTap, swipeLeft, swipeRight, swipeUp, swipeDown,touchingRight,touchingLeft;
+    public bool tap, doubleTap, swipeLeft, swipeRight, swipeUp, swipeDown,touchingRight,touchingLeft,allowLightPaint,jump;
     private Vector2 swipeDelta, startTouch;
     private float lastTap;
     private float sqrDeadzone;
@@ -54,9 +54,11 @@ public class InputManager : MonoBehaviour
 
     //vars to check touch position
     private Vector2 touchPos = Vector2.zero;
+    private Vector2 touchPos2 = Vector2.zero;
 
-    private Rect leftSide = new Rect(0, 0, Screen.width / sideAreasSize, Screen.height);
-    private Rect rightSide = new Rect(Screen.width - Screen.width / sideAreasSize, 0, Screen.width / sideAreasSize, Screen.height);
+    private Rect _leftSide = new Rect(0, 0, Screen.width / sideAreasSize, Screen.height);
+    private Rect _rightSide = new Rect(Screen.width - Screen.width / sideAreasSize, 0, Screen.width / sideAreasSize, Screen.height);
+    private Rect _centerArea = new Rect(Screen.width / (sideAreasSize * 2), 0, Screen.width - Screen.width / sideAreasSize, Screen.height);
 
     #endregion
 
@@ -67,6 +69,7 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(doubleTap);
         CheckTouchArea();
 
         /*//Reset bools
@@ -240,33 +243,63 @@ public class InputManager : MonoBehaviour
         if (Input.touchCount > 0)
         {
             touchPos = Input.GetTouch(0).position;
-
-
-            if (leftSide.Contains(touchPos))
+            
+            if(Input.touchCount > 1)
             {
-                touchingLeft = true;
+                touchPos2 = Input.GetTouch(1).position;
             }
-            else
-            {
-                touchingLeft = false;
-            }
+            
+        }
+        else
+        {
+            touchPos = new Vector2(99999999,999999999);
+            touchPos2 = new Vector2(99999999, 999999999);
+        }
 
-
-            if (rightSide.Contains(touchPos))
-            {
-                touchingRight = true;
-            }
-            else
-            {
-                touchingRight = false;
-            }
+        if (_leftSide.Contains(touchPos))
+        {
+            touchingLeft = true;
+        }
+        else
+        {
+            touchingLeft = false;
         }
 
 
-        
+        if (_rightSide.Contains(touchPos))
+        {
+            touchingRight = true;
+        }
+        else
+        {
+            touchingRight = false;
+        }
+
+        if(_centerArea.Contains(touchPos))
+        {
+            allowLightPaint = true;
+        }
+        else
+        {
+            allowLightPaint = false;
+        }
+
+        if((touchingRight == true && _leftSide.Contains(touchPos2)) || (touchingLeft == true && _rightSide.Contains(touchPos2)))
+        {
+            jump = true;
+        }
+        else
+        {
+            jump = false;
+        }
 
 
-        
+
+
+
+
+
+
 
 
 

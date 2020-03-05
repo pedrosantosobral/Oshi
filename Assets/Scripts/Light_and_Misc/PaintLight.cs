@@ -68,11 +68,12 @@ public class PaintLight : MonoBehaviour
                 _doneOnce = false;
             }
 
-            //if player mask is bigger then the minimum light size
-            if (_playerMaskReference.transform.localScale.x > minPlayerLight && _playerMaskReference.transform.localScale.y > minPlayerLight)
+            if(_inputManagerReference.allowLightPaint == true)
             {
-                if (_inputManagerReference.touchingRight == false && _inputManagerReference.touchingLeft == false)
+                //if player mask is bigger then the minimum light size
+                if (_playerMaskReference.transform.localScale.x > minPlayerLight && _playerMaskReference.transform.localScale.y > minPlayerLight)
                 {
+
                     if (Input.touchCount > 0)
                     {
 
@@ -93,9 +94,8 @@ public class PaintLight : MonoBehaviour
                         }
                     }
                 }
-
-                
             }
+            
             //if its painted light left
             if (lightQueue.Count > 0)
             {

@@ -45,36 +45,47 @@ public class PlayerController : MonoBehaviour
 
         FindInputManager();
 
+        if (_inputManagerReference.swipeUp == true)
+        {
+            verticalmove = 1;
+        }
+        else
+        {
+            verticalmove = 0;
+        }
+
         //TODO STOP PLAYER WHEN TOUCH ENDS AND ADD JUMP SWIPE
         if (_inputManagerReference.touchingLeft == true)
         {
             _horizontalmove = -1 * runspeed;
-            
-            if(_inputManagerReference.swipeUp == true)
+
+            if(_inputManagerReference.jump == true)
             {
-                verticalmove = 1 * runspeed;
+                verticalmove = 1;
+            }
+            else
+            {
+                verticalmove = 0;
             }
         }
-
-
-        if (_inputManagerReference.touchingRight == true)
+        else if (_inputManagerReference.touchingRight == true)
         {
             _horizontalmove = 1 * runspeed;
 
-            if (_inputManagerReference.swipeUp == true)
+            if (_inputManagerReference.jump == true)
             {
-                verticalmove = 1 * runspeed; 
+                verticalmove = 1;
+            }
+            else
+            {
+                verticalmove = 0;
             }
         }
-
-        if(Input.touchCount == 0)
+        else
         {
-
             _horizontalmove = 0;
             verticalmove = 0;
         }
-
-
 
         //define groundcheck radius from the player feet
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);

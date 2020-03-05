@@ -606,8 +606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082fd91a386212b448abc8ed46b49f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deadZone: 30
-  _doubleTapDelta: 0.1
+  _deadZone: 50
+  _doubleTapDelta: 1
   tap: 0
   doubleTap: 0
   swipeLeft: 0
@@ -616,6 +616,8 @@ MonoBehaviour:
   swipeDown: 0
   touchingRight: 0
   touchingLeft: 0
+  allowLightPaint: 0
+  jump: 0
 --- !u!4 &421645334
 Transform:
   m_ObjectHideFlags: 0
