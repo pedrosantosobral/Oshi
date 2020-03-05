@@ -69,7 +69,20 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(doubleTap);
+        if(doubleTap == true)
+        {
+            Debug.Log("doubletap");
+        }
+        tap = false;
+        doubleTap = false;
+        //ORIGINAL CODE
+
+
+        swipeRight = false;
+        swipeLeft = false;
+        swipeDown = false;
+        swipeUp = false;
+
         CheckTouchArea();
 
         /*//Reset bools
@@ -87,22 +100,13 @@ public class InputManager : MonoBehaviour
 
         }
         */
-        tap = false;
-        doubleTap = false;
-        //ORIGINAL CODE
-        
-        
-        swipeRight = false;
-        swipeLeft = false;
-        swipeDown = false;
-        swipeUp = false;
-        
+       
 
 
         UpdateMobile();
 
 #if UNITY_EDITOR
-        UpdateStandalone();
+
 #else
         
 #endif
@@ -184,6 +188,21 @@ public class InputManager : MonoBehaviour
             else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
             {
                 startTouch = swipeDelta = Vector2.zero;
+            }
+
+            if(Input.touches.Length > 1)
+            {
+                if (Input.touches[1].phase == TouchPhase.Began)
+                {
+                    tap = true;
+                    startTouch = Input.mousePosition;
+                    doubleTap = Time.time - lastTap < _doubleTapDelta;
+                    lastTap = Time.time;
+                }
+                else if (Input.touches[1].phase == TouchPhase.Ended || Input.touches[1].phase == TouchPhase.Canceled)
+                {
+                    startTouch = swipeDelta = Vector2.zero;
+                }
             }
         }
 

@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
         FindInputManager();
 
-        if (_inputManagerReference.swipeUp == true)
+        if (_inputManagerReference.doubleTap == true)
         {
             verticalmove = 1;
         }
@@ -58,33 +58,14 @@ public class PlayerController : MonoBehaviour
         if (_inputManagerReference.touchingLeft == true)
         {
             _horizontalmove = -1 * runspeed;
-
-            if(_inputManagerReference.jump == true)
-            {
-                verticalmove = 1;
-            }
-            else
-            {
-                verticalmove = 0;
-            }
         }
         else if (_inputManagerReference.touchingRight == true)
         {
             _horizontalmove = 1 * runspeed;
-
-            if (_inputManagerReference.jump == true)
-            {
-                verticalmove = 1;
-            }
-            else
-            {
-                verticalmove = 0;
-            }
         }
         else
         {
             _horizontalmove = 0;
-            verticalmove = 0;
         }
 
         //define groundcheck radius from the player feet
