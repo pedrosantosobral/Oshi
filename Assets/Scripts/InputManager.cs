@@ -294,14 +294,27 @@ public class InputManager : MonoBehaviour
             touchingRight = false;
         }
 
+
+
         if(_centerArea.Contains(touchPos))
         {
             allowLightPaint = true;
+            _leftSide = new Rect(0, 0, 0, 0);
+            _rightSide = new Rect(0, 0, 0, 0);
+            _centerArea = new Rect(0, 0, Screen.width, Screen.height);
         }
         else
         {
             allowLightPaint = false;
-        }
+             _leftSide = new Rect(0, 0, Screen.width / sideAreasSize, Screen.height);
+            _rightSide = new Rect(Screen.width - Screen.width / sideAreasSize, 0, Screen.width / sideAreasSize, Screen.height);
+            _centerArea = new Rect(Screen.width / (sideAreasSize * 2), 0, Screen.width - Screen.width / sideAreasSize, Screen.height);
+
+}
+
+
+
+
 
         if((touchingRight == true && _leftSide.Contains(touchPos2)) || (touchingLeft == true && _rightSide.Contains(touchPos2)))
         {

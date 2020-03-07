@@ -59,6 +59,8 @@ public class Trap : MonoBehaviour
         }
 
     }
+
+    //change to raycast
     private void OnTriggerEnter2D(Collider2D other)
     {
         
