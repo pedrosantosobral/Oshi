@@ -21,8 +21,12 @@ public class Trap : MonoBehaviour
     private LevelGenerator     lvlGeneratorReference;
     private PlayerInteractions playerReference;
 
+    private RaycastHit2D _hitInfo;
+    public int hitDistance = 3;
+
     private void Start()
     {
+        
         shotFeedBack.SetActive(false);
         activactedTrap.SetActive(false);
         lvlGeneratorReference = GameObject.Find("LevelGenerator").GetComponent<LevelGenerator>();
@@ -30,8 +34,10 @@ public class Trap : MonoBehaviour
        // triggerToBeActivated2.enabled = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+
+
 
         if (lvlGeneratorReference.readyToPlayer == true && doOnce == false)
         {
@@ -44,16 +50,55 @@ public class Trap : MonoBehaviour
 
         if (_isActive == true && _isWasted == false)
         {
-            triggerToBeActivated.enabled = true;
+            //REMOVE COMENTSS TO GO BACK
+            //triggerToBeActivated.enabled = true;
             // triggerToBeActivated2.enabled = true;
             activactedTrap.SetActive(true);
 
-          // RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right,hitDistance);
+            _hitInfo = Physics2D.Raycast(transform.position, transform.right,hitDistance);
+
+            Vector2 forward = transform.TransformDirection(transform.right) * 3.5f;
+            Debug.DrawRay(transform.position, forward, Color.green);
+
+            if (_hitInfo.collider != null)
+            {
+                //works here
+                if (!_hitInfo.collider.isTrigger)
+                {
+                    //dont work here
+                    if (_hitInfo.collider.tag == "Player")
+                    {
+                        //SEND EVENT NOTIFICATION TO PLAYER SAYING HE WAS HIT
+                        shotFeedBack.SetActive(true);
+                        _isWasted = true;
+                        Invoke("DelayedAnim", 1f);
+                        
+                    }
+
+                    if (_hitInfo.collider.tag == "FlyEnemy")
+                    {
+                        shotFeedBack.SetActive(true);
+                        _isWasted = true;
+                        Invoke("DelayedAnim", 1f);
+                        Destroy(_hitInfo.collider.gameObject);
+                    }
+                }
+
+                if (_hitInfo.collider.tag == "PatrolEnemy")
+                {
+                    shotFeedBack.SetActive(true);
+                    _isWasted = true;
+                    Invoke("DelayedAnim", 1f);
+                    Destroy(_hitInfo.collider.gameObject);
+                }
+
+            }
+      
 
         }
         else 
-        {
-            triggerToBeActivated.enabled = false;
+        {   //REMOVE COMENT TO FIX
+            //triggerToBeActivated.enabled = false;
             // triggerToBeActivated2.enabled = false;
             activactedTrap.SetActive(false);
         }
