@@ -7,6 +7,7 @@ public class Trap : MonoBehaviour
     //public float hitDistance = 3;
 
     public LayerMask whatIsLight;
+    public LayerMask maskToCollide;
     public bool _isActive;
     public GameObject activactedTrap;
     public GameObject shotFeedBack;
@@ -22,7 +23,7 @@ public class Trap : MonoBehaviour
     private PlayerInteractions playerReference;
 
     private RaycastHit2D _hitInfo;
-    public int hitDistance = 3;
+    public float hitDistance = 3.5f;
 
     private void Start()
     {
@@ -36,8 +37,6 @@ public class Trap : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-
 
         if (lvlGeneratorReference.readyToPlayer == true && doOnce == false)
         {
@@ -55,19 +54,18 @@ public class Trap : MonoBehaviour
             // triggerToBeActivated2.enabled = true;
             activactedTrap.SetActive(true);
 
-            _hitInfo = Physics2D.Raycast(transform.position, transform.right,hitDistance);
+
+            //to ignore triggers i went to project setings, and disabled querry trigger detections
+            _hitInfo = Physics2D.Raycast(transform.position, transform.right,hitDistance,maskToCollide);
 
             Vector2 forward = transform.TransformDirection(transform.right) * 3.5f;
-            Debug.DrawRay(transform.position, forward, Color.green);
 
             if (_hitInfo.collider != null)
             {
-                //works here
-                if (!_hitInfo.collider.isTrigger)
-                {
-                    //dont work here
-                    if (_hitInfo.collider.tag == "Player")
+                
+                    if (_hitInfo.transform.tag == "Player")
                     {
+                        print("kek3");
                         //SEND EVENT NOTIFICATION TO PLAYER SAYING HE WAS HIT
                         shotFeedBack.SetActive(true);
                         _isWasted = true;
@@ -75,14 +73,14 @@ public class Trap : MonoBehaviour
                         
                     }
 
-                    if (_hitInfo.collider.tag == "FlyEnemy")
+                    if (_hitInfo.collider.gameObject.tag == "FlyEnemy")
                     {
                         shotFeedBack.SetActive(true);
                         _isWasted = true;
                         Invoke("DelayedAnim", 1f);
                         Destroy(_hitInfo.collider.gameObject);
                     }
-                }
+                
 
                 if (_hitInfo.collider.tag == "PatrolEnemy")
                 {

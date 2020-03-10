@@ -180,6 +180,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _horizontalmove: 0
+  verticalmove: 0
   _groundedRememberTime: 0.25
 --- !u!114 &327506146070496921
 MonoBehaviour:
@@ -373,7 +374,7 @@ GameObject:
   - component: {fileID: 5230107385730911910}
   m_Layer: 0
   m_Name: HurtSprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,7 +473,7 @@ GameObject:
   - component: {fileID: 4528267724757285956}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
