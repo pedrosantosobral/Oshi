@@ -6,6 +6,8 @@ public class Trap : MonoBehaviour
 {
     //public float hitDistance = 3;
 
+    [SerializeField] private VoidEvent onPlayerDamage;
+
     public LayerMask whatIsLight;
     public LayerMask maskToCollide;
     public bool _isActive;
@@ -18,32 +20,19 @@ public class Trap : MonoBehaviour
     private float _pickLightRadius = 1f;
 
     private bool doOnce = false;
-
-    private LevelGenerator     lvlGeneratorReference;
-    private PlayerInteractions playerReference;
-
     private RaycastHit2D _hitInfo;
     public float hitDistance = 3.5f;
 
     private void Start()
     {
-        
         shotFeedBack.SetActive(false);
         activactedTrap.SetActive(false);
-        lvlGeneratorReference = GameObject.Find("LevelGenerator").GetComponent<LevelGenerator>();
         triggerToBeActivated.enabled = false;
        // triggerToBeActivated2.enabled = false;
     }
 
     private void FixedUpdate()
     {
-
-        if (lvlGeneratorReference.readyToPlayer == true && doOnce == false)
-        {
-            Invoke("GetPlayerCollider", 0.1f);
-            doOnce = true;
-        }
-
 
         _isActive = Physics2D.OverlapCircle(gameObject.transform.position, _pickLightRadius, whatIsLight);
 
@@ -67,6 +56,7 @@ public class Trap : MonoBehaviour
                     {
                         print("kek3");
                         //SEND EVENT NOTIFICATION TO PLAYER SAYING HE WAS HIT
+                        onPlayerDamage.Raise();
                         shotFeedBack.SetActive(true);
                         _isWasted = true;
                         Invoke("DelayedAnim", 1f);
@@ -153,11 +143,6 @@ public class Trap : MonoBehaviour
         }
     }
     */
-    private void GetPlayerCollider()
-    {
-        playerReference = GameObject.Find("Player(Clone)").GetComponent<PlayerInteractions>();
-    }
-
     private void DelayedAnim()
     {
         shotFeedBack.SetActive(false);

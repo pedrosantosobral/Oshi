@@ -38,7 +38,7 @@ public class PlayerInteractions : MonoBehaviour
         
         if (invinciblePlayerForSomeTime == false)
         {
-            if (other.CompareTag("Trap") || !other.isTrigger && other.CompareTag("PatrolEnemy") || other.CompareTag("FlyEnemy") && !other.isTrigger)
+            if (!other.isTrigger && other.CompareTag("PatrolEnemy") || other.CompareTag("FlyEnemy") && !other.isTrigger)
             {
                 if(_HP == 2)
                 {
@@ -106,5 +106,17 @@ public class PlayerInteractions : MonoBehaviour
     {
         //reload the scene
         SceneManager.LoadScene("DiedScreen");
+    }
+
+    public void HitByTrap()
+    {
+        if (_HP == 2)
+        {
+            invinciblePlayerForSomeTime = true;
+        }
+
+        _HP -= 1;
+        _invincibleTimeReference = invincibleTime;
+        _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
     }
 }
