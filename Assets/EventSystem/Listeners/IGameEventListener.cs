@@ -1,4 +1,8 @@
-﻿public interface IGameEventListener<T>
+﻿namespace CustomEventSystem
 {
-     void OnEventRaised(T item);
+    public interface IGameEventListener<T>
+    {
+        void OnEventRaised(T item);
+    }
 }
+

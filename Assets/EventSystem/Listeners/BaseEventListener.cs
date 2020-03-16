@@ -1,42 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-//T = Type // E = Event // UER = Unity event Response
-public abstract class BaseEventListener<T,E, UER> : MonoBehaviour,
-    IGameEventListener<T> where E : BaseEvent<T> where UER : UnityEvent<T>
+namespace CustomEventSystem
 {
-    [SerializeField] private E gameEvent;
-    public E GameEvent { get { return gameEvent; } set { gameEvent = value; } }
-
-    [SerializeField] private UER unityEventResponse;
-
-
-    //Only listen if exists in scene
-    //register
-    private void OnEnable()
+    //T = Type // E = Event // UER = Unity event Response
+    public abstract class BaseEventListener<T, E, UER> : MonoBehaviour,
+        IGameEventListener<T> where E : BaseEvent<T> where UER : UnityEvent<T>
     {
-        if(gameEvent == null)
-        { 
-            return; 
-        }
-        GameEvent.RegisterListener(this);
-    }
+        [SerializeField] private E gameEvent;
+        public E GameEvent { get { return gameEvent; } set { gameEvent = value; } }
 
-    //unregister
-    private void OnDisable()
-    {
-        if(gameEvent == null)
-        { 
-            return;
-        }
-        GameEvent.UnregisterListener(this);
-    }
+        [SerializeField] private UER unityEventResponse;
 
-    public void OnEventRaised(T item)
-    {
-        if(unityEventResponse != null)
+
+        //Only listen if exists in scene
+        //register
+        private void OnEnable()
         {
-            unityEventResponse.Invoke(item);
+            if (gameEvent == null)
+            {
+                return;
+            }
+            GameEvent.RegisterListener(this);
+        }
+
+        //unregister
+        private void OnDisable()
+        {
+            if (gameEvent == null)
+            {
+                return;
+            }
+            GameEvent.UnregisterListener(this);
+        }
+
+        public void OnEventRaised(T item)
+        {
+            if (unityEventResponse != null)
+            {
+                unityEventResponse.Invoke(item);
+            }
         }
     }
+
 }
