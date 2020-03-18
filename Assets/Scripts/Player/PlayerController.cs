@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
         FindInputManager();
 
-        if (_inputManagerReference.doubleTap == true)
+        if (_inputManagerReference.doubleTap == true && (_inputManagerReference.touchingRight == true || _inputManagerReference.touchingLeft == true)) 
         {
             verticalmove = 1;
         }
