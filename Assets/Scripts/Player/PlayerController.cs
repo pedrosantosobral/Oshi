@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -102,7 +99,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_inputManagerReference == null)
         {
-            _inputManagerReference = GameObject.Find("InputManager").GetComponent<InputManager>();
+            _inputManagerReference = GameObject.FindGameObjectWithTag("InputManager").GetComponent<InputManager>();
         }
 
     }
