@@ -1,10 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
+using CustomEventSystem;
 public class LevelGenerator : MonoBehaviour
 {
     private int ammountOfColectibles = 3;
+
+    //LoadingScreen variables
+    [SerializeField] private VoidEvent onPlayerSpawn;
+    public Animator loadingScreen;
 
     //variables for the collectibles random positions generation
     public List<Pos> colectableRoomPositions;
@@ -272,6 +275,8 @@ public class LevelGenerator : MonoBehaviour
     private void ReadyToPlayer()
     {
         readyToPlayer = true;
+        loadingScreen.SetBool("FadeScreen", readyToPlayer);
+        onPlayerSpawn.Raise();
     }
 
 

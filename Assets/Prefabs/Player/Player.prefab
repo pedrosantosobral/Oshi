@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5230107385730911910}
   lightCollider: {fileID: 3011602999663806205}
+  onPlayerSpawn: {fileID: 11400000, guid: c511d89c59e5f0745be3162b98c88be4, type: 2}
   invincibleTime: 3
 --- !u!68 &2326164023788368641
 EdgeCollider2D:

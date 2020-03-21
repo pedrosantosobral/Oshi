@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-//Temporary using;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerInteractions : MonoBehaviour
@@ -9,6 +6,7 @@ public class PlayerInteractions : MonoBehaviour
     public Animator     animator;
     
     public Collider2D lightCollider;
+
 
     //invincible timer variables
     private float       _invincibleTimeReference;
