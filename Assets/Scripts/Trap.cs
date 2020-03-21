@@ -64,6 +64,7 @@ public class Trap : MonoBehaviour
                         
                     }
 
+                    //NEED FIX HERE
                     if (_hitInfo.collider.gameObject.tag == "FlyEnemy")
                     {
                         shotFeedBack.SetActive(true);

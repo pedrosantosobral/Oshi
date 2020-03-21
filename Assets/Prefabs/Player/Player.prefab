@@ -112,8 +112,8 @@ GameObject:
   - component: {fileID: 2326164023788368702}
   - component: {fileID: 327506146070496921}
   - component: {fileID: 2326164023788368641}
-  - component: {fileID: 7855932911496962027}
   - component: {fileID: 7207918607448251373}
+  - component: {fileID: 3527381852765686271}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -197,7 +197,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5230107385730911910}
   lightCollider: {fileID: 3011602999663806205}
-  onPlayerSpawn: {fileID: 11400000, guid: c511d89c59e5f0745be3162b98c88be4, type: 2}
   invincibleTime: 3
 --- !u!68 &2326164023788368641
 EdgeCollider2D:
@@ -220,22 +219,6 @@ EdgeCollider2D:
   - {x: 0.3509439, y: -0.0017917156}
   - {x: 0.34692994, y: 0.7256303}
   - {x: -0.33945206, y: 0.7270572}
---- !u!58 &7855932911496962027
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2326164023788368640}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.367}
-  serializedVersion: 2
-  m_Radius: 0.6
 --- !u!114 &7207918607448251373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +246,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!61 &3527381852765686271
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326164023788368640}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.36}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.8}
+  m_EdgeRadius: 0
 --- !u!1 &2326164023936555697
 GameObject:
   m_ObjectHideFlags: 0
