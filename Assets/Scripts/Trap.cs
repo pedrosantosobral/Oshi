@@ -5,8 +5,7 @@ using CustomEventSystem;
 
 public class Trap : MonoBehaviour
 {
-    //public float hitDistance = 3;
-
+    
     [SerializeField] private VoidEvent onPlayerDamage;
 
     public LayerMask whatIsLight;
@@ -34,7 +33,6 @@ public class Trap : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         _isActive = Physics2D.OverlapCircle(gameObject.transform.position, _pickLightRadius, whatIsLight);
 
         if (_isActive == true && _isWasted == false)
