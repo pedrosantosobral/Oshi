@@ -21,7 +21,7 @@ public class RandomPlayerLightSprite : MonoBehaviour
         {
             //change sprite
             _spriteRenderReference.sprite = lightSprites[Random.Range(0, lightSprites.Length)];
-            _timer = Random.Range(0.01f, 1f);
+            _timer = Random.Range(0.01f, 0.1f);
         }
     }
 
