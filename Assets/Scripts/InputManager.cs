@@ -33,7 +33,7 @@ public class InputManager : MonoBehaviour
 
     [SerializeField] private float _deadZone = 100.0f;
     [SerializeField] private float _doubleTapDelta = 0.5f;
-    private static int sideAreasSize = 5;
+    private static int sideAreasSize = 4;
 
     [Header("Logic")]
 
