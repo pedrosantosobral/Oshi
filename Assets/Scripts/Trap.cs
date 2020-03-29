@@ -27,7 +27,7 @@ public class Trap : MonoBehaviour
     {
         shotFeedBack.SetActive(false);
         activactedTrap.SetActive(false);
-        triggerToBeActivated.enabled = false;
+       // triggerToBeActivated.enabled = false;
        // triggerToBeActivated2.enabled = false;
     }
 
