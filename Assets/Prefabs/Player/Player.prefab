@@ -103,7 +103,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 01ecbaddc1a01c949b9f6db4030b53f0, type: 3}
   - {fileID: 21300000, guid: e596d5b5a2e51fa4daf07aeabd5a48b6, type: 3}
   - {fileID: 21300000, guid: 914aef7b805f0e643b7827c953e76cea, type: 3}
-  timeForNextSprite: 0.3
+  timeForNextSprite: 2
 --- !u!1 &2326164023788368640
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +748,7 @@ GameObject:
   - component: {fileID: 3011602999663806205}
   - component: {fileID: 54861013647605696}
   - component: {fileID: 1173092703198907218}
+  - component: {fileID: 1611250884445870305}
   m_Layer: 13
   m_Name: PlayerLightMask
   m_TagString: light
@@ -820,3 +821,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a58686ebab00c42aa6c17f1d9a1d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1611250884445870305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081329850297236863}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f54745858ff9c4458029456dc5d9861, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
