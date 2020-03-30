@@ -214,10 +214,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: creating the best map ever
+  m_text: Generating the best map ever
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 940a2d1147989d64abe988eecd2489e5, type: 2}
+  m_sharedMaterial: {fileID: -5541475324327771389, guid: 940a2d1147989d64abe988eecd2489e5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -283,7 +284,7 @@ MonoBehaviour:
   m_margin: {x: -435.0034, y: 0, z: -442.37637, w: -180.57085}
   m_textInfo:
     textComponent: {fileID: 144251374}
-    characterCount: 26
+    characterCount: 28
     spriteCount: 0
     spaceCount: 4
     wordCount: 5
@@ -1227,16 +1228,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeForNextPhrase: 1.5
   phrases:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
+  - Randomizing enemies
+  - Rendering Oshi's light
+  - Generating the best map ever
+  - 'Tip: Don''t die'
+  - Waiting for art development
+  - Randomizing friends
   textToChange: {fileID: 144251374}
 --- !u!114 &641379057
 MonoBehaviour:
