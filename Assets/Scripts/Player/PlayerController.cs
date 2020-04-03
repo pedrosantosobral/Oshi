@@ -4,6 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     private InputManager _inputManagerReference;
 
+    public ParticleSystem playerDust;
+
     //speed variables
     public float        runspeed;
     public float        jumpforce;
@@ -49,20 +51,25 @@ public class PlayerController : MonoBehaviour
         else
         {
             verticalmove = 0;
+            ParticlesPlay();
         }
 
         //TODO STOP PLAYER WHEN TOUCH ENDS AND ADD JUMP SWIPE
         if (_inputManagerReference.touchingLeft == true)
         {
             _horizontalmove = -1 * runspeed;
+           
         }
         else if (_inputManagerReference.touchingRight == true)
         {
             _horizontalmove = 1 * runspeed;
+            
         }
         else
         {
             _horizontalmove = 0;
+            ParticlesPlay();
+
         }
 
         //define groundcheck radius from the player feet
@@ -103,4 +110,11 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    public void ParticlesPlay()
+    {
+        playerDust.Play();
+    }
+
+
 }
