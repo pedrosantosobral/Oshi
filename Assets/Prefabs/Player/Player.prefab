@@ -137,7 +137,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8575217265541525711}
   - {fileID: 584366620795038685}
   - {fileID: 3087929133990568014}
   - {fileID: 2326164023936555694}
@@ -179,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9fee370690ae749b89170be6a44343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteToFlip: {fileID: 8665697375028322567}
   playerDust: {fileID: 7260332362966639274}
   runspeed: 5
   jumpforce: 6.4
@@ -307,7 +307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2326164023390891064}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2646449769053257519
 GameObject:
@@ -339,7 +339,7 @@ Transform:
   m_Children:
   - {fileID: 8405997279019881774}
   m_Father: {fileID: 2326164023390891064}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5553258458523275695
 MonoBehaviour:
@@ -401,11 +401,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3086337819601828298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.006, y: 0.007, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: -0.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.14, z: 14.34}
+  m_LocalScale: {x: 1, y: 1, z: -1}
   m_Children: []
-  m_Father: {fileID: 2326164023390891064}
+  m_Father: {fileID: 3087929133990568014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &7260332362966639274
@@ -416,13 +416,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3086337819601828298}
   serializedVersion: 6
-  lengthInSec: 11.18
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -431,7 +431,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -491,7 +491,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.73
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -544,7 +544,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6.37
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1241,7 +1241,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 11.27
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1864,7 +1864,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.19
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1917,7 +1917,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.06
+      scalar: 0.17
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5256,7 +5256,7 @@ Transform:
   m_LocalScale: {x: 0.37, y: 0.37, z: 0.2}
   m_Children: []
   m_Father: {fileID: 2326164023390891064}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1468485931694348382
 SpriteRenderer:
@@ -5438,9 +5438,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.43, z: 0}
   m_LocalScale: {x: 0.37, y: 0.37, z: 0.2}
-  m_Children: []
+  m_Children:
+  - {fileID: 8575217265541525711}
   m_Father: {fileID: 2326164023390891064}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4528267724757285956
 SpriteRenderer:
@@ -5525,7 +5526,7 @@ Transform:
   - {fileID: 1218869967575334508}
   - {fileID: 2326164022818394534}
   m_Father: {fileID: 2326164023390891064}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &3011602999663806205
 CircleCollider2D:

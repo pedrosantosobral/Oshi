@@ -4,6 +4,8 @@ public class PlayerController : MonoBehaviour
 {
     private InputManager _inputManagerReference;
 
+    public GameObject spriteToFlip;
+
     public ParticleSystem playerDust;
 
     //speed variables
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public float        _horizontalmove, verticalmove;
     //ground bool
     private bool        _isGrounded;
+    private bool        lookingRight;
 
     //Variables for groundCheckTimer, even if the player is not grounded
     //he is alowed to jump for a little time
@@ -41,8 +44,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         FindInputManager();
+        TurnPlayerSprite();
 
         if ((_inputManagerReference.doubleTap == true || _inputManagerReference.swipeUp == true) && (_inputManagerReference.touchingRight == true || _inputManagerReference.touchingLeft == true)) 
         {
@@ -51,25 +54,26 @@ public class PlayerController : MonoBehaviour
         else
         {
             verticalmove = 0;
-            ParticlesPlay();
+
         }
 
         //TODO STOP PLAYER WHEN TOUCH ENDS AND ADD JUMP SWIPE
         if (_inputManagerReference.touchingLeft == true)
         {
             _horizontalmove = -1 * runspeed;
-           
+            lookingRight = false;
+
         }
         else if (_inputManagerReference.touchingRight == true)
         {
             _horizontalmove = 1 * runspeed;
-            
+            lookingRight = true;
+
         }
         else
         {
             _horizontalmove = 0;
-            ParticlesPlay();
-
+            
         }
 
         //define groundcheck radius from the player feet
@@ -111,10 +115,28 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void ParticlesPlay()
+    private void TurnPlayerSprite()
     {
-        playerDust.Play();
+
+        if(lookingRight == true)
+        {
+             spriteToFlip.transform.rotation = Quaternion.Euler(0, 0, 0);
+            // playerDust.Play();
+        }
+        else
+        {
+             spriteToFlip.transform.rotation = Quaternion.Euler(0, 180, 0);
+             //playerDust.Play();
+        }
+
+
     }
+
+
+    
+        
+    
+
 
 
 }
