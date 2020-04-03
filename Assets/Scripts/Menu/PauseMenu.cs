@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject panel;
+    public GameObject pauseButton;
+    
+    public GameObject activeColectables;
+    public GameObject disabledColectables;
 
     public void GoLevelSelector()
     {
@@ -19,18 +23,26 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        panel.SetActive(false);
+        panel.SetActive(true);
         Time.timeScale = 0f;
+        pauseButton.SetActive(false);
+        activeColectables.SetActive(false);
+        disabledColectables.SetActive(false);
     }
 
     public void ResumeGame()
     {
-        panel.SetActive(true);
+        panel.SetActive(false);
         Time.timeScale = 1.0f;
+        pauseButton.SetActive(true);
+        activeColectables.SetActive(true);
+        disabledColectables.SetActive(true);
     }
 
     private void Start()
     {
         panel.SetActive(false);
     }
+
+
 }
