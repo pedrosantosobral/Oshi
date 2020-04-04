@@ -13,12 +13,14 @@ public class PauseMenu : MonoBehaviour
 
     public void GoLevelSelector()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("Menu");
     }
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene("Oshi");
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void PauseGame()
