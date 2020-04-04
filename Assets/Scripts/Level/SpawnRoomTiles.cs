@@ -15,5 +15,6 @@ public class SpawnRoomTiles : MonoBehaviour
         //need to be a child of the room bcs when a room gets destroyed bcs of dead ends it needs to destroy the tiles too
         GameObject instance = (GameObject)Instantiate(tilesArray[rand],transform.position, Quaternion.identity);
         instance.transform.parent = transform;
+        //Destroy(this.gameObject);
     }
 }
