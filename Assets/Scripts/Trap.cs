@@ -68,7 +68,7 @@ public class Trap : MonoBehaviour
                         shotFeedBack.SetActive(true);
                         _isWasted = true;
                         Invoke("DelayedAnim", 1f);
-                        Destroy(_hitInfo.collider.gameObject);
+                        Destroy(_hitInfo.collider.transform.parent.gameObject);
                     }
                 
 
