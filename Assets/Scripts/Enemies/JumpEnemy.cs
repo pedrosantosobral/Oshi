@@ -29,27 +29,30 @@ public class JumpEnemy : MonoBehaviour
     [SerializeField]
     private Vector2 ofsetFloorCheck;
     [SerializeField]
-    private Vector2 floorCheckSize;
+    private float floorCheckSize;
     [SerializeField]
     private Vector2 ofsetTargetCheck;
     [SerializeField]
-    private float targetCheckRadius;
-
+    private int jumpTimer = 5;
+    
+    private float timer = 0;
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (isGrounded)
+        if (isGrounded && timer >= jumpTimer)
         {
             if (other.CompareTag("Player"))
             {
+                timer = 0f;
                 target = other.transform;
-                Invoke("JumpToTarget", 1f);
+                Invoke("JumpToTarget", 0f);
+
             }
-            else if (other.CompareTag("FlyEnemyInside") )
+            else if (other.CompareTag("FlyEnemyInside"))
             {
                 target = other.transform;
                 Invoke("JumpToTarget", 0f);
@@ -70,38 +73,37 @@ public class JumpEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = IsGrounded();
+        timer += Time.deltaTime;
+
+        IsGrounded();
+        Debug.Log(isGrounded);
+
+
         //if enemy collided with the player, call hit
-        if (_collidedWithPlayer == true) {
+        if (_collidedWithPlayer == true)
+        {
 
         }
 
-        //disable colliders for some time after collision with player
-        if (_disablePlayerColisionForSomeTime == true)
-        {
-            GetComponent<BoxCollider2D>().enabled = false;
-            GetComponent<CircleCollider2D>().enabled = false;
-        }
-        //reset enemy colliders
-        else
-        {
-            GetComponent<BoxCollider2D>().enabled = true;
-            GetComponent<CircleCollider2D>().enabled = true;
-        }
     }
-    private bool IsGrounded()
+    private void IsGrounded()
     {
         Vector2 position = new Vector2(transform.position.x + ofsetFloorCheck.x, transform.position.y + ofsetFloorCheck.y);
-        Collider2D[] col = Physics2D.OverlapBoxAll(position, floorCheckSize, groundLayerMask);
-        return (col.Length > 0 || col != null);
+        Vector2 position2 = new Vector2(transform.position.x - ofsetFloorCheck.x, transform.position.y + ofsetFloorCheck.y);
+        isGrounded = (Physics2D.OverlapCircle(position, floorCheckSize, groundLayerMask) != null ||
+            Physics2D.OverlapCircle(position2, floorCheckSize, groundLayerMask) != null);
+
     }
 
 
     private void OnDrawGizmosSelected()
     {
         Vector2 position = new Vector2(transform.position.x + ofsetFloorCheck.x, transform.position.y + ofsetFloorCheck.y);
+        Vector2 position2 = new Vector2(transform.position.x - ofsetFloorCheck.x, transform.position.y + ofsetFloorCheck.y);
         Gizmos.color = Color.red;
-        Gizmos.DrawCube(position, floorCheckSize);
+        Gizmos.DrawSphere(position, floorCheckSize);
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(position2, floorCheckSize);
     }
 
     private void DealDamageToPlayer()
