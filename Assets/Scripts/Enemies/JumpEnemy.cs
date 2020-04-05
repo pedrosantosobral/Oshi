@@ -49,7 +49,7 @@ public class JumpEnemy : MonoBehaviour
             {
                 timer = 0f;
                 target = other.transform;
-                Invoke("JumpToTarget", 3f);
+                Invoke("JumpToTarget", 0f);
 
             }
             else if (other.CompareTag("FlyEnemyInside"))
