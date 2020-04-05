@@ -63,7 +63,7 @@ public class Trap : MonoBehaviour
                     }
 
                     //NEED FIX HERE
-                    if (_hitInfo.collider.gameObject.tag == "FlyEnemy")
+                    if (_hitInfo.collider.gameObject.tag == "FlyEnemyInside")
                     {
                         shotFeedBack.SetActive(true);
                         _isWasted = true;

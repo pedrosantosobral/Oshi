@@ -80,7 +80,7 @@ MonoBehaviour:
   ofsetFloorCheck: {x: 0.27, y: -0.25}
   floorCheckSize: 0.08
   ofsetTargetCheck: {x: 0, y: 0}
-  jumpTimer: 3
+  jumpTimer: 1
 --- !u!61 &7881439283121883292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4964,11 +4964,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2230735546497641319}
     m_Modifications:
-    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemiesLight
-      objectReference: {fileID: 0}
     - target: {fileID: 787331909187135919, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5023,6 +5018,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemiesLight
       objectReference: {fileID: 0}
     - target: {fileID: 8068625425088023072, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}
