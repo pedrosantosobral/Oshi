@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: 81ddbb741dcd6d94f80d91c229f11bca,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &311246374
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &475355735 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5379288229080676197, guid: 25133926419404b4094b586bec8efb5f,
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &543672000
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &548017292
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &561324292
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!224 &641379055 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6797260470565483330, guid: 247df3ec9f8254c48965755c5d2eeef0,
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &700337642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,7 +1663,7 @@ SpriteRenderer:
   m_Size: {x: 200.0251, y: 57.600002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1092443085
@@ -1835,7 +1835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1344893947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,7 +1879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1348677753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1361863784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,7 +1967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1393731147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1402499502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1421630734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,10 +2221,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1532126378}
-  - component: {fileID: 1532126377}
   - component: {fileID: 1532126379}
+  - component: {fileID: 1532126377}
   m_Layer: 0
-  m_Name: LevelGenerator
+  m_Name: LevelGenerator_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2239,47 +2239,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1532126376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2d012d1432e513428a124c19e0623f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 66e46812cc82dab4a9229190319f3d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onPlayerSpawn: {fileID: 11400000, guid: c511d89c59e5f0745be3162b98c88be4, type: 2}
   loadingScreen: {fileID: 641379059}
   readyToPlayer: 0
-  numberOfHardRooms: 0
-  numberOfMediumRooms: 0
-  roomPositions: []
   Room:
     serializedVersion: 2
     m_Bits: 1024
-  startPositions:
-  - {fileID: 209990068}
-  - {fileID: 460870137}
-  - {fileID: 1836246877}
-  - {fileID: 532139126}
-  startingRooms:
-  - {fileID: 1874438540509026623, guid: 389921c60c7196841bb6dfd9bbc8875b, type: 3}
-  endRooms:
-  - {fileID: 1874438540509026623, guid: 08dbff87ff452484798b68a7bd310e23, type: 3}
-  rooms:
-  - {fileID: 8883411798325144173, guid: 305583f1ec3f535428571c7e2564b9dd, type: 3}
-  - {fileID: 8619766964613682908, guid: 07ce7226e7850ae448e9a6a736dda503, type: 3}
-  - {fileID: 4834486344982528912, guid: 0ed394543646d194da9a9666762aa35e, type: 3}
-  - {fileID: 1050907296156608508, guid: e1aa184e88740604ea43896aa12a9650, type: 3}
-  - {fileID: 6916262839103606062, guid: 65daf9303269cee439fa288e2612b779, type: 3}
-  - {fileID: 8637235907597184871, guid: 85cf5b4da13b661458ed2d311603db98, type: 3}
-  - {fileID: 2857739133672822095, guid: 73845df710bebc44ba2868ff2f908b19, type: 3}
-  - {fileID: 2470927189484249263, guid: 74a6c85e7c051e841ba8b8b50da764f9, type: 3}
-  - {fileID: 2758430817193268840, guid: 89d4cac0211bee3418031e19483656ae, type: 3}
-  - {fileID: 5978660649371524285, guid: 1f02c5086f529bf47a85157b9f222fa4, type: 3}
-  - {fileID: 8559946006025174482, guid: 36af179e0ef044443887ef8b3b21f5d4, type: 3}
-  - {fileID: 665284223368082792, guid: 6c6c2adf2e79e5b4eba1abaf5b58c878, type: 3}
-  moveAmountLR: 20
-  moveAmountTD: 10
-  minX: 0
-  maxX: 60
-  minY: -30
   stopGeneration: 0
-  _startTimeBetweenRooms: 0.3
+  _startTimeBetweenRooms: 0.25
 --- !u!4 &1532126378
 Transform:
   m_ObjectHideFlags: 0
@@ -2890,7 +2860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1904354254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,7 +2904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &1925834633
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,7 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab057276e07d166449a1e502b6e06b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGeneratorReference: {fileID: 1532126377}
+  levelGeneratorReference: {fileID: 0}
 --- !u!1 &2138798457
 GameObject:
   m_ObjectHideFlags: 0
