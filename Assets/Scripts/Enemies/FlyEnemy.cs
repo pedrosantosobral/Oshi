@@ -39,7 +39,7 @@ public class FlyEnemy : MonoBehaviour
 
         if (other.CompareTag("hpRecharge"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 
