@@ -3,19 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    public Animator     animator;
-    
+    public Animator animator;
+
     public Collider2D lightCollider;
 
 
     //invincible timer variables
-    private float       _invincibleTimeReference;
-    public float        invincibleTime;
-    private bool        invinciblePlayerForSomeTime;
+    private float _invincibleTimeReference;
+    public float invincibleTime;
+    private bool invinciblePlayerForSomeTime;
     //paint light component reference
-    private GameObject  _paintLightReference;
+    private GameObject _paintLightReference;
     //player HP
-    private int         _HP;
+    private int _HP;
     private SavedData _savedDataReference;
     private int colectedColectables = -1;
 
@@ -24,32 +24,32 @@ public class PlayerInteractions : MonoBehaviour
     {
         _paintLightReference = GameObject.Find("PaintLight");
         _savedDataReference = GameObject.Find("SaveData").GetComponent<SavedData>();
-       
+
         _HP = 2;
         invinciblePlayerForSomeTime = false;
-       
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Physics2D.IgnoreCollision(lightCollider, other, true);
-        
+
         if (invinciblePlayerForSomeTime == false)
         {
             if (!other.isTrigger && other.CompareTag("PatrolEnemy") || other.CompareTag("FlyEnemy") && !other.isTrigger || other.CompareTag("JumpEnemyInside") && !other.isTrigger)
             {
-                if(_HP == 2)
+                if (_HP == 2)
                 {
                     invinciblePlayerForSomeTime = true;
                 }
-                
+
                 _HP -= 1;
                 _invincibleTimeReference = invincibleTime;
                 //damage player;
                 _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
             }
 
-            if(other.CompareTag("hpRecharge"))
+            if (other.CompareTag("hpRecharge"))
             {
                 if (_HP == 1)
                 {
@@ -60,13 +60,13 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
 
-        if(other.CompareTag("Colectable"))
+        if (other.CompareTag("Colectable"))
         {
             Destroy(other.gameObject);
             colectedColectables++;
             _savedDataReference.ActivateColectable(colectedColectables);
         }
-        
+
     }
 
     // Update is called once per frame
@@ -78,8 +78,8 @@ public class PlayerInteractions : MonoBehaviour
         {
             KillPlayer();
         }
-        
-        if(invinciblePlayerForSomeTime == true)
+
+        if (invinciblePlayerForSomeTime == true)
         {
             InvinciblePlayerForSomeTime();
         }
@@ -103,7 +103,14 @@ public class PlayerInteractions : MonoBehaviour
     private void KillPlayer()
     {
         //reload the scene
-        SceneManager.LoadScene("DiedScreen");
+        if (SceneManager.GetActiveScene().name == "Oshi_Tutorial")
+        {
+            SceneManager.LoadScene("DiedTutorialScreen");
+        }
+        else if (SceneManager.GetActiveScene().name == "Oshi")
+        {
+            SceneManager.LoadScene("DiedScreen");
+        }
     }
 
     public void HitByTrap()

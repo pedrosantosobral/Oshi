@@ -7,7 +7,14 @@ public class Retry : MonoBehaviour
 {
     public void LoadScnene()
     {
-        SceneManager.LoadScene("Oshi");
+        if (SceneManager.GetActiveScene().name == "DiedTutorialScreen")
+        {
+            SceneManager.LoadScene("Oshi_Tutorial");
+        }
+        else if(SceneManager.GetActiveScene().name == "DiedScreen")
+        {
+            SceneManager.LoadScene("Oshi");
+        }
     }
 
     public void Menu()
