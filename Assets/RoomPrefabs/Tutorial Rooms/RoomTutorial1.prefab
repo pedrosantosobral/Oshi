@@ -658,51 +658,6 @@ MonoBehaviour:
   - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
   - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
   - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
---- !u!1 &1622094506026856551
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7578036960620782731}
-  - component: {fileID: 3180983127181465191}
-  m_Layer: 10
-  m_Name: SpawnPoint (158)
-  m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7578036960620782731
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622094506026856551}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4834486344982528915}
-  m_RootOrder: 135
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3180983127181465191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622094506026856551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbb1ca5d5a34f747bd47a49fb3398cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilesArray:
-  - {fileID: 3444646933974643933, guid: 004aa7157ebdb6244bc7111048a39d13, type: 3}
 --- !u!1 &1672764232711751865
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1931032480550283637}
-  - component: {fileID: 2335371015860394821}
+  - component: {fileID: 2295889966406647314}
   m_Layer: 10
   m_Name: SpawnPoint (90)
   m_TagString: Untagged
@@ -922,7 +877,7 @@ Transform:
   m_Father: {fileID: 4834486344982528915}
   m_RootOrder: 134
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2335371015860394821
+--- !u!114 &2295889966406647314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -931,7 +886,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1868062674685835561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b4a9a5a50084904bbbaae6c3f552b14, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e61a90cc170a6242832c5e5ad1848bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2326164023788368640, guid: a58f5b3f6f00e8249ad761f06e430330, type: 3}
@@ -4482,7 +4437,6 @@ Transform:
   - {fileID: 6426395200829558443}
   - {fileID: 3281806459491437453}
   - {fileID: 1931032480550283637}
-  - {fileID: 7578036960620782731}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
