@@ -4950,6 +4950,8 @@ GameObject:
   - component: {fileID: 5007370254694892716}
   - component: {fileID: 7843334730614576625}
   - component: {fileID: 570144538332172290}
+  - component: {fileID: 8067303325147028870}
+  - component: {fileID: 4891719220233980377}
   m_Layer: 14
   m_Name: EnemySprite
   m_TagString: FlyEnemyInside
@@ -5032,6 +5034,37 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.72
+--- !u!114 &8067303325147028870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064695630318528197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedTag: JumpEnemyInside
+  destroyCollidedObject: 3
+  objectoReference: {fileID: 3444646933974643933}
+--- !u!58 &4891719220233980377
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064695630318528197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

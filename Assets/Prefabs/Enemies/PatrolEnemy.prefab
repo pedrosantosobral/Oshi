@@ -42,6 +42,8 @@ GameObject:
   - component: {fileID: 3873423216042292008}
   - component: {fileID: 7578178130976824364}
   - component: {fileID: 6327071703520502732}
+  - component: {fileID: 6910771303304928397}
+  - component: {fileID: 5686782373558898830}
   m_Layer: 14
   m_Name: PatrolEnemy
   m_TagString: PatrolEnemy
@@ -142,6 +144,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9, y: 1.9}
   m_EdgeRadius: 0
+--- !u!114 &6910771303304928397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444646933974643933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedTag: JumpEnemyInside
+  destroyCollidedObject: 2
+  objectoReference: {fileID: 0}
+--- !u!114 &5686782373558898830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444646933974643933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedTag: FlyEnemyInside
+  destroyCollidedObject: 0
+  objectoReference: {fileID: 0}
 --- !u!1 &5537189979199749399
 GameObject:
   m_ObjectHideFlags: 0

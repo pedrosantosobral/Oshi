@@ -58,8 +58,6 @@ public class JumpEnemy : MonoBehaviour
                 Invoke("JumpToTarget", 0f);
             }
         }
-
-       
     }
 
     private void JumpToTarget()
