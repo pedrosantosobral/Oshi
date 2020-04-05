@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4858758535013634456}
   - component: {fileID: 4198477333543646262}
   m_Layer: 8
-  m_Name: RoomTile_TopRightCorner 2
+  m_Name: BottomRightConnector_RoomTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,4 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e275cdb35a209754a95055de9e38c57f, type: 3}
+  - {fileID: 21300000, guid: 0a39ebd1cdc681945924d0ea2e2998c4, type: 3}
+  - {fileID: 21300000, guid: 1a9948a8174179448b143bd75c2e8b07, type: 3}
+  - {fileID: 21300000, guid: 95d0857d35245e346a6b373efa9c2464, type: 3}
