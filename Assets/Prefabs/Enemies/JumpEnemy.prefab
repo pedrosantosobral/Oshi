@@ -69,15 +69,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
-  speed: 2
+  speed: 1.49999
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 256
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 16896
-  ofsetFloorCheck: {x: 0.24, y: -0.25}
-  floorCheckSize: 0.08
+  ofsetFloorCheck: {x: 0.2405, y: -0.245}
+  floorCheckSize: 0.11
   ofsetTargetCheck: {x: 0, y: 0}
   jumpTimer: 2
 --- !u!58 &8673408600982009500
@@ -95,7 +95,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 12
+  m_Radius: 10
 --- !u!1 &4131292250562381234
 GameObject:
   m_ObjectHideFlags: 0
