@@ -5,14 +5,14 @@ using Pathfinding;
 
 public class FlyEnemy : MonoBehaviour
 {
-    public Collider2D               colliderToBeCheckedByThePlayer;
-    public LayerMask                obstacleMask;
-    
-    private GameObject               _bestTarget;
-    AIDestinationSetter             _aiDestinationSetterReference;
+    public Collider2D colliderToBeCheckedByThePlayer;
+    public LayerMask obstacleMask;
 
-    private List<GameObject>         _enemyOwnList;
-    private PaintLight              _paintLightComponentReference;
+    private GameObject _bestTarget;
+    AIDestinationSetter _aiDestinationSetterReference;
+
+    private List<GameObject> _enemyOwnList;
+    private PaintLight _paintLightComponentReference;
     // Start is called before the first frame update
     private void Start()
     {
@@ -26,29 +26,26 @@ public class FlyEnemy : MonoBehaviour
     private void Update()
     {
         _enemyOwnList = _paintLightComponentReference.listToEnemies;
-        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-         if (other.CompareTag("Player") && !other.isTrigger)
-         {
+
+        if (other.CompareTag("Player") && !other.isTrigger)
+        {
             _aiDestinationSetterReference.target = other.transform;
-         }
-        
+        }
+
 
         if (other.CompareTag("hpRecharge"))
         {
             Destroy(other.gameObject);
         }
-
-
     }
-    
 
     private void OnTriggerStay2D(Collider2D other)
     {
-       
+
         if (other.CompareTag("PatrolEnemy"))
         {
             _aiDestinationSetterReference.target = other.transform;
@@ -59,17 +56,14 @@ public class FlyEnemy : MonoBehaviour
             //_aiDestinationSetterReference.target = other.transform;
             GetClosestTarget();
             CheckForNearestTargetToFolow();
-            
+
         }
-        
+
     }
-
-
-
     private void CheckForNearestTargetToFolow()
     {
-          if(_bestTarget != null)
-          _aiDestinationSetterReference.target = _bestTarget.transform;
+        if (_bestTarget != null)
+            _aiDestinationSetterReference.target = _bestTarget.transform;
     }
 
     private void GetClosestTarget()

@@ -66,7 +66,12 @@ public class PatrolEnemy : MonoBehaviour
 
         if (other.CompareTag("FlyEnemy") && other.isTrigger == false)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+        }
+
+        if (other.CompareTag("JumpEnemyInside") && other.isTrigger == false)
+        {
+            Destroy(other.gameObject);
         }
     }
 

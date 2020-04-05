@@ -49,7 +49,7 @@ public class JumpEnemy : MonoBehaviour
             {
                 timer = 0f;
                 target = other.transform;
-                Invoke("JumpToTarget", 0f);
+                Invoke("JumpToTarget", 3f);
 
             }
             else if (other.CompareTag("FlyEnemyInside"))
@@ -59,6 +59,7 @@ public class JumpEnemy : MonoBehaviour
             }
         }
 
+       
     }
 
     private void JumpToTarget()
@@ -76,7 +77,6 @@ public class JumpEnemy : MonoBehaviour
         timer += Time.deltaTime;
 
         IsGrounded();
-        Debug.Log(isGrounded);
 
 
         //if enemy collided with the player, call hit

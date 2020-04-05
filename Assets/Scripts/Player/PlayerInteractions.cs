@@ -36,7 +36,7 @@ public class PlayerInteractions : MonoBehaviour
         
         if (invinciblePlayerForSomeTime == false)
         {
-            if (!other.isTrigger && other.CompareTag("PatrolEnemy") || other.CompareTag("FlyEnemy") && !other.isTrigger || other.CompareTag("JumpEnemy") && !other.isTrigger)
+            if (!other.isTrigger && other.CompareTag("PatrolEnemy") || other.CompareTag("FlyEnemy") && !other.isTrigger || other.CompareTag("JumpEnemyInside") && !other.isTrigger)
             {
                 if(_HP == 2)
                 {
