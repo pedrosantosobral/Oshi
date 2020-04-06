@@ -25,8 +25,10 @@ public class PlayerInteractions : MonoBehaviour
         _paintLightReference = GameObject.Find("PaintLight");
         _savedDataReference = GameObject.Find("SaveData").GetComponent<SavedData>();
 
-        _HP = 2;
-        invinciblePlayerForSomeTime = false;
+        _HP = 1;
+        invinciblePlayerForSomeTime = true;
+        _invincibleTimeReference = invincibleTime;
+        _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
 
     }
 
