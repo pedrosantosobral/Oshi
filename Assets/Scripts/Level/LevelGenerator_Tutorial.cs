@@ -8,9 +8,9 @@ public class LevelGenerator_Tutorial : MonoBehaviour
     [SerializeField] private VoidEvent onPlayerSpawn;
     public Animator loadingScreen;
 
-
     private bool    _calculationDone;
     public  bool    readyToPlayer;
+    public float    loadingScreenTimer;
 
     public LayerMask Room;
 
@@ -23,22 +23,41 @@ public class LevelGenerator_Tutorial : MonoBehaviour
     private float       _startTimeBetweenRooms = 0.25f;
     private void Start()
     {
-        //TimerBetweenRoomSpawns();
-        stopGeneration = true;
-        CreateAIGraph();
-        _calculationDone = true;
+        stopGeneration = false;
+        _calculationDone = false;
         
         
-
     }
-   
+
+    private void Update()
+    {
+        if(loadingScreenTimer > -0.1)
+        {
+            loadingScreenTimer -= Time.deltaTime;
+        }
+        
+        if (loadingScreenTimer < 0)
+        {
+            StopLoadingScreen();
+
+        }
+    }
+
     private void CreateAIGraph()
     {
+
+        bool doOnce = true;
+
         if(stopGeneration == true)
         {
             if (_calculationDone == false)
             {
-                Invoke("ScanGraph", 0.1f);
+                if(doOnce == true)
+                {
+                    Invoke("ScanGraph", 0.1f);
+                    doOnce = false;
+                }
+                
             }
             
         }
@@ -55,6 +74,12 @@ public class LevelGenerator_Tutorial : MonoBehaviour
         readyToPlayer = true;
         loadingScreen.SetBool("FadeScreen", readyToPlayer);
         onPlayerSpawn.Raise();
+    }
+
+    private void StopLoadingScreen()
+    {
+        stopGeneration = true;
+        CreateAIGraph();
     }
 
 }
