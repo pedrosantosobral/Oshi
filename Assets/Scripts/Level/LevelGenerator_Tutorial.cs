@@ -1,65 +1,54 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using CustomEventSystem;
+using System.Collections;
+
 public class LevelGenerator_Tutorial : MonoBehaviour
 {
 
     //LoadingScreen variables
     [SerializeField] private VoidEvent onPlayerSpawn;
     public Animator loadingScreen;
+    [SerializeField] private int seconds = 3;
 
-    private bool    _calculationDone;
-    public  bool    readyToPlayer;
-    public float    loadingScreenTimer;
+    private bool _calculationDone;
+    public bool readyToPlayer;
 
     public LayerMask Room;
 
     //variable to stop the map generation
-    public bool        stopGeneration;
+    public bool stopGeneration;
 
     //variables to control the room spawning timer
-    private float       _timeBetweenRooms;
+    private float _timeBetweenRooms;
     [SerializeField]
-    private float       _startTimeBetweenRooms = 0.25f;
+    private float _startTimeBetweenRooms = 0.25f;
+
     private void Start()
     {
-        stopGeneration = false;
-        _calculationDone = false;
-        
-        
+        StartCoroutine(Countdown(seconds));
     }
 
-    private void Update()
+    private IEnumerator Countdown(int seconds)
     {
-        if(loadingScreenTimer > -0.1)
+        int counter = seconds;
+        while (counter > 0)
         {
-            loadingScreenTimer -= Time.deltaTime;
+            yield return new WaitForSeconds(1);
+            counter--;
         }
-        
-        if (loadingScreenTimer < 0)
-        {
-            StopLoadingScreen();
-
-        }
+        StopLoadingScreen();
     }
 
     private void CreateAIGraph()
     {
-
-        bool doOnce = true;
-
-        if(stopGeneration == true)
+        if (stopGeneration == true)
         {
             if (_calculationDone == false)
             {
-                if(doOnce == true)
-                {
-                    Invoke("ScanGraph", 0.1f);
-                    doOnce = false;
-                }
-                
+                Invoke("ScanGraph", 0.1f);
             }
-            
+
         }
     }
 
