@@ -89,9 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilesArray:
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
+  - {fileID: 5641642449143166180, guid: ee3604d03138dc24689b831f1fb50589, type: 3}
 --- !u!1 &1389346315
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,11 +189,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4834486344982528912, guid: 0ed394543646d194da9a9666762aa35e,
-        type: 3}
-      propertyPath: m_Name
-      value: RoomTutorial6
-      objectReference: {fileID: 0}
     - target: {fileID: 4834486344982528915, guid: 0ed394543646d194da9a9666762aa35e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,6 +244,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4834486344982528912, guid: 0ed394543646d194da9a9666762aa35e,
+        type: 3}
+      propertyPath: m_Name
+      value: RoomTutorial6
+      objectReference: {fileID: 0}
     - target: {fileID: 3103056638047764715, guid: 0ed394543646d194da9a9666762aa35e,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -266,6 +264,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5683801443078695122, guid: 0ed394543646d194da9a9666762aa35e,
+        type: 3}
+      propertyPath: tilesArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 5641642449143166180, guid: ccc5d3911509ef0429435baeb40f1b9d,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 3751984196848102324, guid: 0ed394543646d194da9a9666762aa35e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ed394543646d194da9a9666762aa35e, type: 3}
