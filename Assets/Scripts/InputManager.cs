@@ -284,24 +284,24 @@ public class InputManager : MonoBehaviour
         if (_leftSide.Contains(touchPos))
         {
             touchingLeft = true;
-            leftInput.SetActive(true);
+            //leftInput.SetActive(true);
         }
         else
         {
             touchingLeft = false;
-            leftInput.SetActive(false);
+            //leftInput.SetActive(false);
         }
 
 
         if (_rightSide.Contains(touchPos))
         {
             touchingRight = true;
-            rightInput.SetActive(true);
+            //rightInput.SetActive(true);
         }
         else
         {
             touchingRight = false;
-            rightInput.SetActive(false);
+            //rightInput.SetActive(false);
         }
 
 
