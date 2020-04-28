@@ -40,6 +40,12 @@ public class LevelGenerator_Tutorial : MonoBehaviour
         StopLoadingScreen();
     }
 
+    private void StopLoadingScreen()
+    {
+        stopGeneration = true;
+        CreateAIGraph();
+    }
+
     private void CreateAIGraph()
     {
         if (stopGeneration == true)
@@ -64,11 +70,4 @@ public class LevelGenerator_Tutorial : MonoBehaviour
         loadingScreen.SetBool("FadeScreen", readyToPlayer);
         onPlayerSpawn.Raise();
     }
-
-    private void StopLoadingScreen()
-    {
-        stopGeneration = true;
-        CreateAIGraph();
-    }
-
 }
