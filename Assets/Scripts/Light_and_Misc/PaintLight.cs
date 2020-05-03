@@ -33,7 +33,7 @@ public class PaintLight : MonoBehaviour
     public bool playerIsDamaged;
 
     //just to do once
-    private bool _doneOnce;
+    private bool _hitFeedback;
 
     private GameObject _playerMaskReference;
     private GameObject _savedLight;
@@ -51,7 +51,7 @@ public class PaintLight : MonoBehaviour
     {
         _actualMaxLight = maxPlayerLight;
         playerIsDamaged = false;
-        _doneOnce = false;
+        _hitFeedback = false;
     }
     void FixedUpdate()
     {
@@ -66,11 +66,11 @@ public class PaintLight : MonoBehaviour
                 _actualMaxLight = damagedMaxLight;
                 _actualMaxPointLightOuterRadius = damagedMaxPointLOR;
 
-                //hit feedback
-                if (_doneOnce == false)
+                //hit feedback(do once in each loop) 
+                if (_hitFeedback == false)
                 {
                     _playerMaskReference.transform.localScale = new Vector3(0.2f, 0.2f, 0);
-                    _doneOnce = true;
+                    _hitFeedback = true;
                 }
 
             }
@@ -78,7 +78,7 @@ public class PaintLight : MonoBehaviour
             {
                 _actualMaxPointLightOuterRadius = maxLOR;
                 _actualMaxLight = maxPlayerLight;
-                _doneOnce = false;
+                _hitFeedback = false;
             }
 
             if (_inputManagerReference.allowLightPaint == true)
