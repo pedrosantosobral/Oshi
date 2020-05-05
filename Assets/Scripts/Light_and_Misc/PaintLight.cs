@@ -2,73 +2,86 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PaintLight : MonoBehaviour
 {
     private InputManager _inputManagerReference;
 
     //size of player light size variables;
-    public float                maxPlayerLight;         //recomended as default 1f
-    public float                damagedMaxLight;        //recomended as default 0.7f
-    public float                minPlayerLight;         //recomended as default 0.4f
-    private float               _actualMaxLight;
+    public float maxPlayerLight;         //recomended as default 1f
+    public float minPlayerLight;         //recomended as default 0.4f
 
-    public float                normalRechargeRate;     //recomended as default 0.12f
-    public float                slowerRechargeRate;     //recomended as default 0.020f
+    public float lightFactor;
 
-    public float                ammountOfLightToPaint;  //recomended as default 0.020f THE BIGGER THE VALUE THE MOST LIGHT WILL BE AVALIABLE
+    public float _actualMaxPointLightOuterRadius;
+
+    internal float maxLOR = 2.6f;
+    internal float damagedMaxPointLOR = 1f;
+    internal float minLOR = 0.6f;
+
+   public float _actualMaxLight;
+
+    public float damagedMaxLight;        //recomended as default 0.7f
+ 
+    public float normalRechargeRate;     //recomended as default 0.12f
+    public float slowerRechargeRate;     //recomended as default 0.020f
+
+    public float ammountOfLightToPaint;  //recomended as default 0.020f THE BIGGER THE VALUE THE MOST LIGHT WILL BE AVALIABLE
 
     //check if player is damaged
-    public bool                 playerIsDamaged;
+    public bool playerIsDamaged;
 
     //just to do once
-    private bool                _doneOnce;
+    private bool _hitFeedback;
 
-    private GameObject          _playerMaskReference;
-    private GameObject          _savedLight;
+    private GameObject _playerMaskReference;
+    private GameObject _savedLight;
 
-    private float               _nextActionTime;
-    public float                paintFadeTimePeriod;
-    public float                noPaintLightTime;
+    private float _nextActionTime;
 
+    public float paintFadeTimePeriod;
+    public float noPaintLightTime;
 
-    public GameObject           lightToSpawn;
-    public Queue<GameObject>    lightQueue       = new Queue<GameObject>();
-    public List<GameObject>     listToEnemies    = new List<GameObject>();
+    public GameObject lightToSpawn;
+    public Queue<GameObject> lightQueue = new Queue<GameObject>();
+    public List<GameObject> listToEnemies = new List<GameObject>();
 
     private void Start()
     {
         _actualMaxLight = maxPlayerLight;
         playerIsDamaged = false;
-        _doneOnce = false;
+        _hitFeedback = false;
     }
     void FixedUpdate()
     {
         FindInputManager();
         FindPlayer();
 
-        if(_playerMaskReference != null)
+        if (_playerMaskReference != null)
         {
             if (playerIsDamaged == true)
             {
                 //change max player light to damaged light state
                 _actualMaxLight = damagedMaxLight;
+                _actualMaxPointLightOuterRadius = damagedMaxPointLOR;
 
-                //hit feedback
-                if (_doneOnce == false)
+                //hit feedback(do once in each loop) 
+                if (_hitFeedback == false)
                 {
                     _playerMaskReference.transform.localScale = new Vector3(0.2f, 0.2f, 0);
-                    _doneOnce = true;
+                    _hitFeedback = true;
                 }
 
             }
             else if (playerIsDamaged == false)
             {
+                _actualMaxPointLightOuterRadius = maxLOR;
                 _actualMaxLight = maxPlayerLight;
-                _doneOnce = false;
+                _hitFeedback = false;
             }
 
-            if(_inputManagerReference.allowLightPaint == true)
+            if (_inputManagerReference.allowLightPaint == true)
             {
                 //if player mask is bigger then the minimum light size
                 if (_playerMaskReference.transform.localScale.x > minPlayerLight && _playerMaskReference.transform.localScale.y > minPlayerLight)
@@ -91,11 +104,15 @@ public class PaintLight : MonoBehaviour
 
                             //decrease player mask size
                             _playerMaskReference.transform.localScale -= new Vector3(ammountOfLightToPaint, ammountOfLightToPaint, 0);
+                            _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius -= ammountOfLightToPaint * lightFactor;
+                            _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius =
+                                _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius < 0.6f ?
+                                0.6f : _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius;
                         }
                     }
                 }
             }
-            
+
             //if its painted light left
             if (lightQueue.Count > 0)
             {
@@ -121,12 +138,17 @@ public class PaintLight : MonoBehaviour
                 {
                     //increase player light
                     _playerMaskReference.transform.localScale += new Vector3(normalRechargeRate, normalRechargeRate, 0) * Time.deltaTime;
+                    _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius += normalRechargeRate * lightFactor * Time.deltaTime;
                 }
                 //if is there still light increase player light slowly
                 else if (lightQueue.Count > 0)
                 {
                     _playerMaskReference.transform.localScale += new Vector3(slowerRechargeRate, slowerRechargeRate, 0) * Time.deltaTime;
+                    _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius += slowerRechargeRate * lightFactor * Time.deltaTime;
                 }
+                _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius =
+                                _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius > 2.6f ?
+                                2.6f : _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius;
 
             }
         }
@@ -134,11 +156,11 @@ public class PaintLight : MonoBehaviour
 
     private void FindPlayer()
     {
-        if(_playerMaskReference == null)
+        if (_playerMaskReference == null)
         {
             _playerMaskReference = GameObject.Find("PlayerLightMask");
         }
-        
+
     }
 
     private void FindInputManager()
@@ -152,9 +174,9 @@ public class PaintLight : MonoBehaviour
 
     private void Wait()
     {
-        
+
         //TEST MAKE HERE THE LIST OF LIGHT TO THE ENEMIES
-        if(_savedLight != null)
+        if (_savedLight != null)
         {
             if (_savedLight.GetComponent<CheckCollisionsForLight>().notInsideWall == true)
             {
@@ -165,8 +187,8 @@ public class PaintLight : MonoBehaviour
 
             }
         }
-        
+
     }
 
-   
+
 }
