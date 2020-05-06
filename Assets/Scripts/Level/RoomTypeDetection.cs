@@ -15,6 +15,7 @@ public class RoomTypeDetection : MonoBehaviour
     public Pos roomPos;
 
     public bool temp = false;
+    public bool noteleport = false;
     bool doneOnce = false;
 
     private void Start()
@@ -24,19 +25,8 @@ public class RoomTypeDetection : MonoBehaviour
 
         roomPos.column = GetRoomColumn();
         roomPos.line = GetRoomLine();
-
-      
-
     }
 
-    private void FixedUpdate()
-    {
-        if (doneOnce == false)
-        {
-            Invoke("SetColectables", 1f);
-        }
-        
-    }
     public void DestroyRoom()
     {
         Destroy(gameObject);
@@ -93,7 +83,7 @@ public class RoomTypeDetection : MonoBehaviour
         }
     }
 
-    private void SetColectables()
+    public void SetObjects()
     {
         if(!_lvlGeneratorReference.colectableRoomPositions.Contains(roomPos))
         {
@@ -128,17 +118,15 @@ public class RoomTypeDetection : MonoBehaviour
                 
         }
 
-        if (_lvlGeneratorReference.teleportRoomPositions.Contains(roomPos))
+        if (!_lvlGeneratorReference.teleportRoomPositions.Contains(roomPos))
         {
-            temp = true;
+            noteleport = true;
 
             if (teleportReference != null)
             {
-                teleportReference.SetActive(true);
+                teleportReference.SetActive(false);
             }
 
         }
-
-        doneOnce = true;
     }
 }

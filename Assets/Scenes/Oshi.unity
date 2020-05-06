@@ -1200,8 +1200,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPlayerLight: 0.8
-  damagedMaxLight: 0.3
   minPlayerLight: 0.2
+  lightFactor: 0
+  _actualMaxPointLightOuterRadius: 0
+  _actualMaxLight: 0
+  damagedMaxLight: 0.3
   normalRechargeRate: 0.4
   slowerRechargeRate: 0.12
   ammountOfLightToPaint: 0.02
@@ -2052,6 +2055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPlayerSpawn: {fileID: 11400000, guid: c511d89c59e5f0745be3162b98c88be4, type: 2}
+  canSpawnObjects: {fileID: 11400000, guid: 6c227f2c1efa5b1409da378a7337096c, type: 2}
   loadingScreen: {fileID: 641379059}
   readyToPlayer: 0
   numberOfHardRooms: 0
@@ -2088,7 +2092,7 @@ MonoBehaviour:
   maxX: 60
   minY: -30
   stopGeneration: 0
-  _startTimeBetweenRooms: 1
+  _startTimeBetweenRooms: 0.1
 --- !u!4 &1532126378
 Transform:
   m_ObjectHideFlags: 0

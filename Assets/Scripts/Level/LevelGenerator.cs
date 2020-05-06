@@ -8,6 +8,7 @@ public class LevelGenerator : MonoBehaviour
 
     //LoadingScreen variables
     [SerializeField] private VoidEvent onPlayerSpawn;
+    [SerializeField] private VoidEvent canSpawnObjects;
     public Animator loadingScreen;
 
     //variables for the collectibles random positions generation
@@ -67,10 +68,10 @@ public class LevelGenerator : MonoBehaviour
     {
         TimerBetweenRoomSpawns();
         CreateAIGraph();
-        if(_calculationDone == false && stopGeneration == true)
+        if(_calculationDone == false && _calculationDoneTeleport == false && stopGeneration == true)
         {
             //SET COLECTIBLES HERE AND MOVE READY TO PLAYER INSIDE
-            if(ammountOfColectibles > 0  && ammountOfTeleports > 0)
+            if(ammountOfColectibles >= 0  && ammountOfTeleports >= 0)
             {
                 GetColectableRoomsPositions(ammountOfColectibles);
                 GetTeleportRoomsPositions(ammountOfTeleports);
@@ -79,6 +80,8 @@ public class LevelGenerator : MonoBehaviour
             {
                 _calculationDone = true;
                 _calculationDoneTeleport = true;
+                canSpawnObjects.Raise();
+                print("event was raised");
             }
             
         }
@@ -389,6 +392,7 @@ public class LevelGenerator : MonoBehaviour
         else
         {
             GetTeleportRoomsPositions(ammountOfTeleports);
+            Invoke("RaiseEvent", 1f);
         }
 
     }
@@ -411,7 +415,10 @@ public class LevelGenerator : MonoBehaviour
         {
             Debug.Log("Pos " + "linha" + i.line + " coluna" + i.column);
         }
+    }
 
-
+    private void RaiseEvent()
+    {
+        canSpawnObjects.Raise();
     }
 }

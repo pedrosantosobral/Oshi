@@ -2970,6 +2970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8637235907597184868}
   - component: {fileID: 116020603718856672}
+  - component: {fileID: 7200571077080909741}
   m_Layer: 10
   m_Name: Room LRB 3
   m_TagString: Untagged
@@ -3104,6 +3105,34 @@ MonoBehaviour:
   type: 1
   dificulty: 0
   temp: 1
+  noteleport: 0
+--- !u!114 &7200571077080909741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637235907597184871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64bc25fa47c341b41a6b752874c7aac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6c227f2c1efa5b1409da378a7337096c, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 116020603718856672}
+        m_MethodName: SetObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8637235907701488916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4464,7 +4493,7 @@ PrefabInstance:
     - target: {fileID: 7406112075868094416, guid: 23212591fc37e534cb095e3646ac1444,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 7406112075868094416, guid: 23212591fc37e534cb095e3646ac1444,
         type: 3}
@@ -4669,15 +4698,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 894076be4763d214da90293ed80625ef, type: 3}
---- !u!1 &169302211803134904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8280011033399446307, guid: 894076be4763d214da90293ed80625ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 8120545779545829531}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7983513442671455840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2196307950750703355, guid: 894076be4763d214da90293ed80625ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 8120545779545829531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &169302211803134904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8280011033399446307, guid: 894076be4763d214da90293ed80625ef,
     type: 3}
   m_PrefabInstance: {fileID: 8120545779545829531}
   m_PrefabAsset: {fileID: 0}
