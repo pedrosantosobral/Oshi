@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using CustomEventSystem;
 
 public class PlayerInteractions : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class PlayerInteractions : MonoBehaviour
 
     public Collider2D lightCollider;
 
+    [SerializeField] private VoidEvent showTeleportButton;
+    [SerializeField] private VoidEvent hideTeleportButton;
 
     //invincible timer variables
     private float _invincibleTimeReference;
@@ -35,6 +38,11 @@ public class PlayerInteractions : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Physics2D.IgnoreCollision(lightCollider, other, true);
+
+        if(other.CompareTag("teleport"))
+        {
+            showTeleportButton.Raise();
+        }
 
         if (invinciblePlayerForSomeTime == false)
         {
@@ -69,6 +77,14 @@ public class PlayerInteractions : MonoBehaviour
             _savedDataReference.ActivateColectable(colectedColectables);
         }
 
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("teleport"))
+        {
+            hideTeleportButton.Raise();
+        }
     }
 
     // Update is called once per frame

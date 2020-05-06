@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5230107385730911910}
   lightCollider: {fileID: 4203732783921396744}
+  showTeleportButton: {fileID: 11400000, guid: da8d31a617e7f2c45985c6114ffe756e, type: 2}
+  hideTeleportButton: {fileID: 11400000, guid: 5ad8aa54259d13746bf273592d477da6, type: 2}
   invincibleTime: 3
 --- !u!68 &2326164023788368641
 EdgeCollider2D:
