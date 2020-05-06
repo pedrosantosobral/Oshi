@@ -16,8 +16,9 @@ public class PaintLight : MonoBehaviour
 
     public float _actualMaxPointLightOuterRadius;
 
+    // LOR = Light Outer Radius
     internal float maxLOR = 2.6f;
-    internal float damagedMaxPointLOR = 1f;
+    internal float damagedMaxLOR = 1f;
     internal float minLOR = 0.6f;
 
    public float _actualMaxLight;
@@ -64,12 +65,13 @@ public class PaintLight : MonoBehaviour
             {
                 //change max player light to damaged light state
                 _actualMaxLight = damagedMaxLight;
-                _actualMaxPointLightOuterRadius = damagedMaxPointLOR;
+                _actualMaxPointLightOuterRadius = damagedMaxLOR;
 
                 //hit feedback(do once in each loop) 
                 if (_hitFeedback == false)
                 {
                     _playerMaskReference.transform.localScale = new Vector3(0.2f, 0.2f, 0);
+                    _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius = _actualMaxLight;
                     _hitFeedback = true;
                 }
 
