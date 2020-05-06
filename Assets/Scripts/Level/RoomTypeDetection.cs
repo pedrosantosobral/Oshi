@@ -8,6 +8,7 @@ public class RoomTypeDetection : MonoBehaviour
 
     public GameObject colectableToSpawn;
     public GameObject lightReference;
+    public GameObject teleportReference;
 
     public int  type;
     public int  dificulty; //0 - EASY //1 - MEDIUM //2 - HARD
@@ -125,6 +126,17 @@ public class RoomTypeDetection : MonoBehaviour
                 colectableToSpawn.SetActive(true);
             }
                 
+        }
+
+        if (_lvlGeneratorReference.teleportRoomPositions.Contains(roomPos))
+        {
+            temp = true;
+
+            if (teleportReference != null)
+            {
+                teleportReference.SetActive(true);
+            }
+
         }
 
         doneOnce = true;

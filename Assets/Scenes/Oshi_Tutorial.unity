@@ -4059,6 +4059,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6797260469168683499, guid: 247df3ec9f8254c48965755c5d2eeef0,
+        type: 3}
+      propertyPath: IN_ease_type
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797260469168683499, guid: 247df3ec9f8254c48965755c5d2eeef0,
+        type: 3}
+      propertyPath: IN_time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797260469168683499, guid: 247df3ec9f8254c48965755c5d2eeef0,
+        type: 3}
+      propertyPath: timeForNextPhrase
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 247df3ec9f8254c48965755c5d2eeef0, type: 3}
 --- !u!1001 &7007256053685390992

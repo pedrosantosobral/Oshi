@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5230107385730911910}
-  lightCollider: {fileID: 0}
+  lightCollider: {fileID: 4203732783921396744}
   invincibleTime: 3
 --- !u!68 &2326164023788368641
 EdgeCollider2D:
@@ -5363,6 +5363,12 @@ PrefabInstance:
 --- !u!4 &5852311147864052558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5791677144542935541, guid: a01fae9e3c385604f826a6bf0a76376f,
+    type: 3}
+  m_PrefabInstance: {fileID: 96755193810791099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &4203732783921396744 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4251704708248917683, guid: a01fae9e3c385604f826a6bf0a76376f,
     type: 3}
   m_PrefabInstance: {fileID: 96755193810791099}
   m_PrefabAsset: {fileID: 0}

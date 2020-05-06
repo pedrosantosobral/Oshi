@@ -4,6 +4,7 @@ using CustomEventSystem;
 public class LevelGenerator : MonoBehaviour
 {
     private int ammountOfColectibles = 3;
+    private int ammountOfTeleports = 3;
 
     //LoadingScreen variables
     [SerializeField] private VoidEvent onPlayerSpawn;
@@ -13,8 +14,15 @@ public class LevelGenerator : MonoBehaviour
     public List<Pos> colectableRoomPositions;
     private List<int> _colectableRoomColumn;
     private List<int> _colectableRoomLine;
+
+    //variables for the collectibles random positions generation
+    public List<Pos> teleportRoomPositions;
+    private List<int> _teleportRoomColumn;
+    private List<int> _teleportRoomLine;
+
     //variables to check generation conclusion
     private bool    _calculationDone;
+    private bool   _calculationDoneTeleport = false;
     public  bool    readyToPlayer;
 
     //dificulty variables
@@ -62,13 +70,15 @@ public class LevelGenerator : MonoBehaviour
         if(_calculationDone == false && stopGeneration == true)
         {
             //SET COLECTIBLES HERE AND MOVE READY TO PLAYER INSIDE
-            if(ammountOfColectibles > 0)
+            if(ammountOfColectibles > 0  && ammountOfTeleports > 0)
             {
                 GetColectableRoomsPositions(ammountOfColectibles);
+                GetTeleportRoomsPositions(ammountOfTeleports);
             }
             else
             {
                 _calculationDone = true;
+                _calculationDoneTeleport = true;
             }
             
         }
@@ -79,7 +89,13 @@ public class LevelGenerator : MonoBehaviour
         colectableRoomPositions = new List<Pos>();
         _colectableRoomColumn = new List<int>();
         _colectableRoomLine = new List<int>();
+
+        teleportRoomPositions = new List<Pos>();
+        _teleportRoomColumn = new List<int>();
+        _teleportRoomLine = new List<int>();
+
         _calculationDone    = false;
+        _calculationDoneTeleport = false;
         stopGeneration      = false;
         readyToPlayer       = false;
         //random number generator between 0 and the maximum array size
@@ -328,10 +344,70 @@ public class LevelGenerator : MonoBehaviour
           
     }
 
+    private void GetTeleportRoomsPositions(int ammountOfTeleports)
+    {
+        int randLine;
+        int randColumn;
+
+        Pos randomPos;
+
+        randomPos.line = 0;
+        randomPos.column = 0;
+
+        while (randomPos.line == 0)
+        {
+            randLine = Random.Range(1, 5);
+
+            if (!_teleportRoomLine.Contains(randLine))
+            {
+                randomPos.line = randLine;
+                _teleportRoomLine.Add(randLine);
+            }
+
+        }
+
+        while (randomPos.column == 0)
+        {
+            randColumn = Random.Range(1, 5);
+
+            if (!_teleportRoomColumn.Contains(randColumn))
+            {
+                randomPos.column = randColumn;
+                _teleportRoomColumn.Add(randColumn);
+            }
+        }
+
+        teleportRoomPositions.Add(randomPos);
+
+        ammountOfTeleports--;
+
+        if (ammountOfTeleports == 0)
+        {
+            DebugLists2();
+            _calculationDoneTeleport = true;
+        }
+        else
+        {
+            GetTeleportRoomsPositions(ammountOfTeleports);
+        }
+
+    }
+
     private void DebugLists()
     {
         Debug.Log("Ha " + colectableRoomPositions.Count + " pos");
         foreach(Pos i in colectableRoomPositions)
+        {
+            Debug.Log("Pos " + "linha" + i.line + " coluna" + i.column);
+        }
+
+
+    }
+
+    private void DebugLists2()
+    {
+        Debug.Log("Ha " + teleportRoomPositions.Count + " pos");
+        foreach (Pos i in teleportRoomPositions)
         {
             Debug.Log("Pos " + "linha" + i.line + " coluna" + i.column);
         }
