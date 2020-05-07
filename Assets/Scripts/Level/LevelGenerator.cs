@@ -9,6 +9,7 @@ public class LevelGenerator : MonoBehaviour
     //LoadingScreen variables
     [SerializeField] private VoidEvent onPlayerSpawn;
     [SerializeField] private VoidEvent canSpawnObjects;
+    [SerializeField] private VoidEvent givePlayerEvent;
     public Animator loadingScreen;
 
     //variables for the collectibles random positions generation
@@ -420,5 +421,6 @@ public class LevelGenerator : MonoBehaviour
     private void RaiseEvent()
     {
         canSpawnObjects.Raise();
+        givePlayerEvent.Raise();
     }
 }

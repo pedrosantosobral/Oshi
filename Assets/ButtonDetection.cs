@@ -6,6 +6,7 @@ public class ButtonDetection : MonoBehaviour
 {
     private LevelGenerator _lvlGeneratorReference;
     private GameObject myRoom;
+    private TeleportManager _teleportManagerReference;
 
     public GameObject buttonToActivate;
 
@@ -18,6 +19,7 @@ public class ButtonDetection : MonoBehaviour
         buttonPos.line = line;
         buttonPos.column = column;
         _lvlGeneratorReference = GameObject.Find("LevelGenerator").GetComponent<LevelGenerator>();
+        _teleportManagerReference = GameObject.Find("TeleportManager").GetComponent<TeleportManager>();
     }
 
     public void CheckButtonActivity()
@@ -26,6 +28,11 @@ public class ButtonDetection : MonoBehaviour
         {
             buttonToActivate.SetActive(false);
         }
+    }
+
+    public void PressButton()
+    {
+        _teleportManagerReference.TeleportPlayer(buttonPos);
     }
 
 }
