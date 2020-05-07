@@ -16,4 +16,13 @@ public class TeleportManager : MonoBehaviour
     {
         _player = GameObject.Find("Player(Clone)");
     }
+
+    private void ConnectButtonToRoom()
+    {
+        foreach(RoomTypeDetection room in roomlist)
+        {
+
+        }
+    }
+
 }

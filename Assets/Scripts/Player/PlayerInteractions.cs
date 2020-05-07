@@ -34,7 +34,7 @@ public class PlayerInteractions : MonoBehaviour
         invinciblePlayerForSomeTime = true;
         _invincibleTimeReference = invincibleTime;
         _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
-        setPlayerOnTeleportManager.Raise();
+        //setPlayerOnTeleportManager.Raise();
 
     }
 
