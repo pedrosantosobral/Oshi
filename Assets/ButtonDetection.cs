@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonDetection : MonoBehaviour
 {
     private LevelGenerator _lvlGeneratorReference;
+    private GameObject myRoom;
 
     public GameObject buttonToActivate;
 

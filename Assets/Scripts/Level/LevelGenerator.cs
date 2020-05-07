@@ -12,12 +12,12 @@ public class LevelGenerator : MonoBehaviour
     public Animator loadingScreen;
 
     //variables for the collectibles random positions generation
-    public List<Pos> colectableRoomPositions;
+    public  List<Pos> colectableRoomPositions;
     private List<int> _colectableRoomColumn;
     private List<int> _colectableRoomLine;
 
     //variables for the collectibles random positions generation
-    public List<Pos> teleportRoomPositions;
+    public  List<Pos> teleportRoomPositions;
     private List<int> _teleportRoomColumn;
     private List<int> _teleportRoomLine;
 

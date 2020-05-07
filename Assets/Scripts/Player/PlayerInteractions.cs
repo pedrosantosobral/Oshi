@@ -8,6 +8,8 @@ public class PlayerInteractions : MonoBehaviour
 
     public Collider2D lightCollider;
 
+    private VoidEvent setPlayerOnTeleportManager;
+
     [SerializeField] private VoidEvent showTeleportButton;
     [SerializeField] private VoidEvent hideTeleportButton;
 
@@ -32,6 +34,7 @@ public class PlayerInteractions : MonoBehaviour
         invinciblePlayerForSomeTime = true;
         _invincibleTimeReference = invincibleTime;
         _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
+        setPlayerOnTeleportManager.Raise();
 
     }
 

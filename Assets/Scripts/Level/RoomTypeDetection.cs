@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoomTypeDetection : MonoBehaviour
 {
     private LevelGenerator _lvlGeneratorReference;
+    private TeleportManager _teleportReference;
 
     public GameObject colectableToSpawn;
     public GameObject lightReference;
@@ -22,6 +23,7 @@ public class RoomTypeDetection : MonoBehaviour
     {
         //_colectableToSpawn = GameObject.Find
         _lvlGeneratorReference = GameObject.Find("LevelGenerator").GetComponent<LevelGenerator>();
+        _teleportReference     = GameObject.Find("TeleportManager").GetComponent<TeleportManager>();
 
         roomPos.column = GetRoomColumn();
         roomPos.line = GetRoomLine();
@@ -127,6 +129,10 @@ public class RoomTypeDetection : MonoBehaviour
                 teleportReference.SetActive(false);
             }
 
+        }
+        else
+        {
+            _teleportReference.AddRoom(this);
         }
     }
 }
