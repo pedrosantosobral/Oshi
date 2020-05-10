@@ -2,6 +2,9 @@
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+    private bool animRunning;
+
     private InputManager _inputManagerReference;
 
     public GameObject spriteToFlip;
@@ -24,7 +27,7 @@ public class PlayerController : MonoBehaviour
     //move input variable
     public float        _horizontalmove, verticalmove;
     //ground bool
-    private bool        _isGrounded;
+    [SerializeField] private bool        _isGrounded;
     private bool        lookingRight;
 
     //Variables for groundCheckTimer, even if the player is not grounded
@@ -44,12 +47,19 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(verticalmove);
+        Debug.Log(animRunning);
+        animator.SetBool("isGrounded", _isGrounded);
+        animator.SetFloat("isJumping", verticalmove);
+        animator.SetBool("isRunning", animRunning);
+
         FindInputManager();
         TurnPlayerSprite();
 
         if ((_inputManagerReference.doubleTap == true || _inputManagerReference.swipeUp == true) && (_inputManagerReference.touchingRight == true || _inputManagerReference.touchingLeft == true)) 
         {
             verticalmove = 1;
+            
         }
         else
         {
@@ -62,18 +72,20 @@ public class PlayerController : MonoBehaviour
         {
             _horizontalmove = -1 * runspeed;
             lookingRight = false;
+            animRunning = true;
 
         }
         else if (_inputManagerReference.touchingRight == true)
         {
             _horizontalmove = 1 * runspeed;
             lookingRight = true;
+            animRunning = true;
 
         }
         else
         {
             _horizontalmove = 0;
-            
+            animRunning = false;
         }
 
         //define groundcheck radius from the player feet
