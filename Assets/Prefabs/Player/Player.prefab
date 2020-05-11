@@ -86,6 +86,7 @@ MonoBehaviour:
     m_Bits: 256
   _horizontalmove: 0
   verticalmove: 0
+  _isGrounded: 0
   _groundedRememberTime: 0.25
 --- !u!114 &327506146070496921
 MonoBehaviour:
@@ -5114,7 +5115,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b80f1359df2db9b4c8f6be710620c598, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a4384e5c4c0d1c4d82fb573c9cbd42b, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_FlipX: 1
   m_FlipY: 0
