@@ -28,8 +28,17 @@ public class CanvasManager : MonoBehaviour
     private void Start()
     {
         panel.SetActive(false);
-        _teleportButton.transform.localScale = new Vector3(0, 0, 0);
-        _teleportMenu.transform.localScale = new Vector3(0, 0, 0);
+
+        if(_teleportButton != null)
+        {
+            _teleportButton.transform.localScale = new Vector3(0, 0, 0);
+        }
+       
+        if(_teleportMenu != null)
+        {
+            _teleportMenu.transform.localScale = new Vector3(0, 0, 0);
+        }
+        
     }
 
 

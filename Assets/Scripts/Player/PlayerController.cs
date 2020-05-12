@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 
     private InputManager _inputManagerReference;
 
+    private float timeToLongIdleAnim = 7f;
+    private float actualTimeToLongAnim;
+
     public GameObject spriteToFlip;
 
     public ParticleSystem playerDust;
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
         groundCheck = GetComponentInChildren<Transform>();
         //get player rigidbody
         rb = GetComponent<Rigidbody2D>();
+        actualTimeToLongAnim = timeToLongIdleAnim;
     }
 
     private void FixedUpdate()
@@ -52,18 +56,27 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isGrounded", _isGrounded);
         animator.SetFloat("isJumping", verticalmove);
         animator.SetBool("isRunning", animRunning);
-
+        
         FindInputManager();
         TurnPlayerSprite();
 
         if ((_inputManagerReference.doubleTap == true || _inputManagerReference.swipeUp == true) && (_inputManagerReference.touchingRight == true || _inputManagerReference.touchingLeft == true)) 
         {
             verticalmove = 1;
-            
+            actualTimeToLongAnim = timeToLongIdleAnim;
+
         }
         else
         {
             verticalmove = 0;
+            
+            actualTimeToLongAnim -= Time.deltaTime;
+            if(actualTimeToLongAnim <= 0)
+            {
+                animator.SetTrigger("longIdle");
+                actualTimeToLongAnim = timeToLongIdleAnim;
+
+            }
 
         }
 

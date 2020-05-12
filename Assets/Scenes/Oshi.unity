@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: 81ddbb741dcd6d94f80d91c229f11bca,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2157,6 +2157,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5608011914097171076, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
         type: 3}
       propertyPath: minPlayerLight
@@ -2171,6 +2176,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ammountOfLightToPaint
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: maxPlayerLight
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1daa28ff1c91fa49b921a5ec90c1979, type: 3}
