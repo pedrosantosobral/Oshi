@@ -92,7 +92,8 @@ public class PlayerInteractions : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {
+    {   
+
         animator.SetBool("IsDamaged", invinciblePlayerForSomeTime);
         animator.SetInteger("HP", _HP);
         if (_HP <= 0)

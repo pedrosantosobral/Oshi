@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2326164023788368641}
   - component: {fileID: 7207918607448251373}
   - component: {fileID: 3527381852765686271}
+  - component: {fileID: 8820403998755355340}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcb771cb02e21249906e1506d923702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 5230107385730911910}
+  animator: {fileID: 8820403998755355340}
   lightCollider: {fileID: 4203732783921396744}
   showTeleportButton: {fileID: 11400000, guid: da8d31a617e7f2c45985c6114ffe756e, type: 2}
   hideTeleportButton: {fileID: 11400000, guid: 5ad8aa54259d13746bf273592d477da6, type: 2}
@@ -179,6 +180,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.7313745}
   m_EdgeRadius: 0
+--- !u!95 &8820403998755355340
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326164023788368640}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78064149890907146bca213ccbbc2e2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2326164023936555697
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,7 +5082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &584366620795038685
 Transform:
   m_ObjectHideFlags: 0
