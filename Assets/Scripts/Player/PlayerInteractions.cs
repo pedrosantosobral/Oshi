@@ -96,6 +96,7 @@ public class PlayerInteractions : MonoBehaviour
 
         animator.SetBool("IsDamaged", invinciblePlayerForSomeTime);
         animator.SetInteger("HP", _HP);
+
         if (_HP <= 0)
         {
             KillPlayer();

@@ -48,20 +48,25 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         actualTimeToLongAnim = timeToLongIdleAnim;
     }
-
     private void FixedUpdate()
     {
-        animator.SetBool("isGrounded", _isGrounded);
+        animator.SetBool ("isGrounded", _isGrounded);
         animator.SetFloat("isJumping", verticalmove);
-        animator.SetBool("isRunning", animRunning);
+        animator.SetBool ("isRunning", animRunning);
         
         FindInputManager();
         TurnPlayerSprite();
+
+        if((_inputManagerReference.touchingLeft == true || _inputManagerReference.touchingRight == true) && (_isGrounded == true))
+        {
+            playerDust.Play();
+        }
 
         if ((_inputManagerReference.doubleTap == true || _inputManagerReference.swipeUp == true) && (_inputManagerReference.touchingRight == true || _inputManagerReference.touchingLeft == true)) 
         {
             verticalmove = 1;
             actualTimeToLongAnim = timeToLongIdleAnim;
+            playerDust.Play();
 
         }
         else
@@ -73,9 +78,7 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("longIdle");
                 actualTimeToLongAnim = timeToLongIdleAnim;
-
             }
-
         }
 
         //TODO STOP PLAYER WHEN TOUCH ENDS AND ADD JUMP SWIPE
@@ -91,6 +94,7 @@ public class PlayerController : MonoBehaviour
             _horizontalmove = 1 * runspeed;
             lookingRight = true;
             animRunning = true;
+           
 
         }
         else
@@ -116,8 +120,10 @@ public class PlayerController : MonoBehaviour
         if (_isGrounded == true)
         {
             //set fixed timer value to be decreased
-            _groundedRemember = _groundedRememberTime;  
+            _groundedRemember = _groundedRememberTime;
+           
         }
+        
         //if the player jumped in the time gap make him jump
         if ((verticalmove >= .5f) && (_groundedRemember > 0))
         {
