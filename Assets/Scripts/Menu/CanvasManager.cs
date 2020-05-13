@@ -75,6 +75,7 @@ public class CanvasManager : MonoBehaviour
     public void ShowTelleportButton()
     {
         LeanTween.scale(_teleportButton, new Vector3(1, 1, 1), teleportButtonAnimSpeed).setEase(_teleportButtonIN);
+      
     }
 
     public void HideTelleportButton()

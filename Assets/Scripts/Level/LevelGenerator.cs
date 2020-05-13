@@ -45,7 +45,17 @@ public class LevelGenerator : MonoBehaviour
     //array of room that make part of the map
     public GameObject[] startingRooms;
     public GameObject[] endRooms;
-    public GameObject[] rooms; //Index // 0 - 2 LR // 3 - 5 LRB // 6 - 8 LRT // 9 - 11 LRBT // 12 StartingRoom
+    //public GameObject[] rooms; //Index // 0 - 2 LR // 3 - 5 LRB // 6 - 8 LRT // 9 - 11 LRBT // 12 StartingRoom
+    
+    //room lists for upgrading 
+    public List<GameObject> LR_Rooms;
+    public List<GameObject> LRB_Rooms;
+    public List<GameObject> LRT_Rooms;
+    public List<GameObject> LRBT_Rooms;
+    public List<GameObject> All_Rooms;
+    public List<GameObject> BottomOpened_Rooms;
+    public List<GameObject> TopOpened_Rooms;
+
     //variable to get the probability of each direction
     private int         _direction;
     private int         _downCounter;
@@ -129,9 +139,9 @@ public class LevelGenerator : MonoBehaviour
                 Vector2 newPos = new Vector2(transform.position.x + moveAmountLR, transform.position.y);
                 transform.position = newPos;
 
-                int rand = Random.Range(0, rooms.Length);
+                int rand = Random.Range(0, All_Rooms.Count);
                 //instantiate a new room on a new founded position
-                _toBeDestroyed = Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                _toBeDestroyed = Instantiate(All_Rooms[rand], transform.position, Quaternion.identity);
                 _roomTransformReference = _toBeDestroyed.transform;
                 roomPositions.Add(_roomTransformReference);
 
@@ -166,9 +176,9 @@ public class LevelGenerator : MonoBehaviour
                 Vector2 newPos = new Vector2(transform.position.x - moveAmountLR, transform.position.y);
                 transform.position = newPos;
 
-                int rand = Random.Range(0, rooms.Length);
+                int rand = Random.Range(0, All_Rooms.Count);
                 //instantiate a new room on a new founded position
-                _toBeDestroyed = Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                _toBeDestroyed = Instantiate(All_Rooms[rand], transform.position, Quaternion.identity);
                 _roomTransformReference = _toBeDestroyed.transform;
                 roomPositions.Add(_roomTransformReference);
 
@@ -190,12 +200,12 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (_toBeDestroyed.GetComponent<RoomTypeDetection>().type != 1 && _toBeDestroyed.GetComponent<RoomTypeDetection>().type != 3 && _toBeDestroyed.GetComponent<RoomTypeDetection>().type != 8)
                 {
-                    int randomRoom = Random.Range(9, 11);
+                    int randomRoom = Random.Range(0,LRBT_Rooms.Count);
                     if (_downCounter >= 3)
                     {
                         
                         _toBeDestroyed.GetComponent<RoomTypeDetection>().DestroyRoom();
-                        _toBeDestroyed = Instantiate(rooms[randomRoom], transform.position, Quaternion.identity);
+                        _toBeDestroyed = Instantiate(LRBT_Rooms[randomRoom], transform.position, Quaternion.identity);
                         _roomTransformReference = _toBeDestroyed.transform;
                         roomPositions.Add(_roomTransformReference);
                     }
@@ -212,7 +222,7 @@ public class LevelGenerator : MonoBehaviour
                             randomBR = 1;
                         }
                         //use [3] while bug isnt fixed, than use randomBR
-                        _toBeDestroyed = Instantiate(rooms[randomRoom], transform.position, Quaternion.identity);
+                        _toBeDestroyed = Instantiate(LRBT_Rooms[randomRoom], transform.position, Quaternion.identity);
                         
                         _roomTransformReference = _toBeDestroyed.transform;
                         roomPositions.Add(_roomTransformReference);
@@ -223,9 +233,9 @@ public class LevelGenerator : MonoBehaviour
                 Vector2 newPos = new Vector2(transform.position.x, transform.position.y - moveAmountTD);
                 transform.position = newPos;
 
-                int rand = Random.Range(6, 11);
+                int rand = Random.Range(0, TopOpened_Rooms.Count);
                 //instantiate a new room on a new founded position
-                _toBeDestroyed = Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                _toBeDestroyed = Instantiate(TopOpened_Rooms[rand], transform.position, Quaternion.identity);
                
                 _roomTransformReference = _toBeDestroyed.transform;
                 roomPositions.Add(_roomTransformReference);
