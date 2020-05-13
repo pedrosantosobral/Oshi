@@ -39,6 +39,7 @@ public class SpawnRoom : MonoBehaviour
 
             int rand = Random.Range(0,levelGeneratorReference.All_Rooms.Count);
             Instantiate(levelGeneratorReference.All_Rooms[rand], transform.position, Quaternion.identity);
+            levelGeneratorReference.All_Rooms.RemoveAt(rand);
             Destroy(gameObject);
 
         }

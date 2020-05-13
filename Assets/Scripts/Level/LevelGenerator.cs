@@ -142,6 +142,7 @@ public class LevelGenerator : MonoBehaviour
                 int rand = Random.Range(0, All_Rooms.Count);
                 //instantiate a new room on a new founded position
                 _toBeDestroyed = Instantiate(All_Rooms[rand], transform.position, Quaternion.identity);
+                All_Rooms.RemoveAt(rand);
                 _roomTransformReference = _toBeDestroyed.transform;
                 roomPositions.Add(_roomTransformReference);
 
@@ -179,6 +180,7 @@ public class LevelGenerator : MonoBehaviour
                 int rand = Random.Range(0, All_Rooms.Count);
                 //instantiate a new room on a new founded position
                 _toBeDestroyed = Instantiate(All_Rooms[rand], transform.position, Quaternion.identity);
+                All_Rooms.RemoveAt(rand);
                 _roomTransformReference = _toBeDestroyed.transform;
                 roomPositions.Add(_roomTransformReference);
 
@@ -206,6 +208,7 @@ public class LevelGenerator : MonoBehaviour
                         
                         _toBeDestroyed.GetComponent<RoomTypeDetection>().DestroyRoom();
                         _toBeDestroyed = Instantiate(LRBT_Rooms[randomRoom], transform.position, Quaternion.identity);
+                        LRBT_Rooms.RemoveAt(randomRoom);
                         _roomTransformReference = _toBeDestroyed.transform;
                         roomPositions.Add(_roomTransformReference);
                     }
@@ -223,7 +226,8 @@ public class LevelGenerator : MonoBehaviour
                         }
                         //use [3] while bug isnt fixed, than use randomBR
                         _toBeDestroyed = Instantiate(LRBT_Rooms[randomRoom], transform.position, Quaternion.identity);
-                        
+                        LRBT_Rooms.RemoveAt(randomRoom);
+
                         _roomTransformReference = _toBeDestroyed.transform;
                         roomPositions.Add(_roomTransformReference);
                     }
@@ -236,6 +240,7 @@ public class LevelGenerator : MonoBehaviour
                 int rand = Random.Range(0, TopOpened_Rooms.Count);
                 //instantiate a new room on a new founded position
                 _toBeDestroyed = Instantiate(TopOpened_Rooms[rand], transform.position, Quaternion.identity);
+                TopOpened_Rooms.RemoveAt(rand);
                
                 _roomTransformReference = _toBeDestroyed.transform;
                 roomPositions.Add(_roomTransformReference);
