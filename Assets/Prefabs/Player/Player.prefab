@@ -5428,6 +5428,141 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_AlphaBlendOnOverlap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_BlendStyleIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_LightType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[2].x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[2].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[3].x
+      value: 0.71852887
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[4].x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[4].y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[5].x
+      value: 0.004559353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[5].y
+      value: 0.65099645
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[1].x
+      value: 0.012236282
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[1].y
+      value: -0.65410876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[3].y
+      value: -0.0092332065
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[6].x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[6].y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[7].x
+      value: -0.694056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[7].y
+      value: -0.013071835
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 1.0239998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapeLightParametricSides
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapeLightParametricAngleOffset
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035047007918115943, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_ShapeLightParametricRadius
+      value: 0.62
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01fae9e3c385604f826a6bf0a76376f, type: 3}
 --- !u!4 &5852311147864052558 stripped
