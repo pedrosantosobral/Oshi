@@ -9,8 +9,10 @@ public class PaintLight : MonoBehaviour
     private InputManager _inputManagerReference;
 
     //size of player light size variables;
-    public float maxPlayerLight;         //recomended as default 1f
-    public float minPlayerLight;         //recomended as default 0.4f
+    [SerializeField, Tooltip("recomended as default 1f")]
+    internal float maxPlayerLight;
+    [SerializeField, Tooltip("recomended as default 0.4f")]
+    public float minPlayerLight;
 
     public float lightFactor;
 
@@ -21,16 +23,17 @@ public class PaintLight : MonoBehaviour
     internal float damagedMaxLOR = 1f;
     internal float minLOR = 0.6f;
 
-   public float _actualMaxLight;
+    public float _actualMaxLight;
 
     public float damagedMaxLight;        //recomended as default 0.7f
- 
+
     public float normalRechargeRate;     //recomended as default 0.12f
     public float slowerRechargeRate;     //recomended as default 0.020f
 
-    public float ammountOfLightToPaint;  //recomended as default 0.020f THE BIGGER THE VALUE THE MOST LIGHT WILL BE AVALIABLE
+    [Tooltip("recomended as default 0.020f THE BIGGER THE VALUE THE MOST LIGHT WILL BE AVALIABLE")]
+    public float ammountOfLightToPaint;
 
-    //check if player is damaged
+    [Tooltip("check if player is damaged")]
     public bool playerIsDamaged;
 
     //just to do once
@@ -47,6 +50,10 @@ public class PaintLight : MonoBehaviour
     public GameObject lightToSpawn;
     public Queue<GameObject> lightQueue = new Queue<GameObject>();
     public List<GameObject> listToEnemies = new List<GameObject>();
+
+    private Vector3 lastTouchedPosition;
+    public float distanceBetweenLights;
+
 
     private void Start()
     {
@@ -99,17 +106,21 @@ public class PaintLight : MonoBehaviour
 
                         if (!EventSystem.current.currentSelectedGameObject)
                         {
-                            //Add new spawned light to the queue and instantiate it
-                            lightQueue.Enqueue(_savedLight = Instantiate(lightToSpawn, touchPosition, Quaternion.identity));
-                            //wait for light to check his colisions and then add it after check
-                            Invoke("Wait", 0.001f);
+                            if (lastTouchedPosition == null || Vector3.Distance(lastTouchedPosition, touchPosition) >= distanceBetweenLights)
+                            {
+                                lastTouchedPosition = touchPosition;
+                                //Add new spawned light to the queue and instantiate it
+                                lightQueue.Enqueue(_savedLight = Instantiate(lightToSpawn, touchPosition, Quaternion.identity));
+                                //wait for light to check his colisions and then add it after check
+                                Invoke("Wait", 0.001f);
 
-                            //decrease player mask size
-                            _playerMaskReference.transform.localScale -= new Vector3(ammountOfLightToPaint, ammountOfLightToPaint, 0);
-                            _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius -= ammountOfLightToPaint * lightFactor;
-                            _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius =
-                                _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius < 0.6f ?
-                                0.6f : _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius;
+                                //decrease player mask size
+                                _playerMaskReference.transform.localScale -= new Vector3(ammountOfLightToPaint, ammountOfLightToPaint, 0);
+                                _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius -= ammountOfLightToPaint * lightFactor;
+                                _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius =
+                                    _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius < 0.6f ?
+                                    0.6f : _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius;
+                            }
                         }
                     }
                 }
@@ -131,6 +142,7 @@ public class PaintLight : MonoBehaviour
                     Destroy(lightQueue.Dequeue());
                 }
             }
+            else { lastTouchedPosition = new Vector3(); }
 
             //if timer is 0 and size player light is decreased, increase player light
             if (_playerMaskReference.transform.localScale.x < _actualMaxLight && _playerMaskReference.transform.localScale.y < _actualMaxLight)
