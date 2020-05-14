@@ -2265,6 +2265,16 @@ PrefabInstance:
       propertyPath: maxPlayerLight
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: distanceBetweenLights
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: paintFadeTimePeriod
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1daa28ff1c91fa49b921a5ec90c1979, type: 3}
 --- !u!114 &2063189266 stripped
