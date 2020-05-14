@@ -20,8 +20,8 @@ public class PaintLight : MonoBehaviour
 
     // LOR = Light Outer Radius
     internal float maxLOR = 2.6f;
-    internal float damagedMaxLOR = 1f;
-    internal float minLOR = 0.6f;
+    internal float damagedMaxLOR = 1.6f;
+    internal float minLOR = 1f;
 
     public float _actualMaxLight;
 
@@ -118,8 +118,8 @@ public class PaintLight : MonoBehaviour
                                 _playerMaskReference.transform.localScale -= new Vector3(ammountOfLightToPaint, ammountOfLightToPaint, 0);
                                 _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius -= ammountOfLightToPaint * lightFactor;
                                 _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius =
-                                    _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius < 0.6f ?
-                                    0.6f : _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius;
+                                    _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius < minLOR ?
+                                    minLOR : _playerMaskReference.GetComponent<Light2D>().pointLightOuterRadius;
                             }
                         }
                     }
