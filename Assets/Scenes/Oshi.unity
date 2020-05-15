@@ -2248,22 +2248,22 @@ PrefabInstance:
     - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
         type: 3}
       propertyPath: minPlayerLight
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
         type: 3}
       propertyPath: damagedMaxLight
-      value: 0.4
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
         type: 3}
       propertyPath: ammountOfLightToPaint
-      value: 0.05
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
         type: 3}
       propertyPath: maxPlayerLight
-      value: 0.8
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
         type: 3}
@@ -2274,6 +2274,21 @@ PrefabInstance:
         type: 3}
       propertyPath: paintFadeTimePeriod
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: _actualMaxLight
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: _actualMaxPointLightOuterRadius
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: playerIsDamaged
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1daa28ff1c91fa49b921a5ec90c1979, type: 3}
@@ -3097,7 +3112,7 @@ PrefabInstance:
     - target: {fileID: 5272200590968077428, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.5882353
       objectReference: {fileID: 0}
     - target: {fileID: 5272200590968077428, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}

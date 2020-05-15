@@ -54,7 +54,7 @@ public class Menu : MonoBehaviour {
 
     public void OptionsAnimIn()
     {
-        LeanTween.scale(optionsPanel, new Vector3(0.433f,0.433f,0.433f), optionsFadeINTime).setEase(optionsINAnim);
+        LeanTween.scale(optionsPanel, new Vector3(0.434f,0.434f,0.434f), optionsFadeINTime).setEase(optionsINAnim);
     }
 
     public void OptionsAnimOut()

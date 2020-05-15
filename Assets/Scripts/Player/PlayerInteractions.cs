@@ -78,6 +78,7 @@ public class PlayerInteractions : MonoBehaviour
             Destroy(other.gameObject);
             colectedColectables++;
             _savedDataReference.ActivateColectable(colectedColectables);
+            Debug.Log("enteredColectable");
         }
 
     }
@@ -113,6 +114,7 @@ public class PlayerInteractions : MonoBehaviour
         _invincibleTimeReference -= Time.deltaTime;
         //disable colisions between player and enemies
         Physics2D.IgnoreLayerCollision(12, 9, true);
+        animator.Play("PlayerInvencible2");
 
         if (_invincibleTimeReference <= 0)
         {
