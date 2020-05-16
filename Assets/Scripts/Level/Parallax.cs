@@ -35,7 +35,7 @@ public class Parallax : MonoBehaviour
         float distY = (playerCamera.transform.position.y * parallaxVerticalSpeed);
 
 
-        transform.position = new Vector3(imageStartHorizontalPosition + distX, imageStartVerticalPosition + distY, transform.position.z);
+        transform.position = new Vector3(imageStartHorizontalPosition - distX, imageStartVerticalPosition - distY, transform.position.z);
 
         if(tempX > imageStartHorizontalPosition + imageLength / 2)
         {
