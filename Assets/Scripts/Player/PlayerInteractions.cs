@@ -95,7 +95,7 @@ public class PlayerInteractions : MonoBehaviour
     void FixedUpdate()
     {   
 
-        animator.SetBool("IsDamaged", invinciblePlayerForSomeTime);
+        animator.SetBool("haveDamage",invinciblePlayerForSomeTime);
         animator.SetInteger("HP", _HP);
 
         if (_HP <= 0)
@@ -114,6 +114,7 @@ public class PlayerInteractions : MonoBehaviour
         _invincibleTimeReference -= Time.deltaTime;
         //disable colisions between player and enemies
         Physics2D.IgnoreLayerCollision(12, 9, true);
+        
         animator.Play("PlayerInvencible2");
 
         if (_invincibleTimeReference <= 0)

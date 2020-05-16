@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerLightInfor : MonoBehaviour
 {
+
+    [SerializeField] private LeanTweenType animWobleOut;
+    [SerializeField] private LeanTweenType animWobleIN;
+    [SerializeField] private float woblespeed;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Trap"))
@@ -18,6 +24,24 @@ public class PlayerLightInfor : MonoBehaviour
         {
             collision.gameObject.GetComponent<Trap>()._isActive = false;
         }
+    }
+
+    private void Start()
+    {
+        WobleOUT();
+    }
+
+    private void WobleIn()
+    {
+        woblespeed = Random.Range(1, 3);
+        LeanTween.moveLocal(gameObject, new Vector3(0, 0.367f, 0), woblespeed).setEase(animWobleIN).setOnComplete(WobleOUT);
+    }
+
+    private void WobleOUT()
+    {
+        woblespeed = Random.Range(1, 3);
+        LeanTween.moveLocal(gameObject, new Vector3(Random.Range(-0.05f,0.05f), Random.Range(-0.03f, 0.05f) + 0.367f, 0), woblespeed).setEase(animWobleIN).setOnComplete(WobleOUT);
+        
     }
 
 }
