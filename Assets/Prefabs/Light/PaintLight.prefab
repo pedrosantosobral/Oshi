@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3314533849143211624}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -29.760248, y: 5.3547106, z: 6.140625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -43,18 +43,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb0a3eb280e0a045ad6cf12a3e299b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayerLight: 0.9
-  minPlayerLight: 0.2
+  maxPlayerLight: 1.3
+  minPlayerLight: 0.5
   lightFactor: 3
-  _actualMaxPointLightOuterRadius: 0
-  _actualMaxLight: 0
-  damagedMaxLight: 0.3
+  _actualMaxPointLightOuterRadius: 1.6
+  _actualMaxLight: 0.8
+  damagedMaxLight: 0.8
   normalRechargeRate: 0.4
   slowerRechargeRate: 0.12
-  ammountOfLightToPaint: 0.02
-  playerIsDamaged: 0
-  paintFadeTimePeriod: 0.16
+  ammountOfLightToPaint: 0.04
+  playerIsDamaged: 1
+  paintFadeTimePeriod: 0.25
   noPaintLightTime: 0.4
   lightToSpawn: {fileID: 125795772780563848, guid: f5b471b51d23a524f8ecf9d511b38218,
     type: 3}
   listToEnemies: []
+  distanceBetweenLights: 0.7

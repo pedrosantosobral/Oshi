@@ -250,51 +250,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: maxPlayerLight
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: minPlayerLight
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: _actualMaxPointLightOuterRadius
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: _actualMaxLight
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: damagedMaxLight
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: ammountOfLightToPaint
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: playerIsDamaged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: paintFadeTimePeriod
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314533849143211631, guid: 97f6485397ec1f54cbb8c2971beb4feb,
-        type: 3}
-      propertyPath: distanceBetweenLights
-      value: 0.7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97f6485397ec1f54cbb8c2971beb4feb, type: 3}
 --- !u!4 &5608011915212179499 stripped
