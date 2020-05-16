@@ -936,21 +936,71 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1761101237}
+    - target: {fileID: 558697848278311464, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: parallaxHorizontalSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7796791507368453303, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1761101237}
+    - target: {fileID: 7796791507368453303, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: parallaxHorizontalSpeed
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113359191232241874, guid: b119845e94d01074e9ac35fb5e01daa3,
         type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1761101237}
     - target: {fileID: 5113359191232241874, guid: b119845e94d01074e9ac35fb5e01daa3,
         type: 3}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 1761101237}
+      propertyPath: parallaxHorizontalSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 514595480203511707, guid: b119845e94d01074e9ac35fb5e01daa3,
         type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1761101237}
+    - target: {fileID: 514595480203511707, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: parallaxHorizontalSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922000646564146375, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.79607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922000646564146375, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.79607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922000646564146375, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.79607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723955700762186190, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723955700762186190, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723955700762186190, guid: b119845e94d01074e9ac35fb5e01daa3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6431373
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b119845e94d01074e9ac35fb5e01daa3, type: 3}
 --- !u!1 &792052926
@@ -3215,6 +3265,12 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5272200592670822127, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84487d73ca4b791498332d8f6858417f,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 5272200590795357537, guid: f60fcf2fffb8c164d964374fc9a6edc4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f60fcf2fffb8c164d964374fc9a6edc4, type: 3}
