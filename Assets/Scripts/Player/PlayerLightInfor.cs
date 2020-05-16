@@ -33,14 +33,14 @@ public class PlayerLightInfor : MonoBehaviour
 
     private void WobleIn()
     {
-        woblespeed = Random.Range(1, 3);
+        woblespeed = Random.Range(0.2f, 0.5f);
         LeanTween.moveLocal(gameObject, new Vector3(0, 0.367f, 0), woblespeed).setEase(animWobleIN).setOnComplete(WobleOUT);
     }
 
     private void WobleOUT()
     {
-        woblespeed = Random.Range(1, 3);
-        LeanTween.moveLocal(gameObject, new Vector3(Random.Range(-0.05f,0.05f), Random.Range(-0.03f, 0.05f) + 0.367f, 0), woblespeed).setEase(animWobleIN).setOnComplete(WobleOUT);
+        woblespeed = Random.Range(0.2f, 0.5f);
+        LeanTween.moveLocal(gameObject, new Vector3(Random.Range(-0.03f,0.03f), Random.Range(-0.03f, 0.03f) + 0.367f, 0), woblespeed).setEase(animWobleIN).setOnComplete(WobleOUT);
         
     }
 
