@@ -2347,6 +2347,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGeneratorReference: {fileID: 1532126377}
+--- !u!1 &1901224526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7375479075137480282, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 5272200591258984735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1904354254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2620,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5272200592812636929, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+        type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1901224526}
     - target: {fileID: 5272200592812636930, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}
       propertyPath: m_LocalPosition.x
