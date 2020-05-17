@@ -4758,15 +4758,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8c71274a5f7ba840937f1ccf381c427, type: 3}
---- !u!1 &4774482009715343319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8848408030111942483, guid: e8c71274a5f7ba840937f1ccf381c427,
-    type: 3}
-  m_PrefabInstance: {fileID: 4073930478877030532}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4550833237060736842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 553464020570599374, guid: e8c71274a5f7ba840937f1ccf381c427,
+    type: 3}
+  m_PrefabInstance: {fileID: 4073930478877030532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4774482009715343319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8848408030111942483, guid: e8c71274a5f7ba840937f1ccf381c427,
     type: 3}
   m_PrefabInstance: {fileID: 4073930478877030532}
   m_PrefabAsset: {fileID: 0}
@@ -4777,6 +4777,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1874438540509026620}
     m_Modifications:
+    - target: {fileID: 3271052433521655462, guid: 23212591fc37e534cb095e3646ac1444,
+        type: 3}
+      propertyPath: m_Name
+      value: teleport
+      objectReference: {fileID: 0}
     - target: {fileID: 7406112075868094416, guid: 23212591fc37e534cb095e3646ac1444,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4785,7 +4790,7 @@ PrefabInstance:
     - target: {fileID: 7406112075868094416, guid: 23212591fc37e534cb095e3646ac1444,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.487439
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 7406112075868094416, guid: 23212591fc37e534cb095e3646ac1444,
         type: 3}
@@ -4831,11 +4836,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3271052433521655462, guid: 23212591fc37e534cb095e3646ac1444,
-        type: 3}
-      propertyPath: m_Name
-      value: teleport
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23212591fc37e534cb095e3646ac1444, type: 3}
