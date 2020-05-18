@@ -9,6 +9,7 @@ public class LoadingMapScreen : MonoBehaviour
     private float _timer;
     public List<string> phrases;
     public TMP_Text textToChange;
+    bool stopTimmer = false;
 
     [SerializeField] private LeanTweenType IN_ease_type;
     [SerializeField] private float IN_time;
@@ -23,17 +24,25 @@ public class LoadingMapScreen : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _timer -= Time.deltaTime;
-        if (_timer < 0)
+        if(stopTimmer == false)
         {
-            //change phrase
-            textToChange.gameObject.transform.localScale = Vector3.zero;
-            string temp = phrases[Random.Range(0, phrases.Count)];
-            textToChange.text = temp;
-            phrases.Remove(temp);
-            LeanTween.scale(textToChange.gameObject, new Vector3(1, 1, 1),IN_time).setEase(IN_ease_type);
-            _timer = timeForNextPhrase;
+            _timer -= Time.deltaTime;
+            if (_timer < 0)
+            {
+                //change phrase
+                textToChange.gameObject.transform.localScale = Vector3.zero;
+                string temp = phrases[Random.Range(0, phrases.Count)];
+                textToChange.text = temp;
+                if (phrases.Count <= 5)
+                {
+                    phrases.Remove(temp);
+                    stopTimmer = true;
+                }
+                LeanTween.scale(textToChange.gameObject, new Vector3(1, 1, 1), IN_time).setEase(IN_ease_type);
+                _timer = timeForNextPhrase;
+            }
         }
+        
     }
 
     private void ScaleTo()
