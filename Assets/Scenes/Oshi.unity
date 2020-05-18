@@ -1835,7 +1835,7 @@ MonoBehaviour:
   maxX: 60
   minY: -30
   stopGeneration: 0
-  _startTimeBetweenRooms: 0.1
+  _startTimeBetweenRooms: 0.7
 --- !u!4 &1532126378
 Transform:
   m_ObjectHideFlags: 0
@@ -3282,6 +3282,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 84487d73ca4b791498332d8f6858417f,
         type: 3}
+    - target: {fileID: 5272200592488694105, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+        type: 3}
+      propertyPath: IN_time
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5272200590795357537, guid: f60fcf2fffb8c164d964374fc9a6edc4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f60fcf2fffb8c164d964374fc9a6edc4, type: 3}

@@ -28,7 +28,9 @@ public class LoadingMapScreen : MonoBehaviour
         {
             //change phrase
             textToChange.gameObject.transform.localScale = Vector3.zero;
-            textToChange.text = phrases[Random.Range(0, phrases.Count)];
+            string temp = phrases[Random.Range(0, phrases.Count)];
+            textToChange.text = temp;
+            phrases.Remove(temp);
             LeanTween.scale(textToChange.gameObject, new Vector3(1, 1, 1),IN_time).setEase(IN_ease_type);
             _timer = timeForNextPhrase;
         }
