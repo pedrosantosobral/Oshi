@@ -1835,7 +1835,7 @@ MonoBehaviour:
   maxX: 60
   minY: -30
   stopGeneration: 0
-  _startTimeBetweenRooms: 0.7
+  _startTimeBetweenRooms: 0.1
 --- !u!4 &1532126378
 Transform:
   m_ObjectHideFlags: 0
@@ -2498,6 +2498,16 @@ PrefabInstance:
     - target: {fileID: 5608011915619594722, guid: f1daa28ff1c91fa49b921a5ec90c1979,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: paintFadeTimePeriod
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608011915212179498, guid: f1daa28ff1c91fa49b921a5ec90c1979,
+        type: 3}
+      propertyPath: playerIsDamaged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

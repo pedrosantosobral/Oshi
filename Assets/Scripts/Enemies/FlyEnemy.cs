@@ -26,7 +26,6 @@ public class FlyEnemy : MonoBehaviour
     private void Update()
     {
         _enemyOwnList = _paintLightComponentReference.listToEnemies;
-
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -68,17 +67,23 @@ public class FlyEnemy : MonoBehaviour
 
     private void GetClosestTarget()
     {
+       
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = transform.position;
         foreach (GameObject potentialTarget in _enemyOwnList)
         {
-            Vector3 directionToTarget = potentialTarget.transform.position - currentPosition;
-            float dSqrToTarget = directionToTarget.sqrMagnitude;
-            if (dSqrToTarget < closestDistanceSqr)
+
+            if(potentialTarget != null)
             {
-                closestDistanceSqr = dSqrToTarget;
-                _bestTarget = potentialTarget;
+                Vector3 directionToTarget = potentialTarget.transform.position - currentPosition;
+                float dSqrToTarget = directionToTarget.sqrMagnitude;
+                if (dSqrToTarget < closestDistanceSqr)
+                {
+                    closestDistanceSqr = dSqrToTarget;
+                    _bestTarget = potentialTarget;
+                }
             }
+            
         }
     }
 

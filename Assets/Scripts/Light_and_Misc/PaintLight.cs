@@ -41,6 +41,7 @@ public class PaintLight : MonoBehaviour
 
     private GameObject _playerMaskReference;
     private GameObject _savedLight;
+    private GameObject _lightToDestroy;
 
     private float _nextActionTime;
 
@@ -139,7 +140,8 @@ public class PaintLight : MonoBehaviour
                     {
                         listToEnemies.Remove(lightQueue.Peek());
                     }
-                    Destroy(lightQueue.Dequeue());
+                    _lightToDestroy = lightQueue.Dequeue();
+                    _lightToDestroy.GetComponent<CheckCollisionsForLight>().AnimOUT();
                 }
             }
             else { lastTouchedPosition = new Vector3(); }
