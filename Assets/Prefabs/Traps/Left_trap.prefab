@@ -170,6 +170,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db319523a8b79004fbe9bf04e83f11e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JUMP_DFB: {fileID: 521534613690177431, guid: f505a7f6bf29c9449be59d40abdc2b6d, type: 3}
+  FLY_DFB: {fileID: 521534613690177431, guid: a5c10abf85afe47408d48219da8a1457, type: 3}
+  PATROL_DFB: {fileID: 521534613690177431, guid: 11a1cc1b23d4535458ddbe3f38cc3e90,
+    type: 3}
+  PLAYER_DFB: {fileID: 521534613690177431, guid: bfa8c1cd6c601cf46850a86f01130552,
+    type: 3}
   onPlayerDamage: {fileID: 11400000, guid: c12d2e7a09935f4459f5c0a572e5c849, type: 2}
   whatIsLight:
     serializedVersion: 2

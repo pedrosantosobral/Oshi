@@ -5,7 +5,11 @@ using CustomEventSystem;
 
 public class Trap : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject JUMP_DFB;
+    [SerializeField] private GameObject FLY_DFB;
+    [SerializeField] private GameObject PATROL_DFB;
+    [SerializeField] private GameObject PLAYER_DFB;
+
     [SerializeField] private VoidEvent onPlayerDamage;
 
     public LayerMask whatIsLight;
@@ -68,16 +72,20 @@ public class Trap : MonoBehaviour
                         shotFeedBack.SetActive(true);
                         _isWasted = true;
                         Invoke("DelayedAnim", 1f);
+                        Instantiate(FLY_DFB, new Vector3(_hitInfo.collider.transform.position.x, _hitInfo.collider.transform.position.y, _hitInfo.collider.transform.position.z), Quaternion.identity);
                         Destroy(_hitInfo.collider.transform.parent.gameObject);
+         
                     }
-                
+
 
                 if (_hitInfo.collider.tag == "PatrolEnemy")
                 {
                     shotFeedBack.SetActive(true);
                     _isWasted = true;
                     Invoke("DelayedAnim", 1f);
+                    Instantiate(PATROL_DFB, new Vector3(_hitInfo.collider.transform.position.x, _hitInfo.collider.transform.position.y, _hitInfo.collider.transform.position.z), Quaternion.identity);
                     Destroy(_hitInfo.collider.gameObject);
+                    
                 }
 
             }
@@ -93,7 +101,7 @@ public class Trap : MonoBehaviour
 
     }
 
-    //change to raycast
+    /*/change to raycast
     private void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -127,13 +135,13 @@ public class Trap : MonoBehaviour
             }
         }
 
-        /*
+        
         if(other == playerReference.lightCollider)
         {
             _isActive = true;
         }
         */
-    }
+    
     /*
     private void OnTriggerExit2D(Collider2D other)
     {
