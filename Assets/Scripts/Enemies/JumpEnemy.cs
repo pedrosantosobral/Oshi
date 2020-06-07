@@ -15,7 +15,6 @@ public class JumpEnemy : MonoBehaviour
 
     //increased speed timers and bool
     private bool _collidedWithPlayer;
-    private bool _disablePlayerColisionForSomeTime;
 
     //speed variables
     [SerializeField]

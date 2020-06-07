@@ -156,6 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolDeathFB: {fileID: 521534613690177431, guid: 11a1cc1b23d4535458ddbe3f38cc3e90,
+    type: 3}
+  jumpDeathFB: {fileID: 521534613690177431, guid: f505a7f6bf29c9449be59d40abdc2b6d,
+    type: 3}
   selectedTag: JumpEnemyInside
   destroyCollidedObject: 2
   objectoReference: {fileID: 0}
@@ -171,6 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolDeathFB: {fileID: 521534613690177431, guid: 11a1cc1b23d4535458ddbe3f38cc3e90,
+    type: 3}
+  jumpDeathFB: {fileID: 521534613690177431, guid: f505a7f6bf29c9449be59d40abdc2b6d,
+    type: 3}
   selectedTag: FlyEnemyInside
   destroyCollidedObject: 0
   objectoReference: {fileID: 0}

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyHitDetection : MonoBehaviour
 {
+    [SerializeField] private GameObject patrolDeathFB;
+    [SerializeField] private GameObject jumpDeathFB;
+
     enum destroy
     {
         me,
@@ -28,6 +31,7 @@ public class EnemyHitDetection : MonoBehaviour
             {
                 case destroy.me:
                     {
+                        Instantiate(patrolDeathFB, gameObject.transform.position, Quaternion.identity);
                         Destroy(this.gameObject);
                         break;
                     }
@@ -39,6 +43,7 @@ public class EnemyHitDetection : MonoBehaviour
 
                 case destroy.collidedObj:
                     {
+                        Instantiate(jumpDeathFB, other.gameObject.transform.position, Quaternion.identity);
                         Destroy(other.gameObject);
                         break;
                     }
