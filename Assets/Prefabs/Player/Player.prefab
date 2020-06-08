@@ -102,6 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcb771cb02e21249906e1506d923702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFeedback: {fileID: 521534613690177431, guid: bfa8c1cd6c601cf46850a86f01130552,
+    type: 3}
+  playerDeathFadeEvent: {fileID: 11400000, guid: 5900090ece2608b4a968af3c56f1bcff,
+    type: 2}
   animator: {fileID: 7516366292548875796}
   lightCollider: {fileID: 4203732783921396744}
   showTeleportButton: {fileID: 11400000, guid: da8d31a617e7f2c45985c6114ffe756e, type: 2}

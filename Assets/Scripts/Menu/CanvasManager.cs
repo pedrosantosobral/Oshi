@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
+    
+
     public GameObject panel;
     public GameObject pauseButton;
 
+    [SerializeField] private CanvasGroup blackPannel;
     [SerializeField] private GameObject _teleportButton;
     [SerializeField] private GameObject _teleportMenu;
 
@@ -19,7 +22,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] private LeanTweenType _teleportPanelOUT;
     [SerializeField] private float teleportPanelAnimSpeed;
 
-
+    [SerializeField] private LeanTweenType _blackPanelFadeIN;
+    [SerializeField] private LeanTweenType _blackPanelFadeOUT;
+    [SerializeField] private float blackPanelAnimSpeed;
 
     public GameObject activeColectables;
     public GameObject disabledColectables;
@@ -38,8 +43,38 @@ public class CanvasManager : MonoBehaviour
         {
             _teleportMenu.transform.localScale = new Vector3(0, 0, 0);
         }
+
+        FadeOUT();
         
     }
+
+    public void FadeIN()
+    {
+        LeanTween.alphaCanvas(blackPannel, 1, blackPanelAnimSpeed).setEase(_blackPanelFadeIN);
+    }
+    public void FadeOUT()
+    {
+        LeanTween.alphaCanvas(blackPannel, 0, blackPanelAnimSpeed).setEase(_blackPanelFadeOUT);
+    }
+
+    public void PlayerDeathFadeIN()
+    {
+        LeanTween.alphaCanvas(blackPannel, 1, 3).setEase(_blackPanelFadeIN).setOnComplete(GoOtherScene);
+    }
+
+    private void GoOtherScene()
+    {
+        if (SceneManager.GetActiveScene().name == "Oshi_Tutorial")
+        {
+            SceneManager.LoadScene("DiedTutorialScreen");
+        }
+        else if (SceneManager.GetActiveScene().name == "Oshi")
+        {
+            SceneManager.LoadScene("DiedScreen");
+        }
+    }
+
+
 
 
     public void GoLevelSelector()

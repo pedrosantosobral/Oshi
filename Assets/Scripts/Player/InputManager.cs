@@ -42,9 +42,6 @@ public class InputManager : MonoBehaviour
     private float lastTap;
     private float sqrDeadzone;
 
-    public GameObject rightInput;
-    public GameObject leftInput;
-
     #region Public Properties
 
     public bool Tap { get { return tap; } }
@@ -68,8 +65,6 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         sqrDeadzone = _deadZone * _deadZone;
-        rightInput.SetActive(false);
-        leftInput.SetActive(false);
 
     }
 

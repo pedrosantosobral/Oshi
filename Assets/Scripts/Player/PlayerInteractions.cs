@@ -4,6 +4,9 @@ using CustomEventSystem;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private GameObject deathFeedback;
+    [SerializeField] private VoidEvent playerDeathFadeEvent;
+
     public Animator animator;
 
     public Collider2D lightCollider;
@@ -128,15 +131,10 @@ public class PlayerInteractions : MonoBehaviour
 
     private void KillPlayer()
     {
-        //reload the scene
-        if (SceneManager.GetActiveScene().name == "Oshi_Tutorial")
-        {
-            SceneManager.LoadScene("DiedTutorialScreen");
-        }
-        else if (SceneManager.GetActiveScene().name == "Oshi")
-        {
-            SceneManager.LoadScene("DiedScreen");
-        }
+        Instantiate(deathFeedback, gameObject.transform.position, Quaternion.identity);
+        playerDeathFadeEvent.Raise();
+        Destroy(gameObject);
+       
     }
 
     public void HitByTrap()
