@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyHitDetection : MonoBehaviour
 {
-    [SerializeField] private GameObject patrolDeathFB;
-    [SerializeField] private GameObject jumpDeathFB;
+    [SerializeField] private GameObject deathFB;
 
     enum destroy
     {
@@ -21,7 +20,7 @@ public class EnemyHitDetection : MonoBehaviour
     [SerializeField]
     private destroy destroyCollidedObject;
     [SerializeField]
-    private GameObject objectoReference;
+    private GameObject objectToReference;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,25 +30,27 @@ public class EnemyHitDetection : MonoBehaviour
             {
                 case destroy.me:
                     {
-                        Instantiate(patrolDeathFB, gameObject.transform.position, Quaternion.identity);
+                        Instantiate(deathFB, gameObject.transform.position, Quaternion.identity);
                         Destroy(this.gameObject);
                         break;
                     }
                 case destroy.referenceObject:
                     {
-                        Destroy(objectoReference);
+                        Instantiate(deathFB, objectToReference.transform.position, Quaternion.identity);
+                        Destroy(objectToReference);
                         break;
                     }
 
                 case destroy.collidedObj:
                     {
-                        Instantiate(jumpDeathFB, other.gameObject.transform.position, Quaternion.identity);
+                        Instantiate(deathFB, other.gameObject.transform.position, Quaternion.identity);
                         Destroy(other.gameObject);
                         break;
                     }
 
                 case destroy.parentOfCollidedObj:
                     {
+                        Instantiate(deathFB, other.transform.parent.position, Quaternion.identity);
                         Destroy(other.transform.parent.gameObject);
                         break;
                     }
