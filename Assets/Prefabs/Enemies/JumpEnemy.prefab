@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 5007370254694892716}
   - component: {fileID: 7843334730614576625}
   - component: {fileID: 3550632412322165436}
+  - component: {fileID: 6799697647421852682}
+  - component: {fileID: 502364189110382635}
   m_Layer: 14
   m_Name: EnemySprite
   m_TagString: JumpEnemyInside
@@ -199,6 +201,48 @@ EdgeCollider2D:
   - {x: 1.6831499, y: -1.1947172}
   - {x: 1.6872556, y: 1.1854622}
   - {x: -1.6581048, y: 1.1870022}
+--- !u!61 &6799697647421852682
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064695630318528197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 2.6, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.27, y: 2.35}
+  m_EdgeRadius: 0
+--- !u!114 &502364189110382635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064695630318528197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFB: {fileID: 521534613690177431, guid: f505a7f6bf29c9449be59d40abdc2b6d, type: 3}
+  selectedTag: PatrolEnemy
+  destroyCollidedObject: 3
+  objectToReference: {fileID: 3444646933974643933}
 --- !u!1001 &1352199768476786116
 PrefabInstance:
   m_ObjectHideFlags: 0

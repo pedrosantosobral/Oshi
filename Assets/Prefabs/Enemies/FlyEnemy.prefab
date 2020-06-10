@@ -5051,9 +5051,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFB: {fileID: 521534613690177431, guid: a5c10abf85afe47408d48219da8a1457, type: 3}
   selectedTag: JumpEnemyInside
   destroyCollidedObject: 3
-  objectoReference: {fileID: 3444646933974643933}
+  objectToReference: {fileID: 3444646933974643933}
 --- !u!58 &4891719220233980377
 CircleCollider2D:
   m_ObjectHideFlags: 0
