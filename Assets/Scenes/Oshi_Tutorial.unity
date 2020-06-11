@@ -1415,6 +1415,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilesArray:
   - {fileID: 5641642449143166180, guid: 2d6f7ee0e632a484991d412bffc023bd, type: 3}
+--- !u!1 &502821559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5272200592660691985, guid: bb234af57110fb645b3e27791ca656f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 976793320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561324292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3526,9 +3532,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colectablesToActivate:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 502821559}
+  - {fileID: 1798104448}
+  - {fileID: 2044318786}
 --- !u!4 &1745882298
 Transform:
   m_ObjectHideFlags: 0
@@ -3662,6 +3668,12 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1798104448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5272200591489024821, guid: bb234af57110fb645b3e27791ca656f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 976793320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1805886616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4069,6 +4081,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4236765477122798706, guid: 08dbff87ff452484798b68a7bd310e23, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 08dbff87ff452484798b68a7bd310e23, type: 3}
+--- !u!1 &2044318786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5272200592026060438, guid: bb234af57110fb645b3e27791ca656f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 976793320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2063807858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4834486344982528915, guid: c09180a9b16ee6542b044f14e90efbb9,
