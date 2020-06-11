@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CustomEventSystem;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class Trap : MonoBehaviour
 {
+    [SerializeField] private GameObject lightToDisable;
     [SerializeField] private GameObject JUMP_DFB;
     [SerializeField] private GameObject FLY_DFB;
     [SerializeField] private GameObject PATROL_DFB;
@@ -62,6 +64,7 @@ public class Trap : MonoBehaviour
                         onPlayerDamage.Raise();
                         shotFeedBack.SetActive(true);
                         _isWasted = true;
+                        lightToDisable.GetComponent<Light2D>().enabled = false;
                         Invoke("DelayedAnim", 1f);
                         
                     }
@@ -71,6 +74,7 @@ public class Trap : MonoBehaviour
                     {
                         shotFeedBack.SetActive(true);
                         _isWasted = true;
+                        lightToDisable.GetComponent<Light2D>().enabled = false;
                         Invoke("DelayedAnim", 1f);
                         Instantiate(FLY_DFB, new Vector3(_hitInfo.collider.transform.position.x, _hitInfo.collider.transform.position.y, _hitInfo.collider.transform.position.z), Quaternion.identity);
                         Destroy(_hitInfo.collider.transform.parent.gameObject);
@@ -82,6 +86,7 @@ public class Trap : MonoBehaviour
                 {
                     shotFeedBack.SetActive(true);
                     _isWasted = true;
+                    lightToDisable.GetComponent<Light2D>().enabled = false;
                     Invoke("DelayedAnim", 1f);
                     Instantiate(PATROL_DFB, new Vector3(_hitInfo.collider.transform.position.x, _hitInfo.collider.transform.position.y, _hitInfo.collider.transform.position.z), Quaternion.identity);
                     Destroy(_hitInfo.collider.gameObject);
