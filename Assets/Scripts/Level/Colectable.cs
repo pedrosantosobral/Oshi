@@ -5,7 +5,6 @@ using UnityEngine;
 public class Colectable : MonoBehaviour
 {
     private SavedData _savedDataReference;
-    private int colectedColectables = 0;
 
     void Start()
     {
@@ -15,13 +14,11 @@ public class Colectable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && this.gameObject.GetComponent<Collider2D>() is EdgeCollider2D)
+        if (other.CompareTag("PlayerInside"))
         {
-
-            _savedDataReference.ActivateColectable(colectedColectables);
-            Debug.Log("enteredColectable number" + (colectedColectables));
+            _savedDataReference.ActivateNextColectable();
+            Debug.Log("enteredColectable");
             Destroy(this.gameObject);
-            colectedColectables++;
         }
 
     }

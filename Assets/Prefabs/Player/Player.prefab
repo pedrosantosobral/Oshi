@@ -118,7 +118,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2326164023788368640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -493,9 +493,10 @@ GameObject:
   - component: {fileID: 3087929133990568014}
   - component: {fileID: 4528267724757285956}
   - component: {fileID: 7516366292548875796}
+  - component: {fileID: 2080709344689813369}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Player
+  m_TagString: PlayerInside
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -582,6 +583,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!68 &2080709344689813369
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665697375028322567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.57}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.89775896, y: 1.1906722}
+  - {x: -0.88545746, y: -0.5943791}
+  - {x: 0.9603513, y: -0.59045225}
+  - {x: 0.9664856, y: 1.1996366}
+  - {x: -0.89363664, y: 1.1998618}
 --- !u!1001 &96755193810791099
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -76,13 +76,13 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Colectable") && this.gameObject.GetComponent<Collider2D>() is EdgeCollider2D)
-        {
-            Destroy(other.gameObject);
-            _savedDataReference.ActivateColectable(colectedColectables);
-            Debug.Log("enteredColectable number" + (colectedColectables));
-            colectedColectables++;
-        }
+        //if (other.CompareTag("Colectable") && this.gameObject.GetComponent<Collider2D>() is EdgeCollider2D)
+        //{
+        //    Destroy(other.gameObject);
+        //    _savedDataReference.ActivateColectable(colectedColectables);
+        //    Debug.Log("enteredColectable number" + (colectedColectables));
+        //    colectedColectables++;
+        //}
 
     }
 

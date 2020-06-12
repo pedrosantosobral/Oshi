@@ -17,7 +17,8 @@ public class SavedData : MonoBehaviour
         {
             if (colec.activeSelf == false)
             {
-
+                colec.SetActive(true);
+                break;
             }
         }
     }
