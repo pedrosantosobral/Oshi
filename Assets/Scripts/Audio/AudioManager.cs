@@ -56,7 +56,6 @@ public class AudioManager : MonoBehaviour
     }
 
 
-
     public void PlayMusic(AudioClip musicClip)
     {
         AudioSource activeSource = (firstMusicIsON) ? musicSource_0 : musicSource_1;
