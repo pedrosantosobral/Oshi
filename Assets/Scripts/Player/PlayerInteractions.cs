@@ -25,7 +25,7 @@ public class PlayerInteractions : MonoBehaviour
     //player HP
     private int _HP;
     private SavedData _savedDataReference;
-    private int colectedColectables = -1;
+    private int colectedColectables = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         Physics2D.IgnoreCollision(lightCollider, other, true);
 
-        if(other.CompareTag("teleport"))
+        if (other.CompareTag("teleport"))
         {
             showTeleportButton.Raise();
         }
@@ -76,12 +76,12 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Colectable"))
+        if (other.CompareTag("Colectable") && this.gameObject.GetComponent<Collider2D>() is EdgeCollider2D)
         {
             Destroy(other.gameObject);
-            colectedColectables++;
             _savedDataReference.ActivateColectable(colectedColectables);
-            Debug.Log("enteredColectable");
+            Debug.Log("enteredColectable number" + (colectedColectables));
+            colectedColectables++;
         }
 
     }
@@ -96,9 +96,9 @@ public class PlayerInteractions : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {   
+    {
 
-        animator.SetBool("haveDamage",invinciblePlayerForSomeTime);
+        animator.SetBool("haveDamage", invinciblePlayerForSomeTime);
         animator.SetInteger("HP", _HP);
 
         if (_HP <= 0)
@@ -117,7 +117,7 @@ public class PlayerInteractions : MonoBehaviour
         _invincibleTimeReference -= Time.deltaTime;
         //disable colisions between player and enemies
         Physics2D.IgnoreLayerCollision(12, 9, true);
-        
+
         animator.Play("PlayerInvencible2");
 
         if (_invincibleTimeReference <= 0)
@@ -134,7 +134,7 @@ public class PlayerInteractions : MonoBehaviour
         Instantiate(deathFeedback, gameObject.transform.position, Quaternion.identity);
         playerDeathFadeEvent.Raise();
         Destroy(gameObject);
-       
+
     }
 
     public void HitByTrap()

@@ -10,5 +10,16 @@ public class SavedData : MonoBehaviour
     {
         colectablesToActivate[colectable].SetActive(true);
     }
-        
+
+    public void ActivateNextColectable()
+    {
+      foreach (GameObject colec in colectablesToActivate)
+        {
+            if (colec.activeSelf == false)
+            {
+
+            }
+        }
+    }
+
 }

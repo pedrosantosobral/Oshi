@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
-    
-
     public GameObject panel;
     public GameObject pauseButton;
 
