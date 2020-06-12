@@ -30,7 +30,7 @@ public class FlyEnemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Player") && !other.isTrigger)
+        if (other.CompareTag("PlayerInside") && !other.isTrigger)
         {
             _aiDestinationSetterReference.target = other.transform;
         }
