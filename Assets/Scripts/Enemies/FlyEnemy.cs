@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class FlyEnemy : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     public Collider2D colliderToBeCheckedByThePlayer;
     public LayerMask obstacleMask;
 
@@ -26,6 +27,10 @@ public class FlyEnemy : MonoBehaviour
     private void Update()
     {
         _enemyOwnList = _paintLightComponentReference.listToEnemies;
+        if(_aiDestinationSetterReference.target != null)
+        {
+            animator.SetTrigger("Walking");
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
