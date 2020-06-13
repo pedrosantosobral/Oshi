@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938a685bc514a334989acd6dbe8f8ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 6805609249784566132}
   insideToRotate: {fileID: 5537189979199749399}
   spriteToRotate: {fileID: 6064695630318528197}
   enemyCollider: {fileID: 7578178130976824364}
@@ -155,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyAtack: {fileID: 11400000, guid: 09b5d1051bf1b4045aabbe7a33eb5c77, type: 2}
   deathFB: {fileID: 521534613690177431, guid: 11a1cc1b23d4535458ddbe3f38cc3e90, type: 3}
   selectedTag: FlyEnemyInside
   destroyCollidedObject: 0

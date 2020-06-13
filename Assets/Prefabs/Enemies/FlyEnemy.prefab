@@ -4769,6 +4769,7 @@ GameObject:
   - component: {fileID: 4069102599144492130}
   - component: {fileID: 3630858603570775936}
   - component: {fileID: 7827900986322670108}
+  - component: {fileID: 2424616026473981446}
   m_Layer: 12
   m_Name: FlyEnemy
   m_TagString: FlyEnemy
@@ -4940,6 +4941,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2424616026473981446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444646933974643933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64bc25fa47c341b41a6b752874c7aac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 09b5d1051bf1b4045aabbe7a33eb5c77, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8791500698407750140}
+        m_MethodName: Atack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6064695630318528197
 GameObject:
   m_ObjectHideFlags: 0

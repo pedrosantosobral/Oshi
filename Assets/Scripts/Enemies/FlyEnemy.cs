@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using CustomEventSystem;
 
 public class FlyEnemy : MonoBehaviour
 {
@@ -90,6 +91,11 @@ public class FlyEnemy : MonoBehaviour
             }
             
         }
+    }
+
+    public void Atack()
+    {
+        animator.SetTrigger("Atack");
     }
 
 }

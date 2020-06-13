@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomEventSystem;
 
 public class EnemyHitDetection : MonoBehaviour
 {
+    [SerializeField] private VoidEvent flyAtack;
     [SerializeField] private GameObject deathFB;
 
     enum destroy
@@ -26,6 +28,11 @@ public class EnemyHitDetection : MonoBehaviour
     {
         if (other.CompareTag(selectedTag))
         {
+            if(flyAtack != null)
+            {
+                flyAtack.Raise();
+            }
+            
             switch (destroyCollidedObject)
             {
                 case destroy.me:

@@ -2,7 +2,8 @@
 
 public class JumpEnemy : MonoBehaviour
 {
-
+    
+    [SerializeField] private Animator animator;
     private Transform target;
     private Rigidbody2D myRigidbody;
 
@@ -61,6 +62,7 @@ public class JumpEnemy : MonoBehaviour
 
     private void JumpToTarget()
     {
+        animator.SetTrigger("Stop");
         float deltaY = target.position.y - transform.position.y;
         float deltaX = target.position.x - transform.position.x;
         float throwAngle = Mathf.Atan((deltaY + 4.803f * (jumpTime * jumpTime)) / deltaX);
@@ -105,6 +107,11 @@ public class JumpEnemy : MonoBehaviour
 
     private void DealDamageToPlayer()
     {
+    }
+
+    public void Atack()
+    {
+
     }
 
 }

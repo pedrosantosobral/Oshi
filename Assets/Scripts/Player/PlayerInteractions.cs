@@ -4,6 +4,8 @@ using CustomEventSystem;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private VoidEvent flyEnemyAtackAnim;
+    [SerializeField] private VoidEvent jumpEnemyAtackAnim;
     [SerializeField] private GameObject deathFeedback;
     [SerializeField] private VoidEvent playerDeathFadeEvent;
 
@@ -54,6 +56,16 @@ public class PlayerInteractions : MonoBehaviour
         {
             if (!other.isTrigger && other.CompareTag("PatrolEnemy") || other.CompareTag("FlyEnemy") && !other.isTrigger || other.CompareTag("JumpEnemyInside") && !other.isTrigger)
             {
+                if( other.CompareTag("FlyEnemy") && !other.isTrigger)
+                {
+                    flyEnemyAtackAnim.Raise();
+                }
+                if (other.CompareTag("JumpEnemyInside") && !other.isTrigger)
+                {
+                    jumpEnemyAtackAnim.Raise();
+                }
+
+
                 if (_HP == 2)
                 {
                     invinciblePlayerForSomeTime = true;

@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcb771cb02e21249906e1506d923702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyEnemyAtackAnim: {fileID: 11400000, guid: 09b5d1051bf1b4045aabbe7a33eb5c77, type: 2}
+  jumpEnemyAtackAnim: {fileID: 11400000, guid: d822315adf14bd6449aa584fe952e455, type: 2}
   deathFeedback: {fileID: 521534613690177431, guid: bfa8c1cd6c601cf46850a86f01130552,
     type: 3}
   playerDeathFadeEvent: {fileID: 11400000, guid: 5900090ece2608b4a968af3c56f1bcff,

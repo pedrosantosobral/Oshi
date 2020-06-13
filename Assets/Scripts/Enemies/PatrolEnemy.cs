@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PatrolEnemy : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     public GameObject insideToRotate;
     public GameObject spriteToRotate;
 
@@ -41,10 +42,11 @@ public class PatrolEnemy : MonoBehaviour
         {
             if (other.CompareTag("Player") && other.isTrigger)
             {
+                animator.SetTrigger("Atack");
                 _collidedWithPlayer = true;
                 _timeWithIncreasedSpeedReference = timeWithIncreasedSpeed;
                 enemyLightReference.transform.localScale = new Vector3(3f, 3f, 0);
-
+                /*
                 if (_movingRight == true && other.transform.position.x > gameObject.transform.position.x)
                 {
                     //rotate sprite
@@ -61,6 +63,7 @@ public class PatrolEnemy : MonoBehaviour
                     insideToRotate.transform.eulerAngles = new Vector3(0, 0, 0);
                     _movingRight = true;
                 }
+                */
             }
         }
 
