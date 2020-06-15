@@ -8,6 +8,7 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private VoidEvent jumpEnemyAtackAnim;
     [SerializeField] private GameObject deathFeedback;
     [SerializeField] private VoidEvent playerDeathFadeEvent;
+    [SerializeField] private GameObject playerHP_particles;
 
     public Animator animator;
 
@@ -81,6 +82,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 if (_HP == 1)
                 {
+                    Instantiate(playerHP_particles, other.gameObject.transform.position, Quaternion.identity);
                     _invincibleTimeReference = invincibleTime;
                     _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = false;
                     _HP = _HP + 1;
