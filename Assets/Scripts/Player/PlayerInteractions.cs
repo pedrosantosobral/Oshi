@@ -153,13 +153,18 @@ public class PlayerInteractions : MonoBehaviour
 
     public void HitByTrap()
     {
-        if (_HP == 2)
+        if(invinciblePlayerForSomeTime == false)
         {
-            invinciblePlayerForSomeTime = true;
-        }
+            if (_HP == 2)
+            {
+                invinciblePlayerForSomeTime = true;
+            }
 
-        _HP -= 1;
-        _invincibleTimeReference = invincibleTime;
-        _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
+            _HP -= 1;
+            _invincibleTimeReference = invincibleTime;
+            _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
+        }
+        
+        
     }
 }

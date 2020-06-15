@@ -10,7 +10,7 @@ public class SpikeTrap : MonoBehaviour
 
         if (!other.isTrigger)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("PlayerInside"))
             {
                 //SEND EVENT NOTIFICATION TO PLAYER SAYING HE WAS HIT
                 onPlayerDamage.Raise();
