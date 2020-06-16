@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using CustomEventSystem;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private Light2D playerLight;
     [SerializeField] private VoidEvent flyEnemyAtackAnim;
     [SerializeField] private VoidEvent jumpEnemyAtackAnim;
     [SerializeField] private GameObject deathFeedback;
@@ -76,6 +78,7 @@ public class PlayerInteractions : MonoBehaviour
                 _invincibleTimeReference = invincibleTime;
                 //damage player;
                 _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
+                playerLight.intensity = 0.33f;
             }
 
             if (other.CompareTag("hpRecharge"))
@@ -86,6 +89,7 @@ public class PlayerInteractions : MonoBehaviour
                     _invincibleTimeReference = invincibleTime;
                     _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = false;
                     _HP = _HP + 1;
+                    playerLight.intensity = 0.65f;
                 }
             }
         }
@@ -163,6 +167,7 @@ public class PlayerInteractions : MonoBehaviour
             _HP -= 1;
             _invincibleTimeReference = invincibleTime;
             _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
+            playerLight.intensity = 0.33f;
         }
         
         
