@@ -5,6 +5,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private GameObject playerHurtFeedback;
     [SerializeField] private Light2D playerLight;
     [SerializeField] private VoidEvent flyEnemyAtackAnim;
     [SerializeField] private VoidEvent jumpEnemyAtackAnim;
@@ -72,6 +73,7 @@ public class PlayerInteractions : MonoBehaviour
                 if (_HP == 2)
                 {
                     invinciblePlayerForSomeTime = true;
+                    Instantiate(playerHurtFeedback, gameObject.transform.position, Quaternion.identity);
                 }
 
                 _HP -= 1;
@@ -161,7 +163,9 @@ public class PlayerInteractions : MonoBehaviour
         {
             if (_HP == 2)
             {
+                Instantiate(playerHurtFeedback, gameObject.transform.position, Quaternion.identity);
                 invinciblePlayerForSomeTime = true;
+
             }
 
             _HP -= 1;
