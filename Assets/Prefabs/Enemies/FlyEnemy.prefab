@@ -5051,7 +5051,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!58 &570144538332172290
 CircleCollider2D:
@@ -5081,6 +5081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyAtack: {fileID: 0}
   deathFB: {fileID: 521534613690177431, guid: a5c10abf85afe47408d48219da8a1457, type: 3}
   selectedTag: JumpEnemyInside
   destroyCollidedObject: 3
