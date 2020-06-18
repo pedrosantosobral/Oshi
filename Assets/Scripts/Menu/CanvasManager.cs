@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
+    [SerializeField] private AudioClip popIN;
+    [SerializeField] private AudioClip popOUT;
     public GameObject panel;
     public GameObject pauseButton;
 
@@ -89,6 +91,7 @@ public class CanvasManager : MonoBehaviour
 
     public void PauseGame()
     {
+        AudioManager.Instance.PlaySFX(popOUT);
         panel.SetActive(true);
         Time.timeScale = 0f;
         pauseButton.SetActive(false);
@@ -107,6 +110,7 @@ public class CanvasManager : MonoBehaviour
 
     public void ShowTelleportButton()
     {
+        AudioManager.Instance.PlaySFX(popIN);
         LeanTween.scale(_teleportButton, new Vector3(1, 1, 1), teleportButtonAnimSpeed).setEase(_teleportButtonIN);
       
     }
@@ -118,12 +122,13 @@ public class CanvasManager : MonoBehaviour
 
     public void ShowTelleportPanel()
     {
+        AudioManager.Instance.PlaySFX(popIN);
         LeanTween.scale(_teleportMenu, new Vector3(0.8f,0.8f, 1), teleportPanelAnimSpeed).setEase(_teleportPanelIN);
     }
 
     public void HideTelleportPanel()
     {
+        AudioManager.Instance.PlaySFX(popOUT);
         LeanTween.scale(_teleportMenu, new Vector3(0, 0, 0), teleportPanelAnimSpeed).setEase(_teleportPanelOUT);
     }
-
 }

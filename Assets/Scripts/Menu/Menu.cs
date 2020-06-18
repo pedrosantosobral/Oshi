@@ -6,10 +6,14 @@ using CustomEventSystem;
 
 public class Menu : MonoBehaviour {
 
+    [SerializeField] private AudioClip popIN;
+    [SerializeField] private AudioClip popOUT;
+
     [SerializeField] private CanvasGroup creditsPanel;
     [SerializeField] private GameObject optionsPanel;
 
     [SerializeField] private CanvasGroup blackPanel;
+    [SerializeField] private CanvasGroup fadeBlackPanel;
 
     [SerializeField] private float blackPanelFadeINTime;
     [SerializeField] private float blackPanelFadeOUTTime;
@@ -64,20 +68,41 @@ public class Menu : MonoBehaviour {
 
     public void PlayLvl1()
     {
-        SceneManager.LoadScene("Oshi_Tutorial");
+        LeanTween.alphaCanvas(fadeBlackPanel, 1, blackPanelFadeINTime).setEase(blackPanelINAnim).setOnComplete(LoadLvl1);
+
     }
 
     public void PlayLvl2()
     {
-        SceneManager.LoadScene("Oshi");
+        LeanTween.alphaCanvas(fadeBlackPanel, 1, blackPanelFadeINTime).setEase(blackPanelINAnim).setOnComplete(LoadLvl2);
+
     }
 
     private void Start()
     {
+        AudioManager.Instance.PlaySFX(popIN);
         LeanTween.alphaCanvas(blackPanel,0,0);
         LeanTween.alphaCanvas(creditsPanel, 0, 0);
         LeanTween.scale(optionsPanel,new Vector3(0f,0f,0f), 0);
+        AudioManager.Instance.PlaySFX(popIN);
+    }
 
+    private void LoadLvl1()
+    {
+        SceneManager.LoadScene("Oshi_Tutorial");
+    }
+    private void LoadLvl2()
+    {
+       SceneManager.LoadScene("Oshi");
+    }
+
+    public void ButtonIN()
+    {
+        AudioManager.Instance.PlaySFX(popIN);
+    }
+    public void ButtonOUT()
+    {
+        AudioManager.Instance.PlaySFX(popOUT);
     }
 
 }

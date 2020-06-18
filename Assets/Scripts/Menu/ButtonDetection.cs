@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ButtonDetection : MonoBehaviour
 {
+    [SerializeField] private AudioClip teleportSound;
+
+
     private LevelGenerator _lvlGeneratorReference;
     private GameObject myRoom;
     private TeleportManager _teleportManagerReference;
@@ -32,6 +35,7 @@ public class ButtonDetection : MonoBehaviour
 
     public void PressButton()
     {
+        AudioManager.Instance.PlaySFX(teleportSound,0.5f);
         _teleportManagerReference.TeleportPlayer(buttonPos);
     }
 

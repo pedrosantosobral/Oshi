@@ -6,6 +6,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class Trap : MonoBehaviour
 {
+    [SerializeField] private AudioClip shotSound;
     [SerializeField] private GameObject lightToDisable;
     [SerializeField] private GameObject JUMP_DFB;
     [SerializeField] private GameObject FLY_DFB;
@@ -63,6 +64,7 @@ public class Trap : MonoBehaviour
                         //SEND EVENT NOTIFICATION TO PLAYER SAYING HE WAS HIT
                         onPlayerDamage.Raise();
                         shotFeedBack.SetActive(true);
+                        AudioManager.Instance.PlaySFX(shotSound,0.3f);
                         _isWasted = true;
                         lightToDisable.GetComponent<Light2D>().enabled = false;
                         Invoke("DelayedAnim", 1f);
@@ -72,7 +74,9 @@ public class Trap : MonoBehaviour
                     //NEED FIX HERE
                     if (_hitInfo.collider.gameObject.tag == "FlyEnemyInside")
                     {
+                        AudioManager.Instance.PlaySFX(shotSound,0.3f);
                         shotFeedBack.SetActive(true);
+
                         _isWasted = true;
                         lightToDisable.GetComponent<Light2D>().enabled = false;
                         Invoke("DelayedAnim", 1f);
@@ -84,6 +88,7 @@ public class Trap : MonoBehaviour
 
                 if (_hitInfo.collider.tag == "PatrolEnemy")
                 {
+                    AudioManager.Instance.PlaySFX(shotSound,0.3f);
                     shotFeedBack.SetActive(true);
                     _isWasted = true;
                     lightToDisable.GetComponent<Light2D>().enabled = false;

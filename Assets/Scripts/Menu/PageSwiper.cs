@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
 {
+    [SerializeField] private AudioClip swipeSound;
+
     private Vector3 panelLocation;
     public float percentThreshold = 0.2f;
     public float easing = 1;
@@ -45,11 +47,13 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
             }
 
             StartCoroutine(SmoothMove(transform.position, newLocation, easing));
+            AudioManager.Instance.PlaySFX(swipeSound,0.1f);
             panelLocation = newLocation;
         }
         else
         {
             StartCoroutine(SmoothMove(transform.position, panelLocation, easing));
+            AudioManager.Instance.PlaySFX(swipeSound,0.1f);
         }
        
     }
