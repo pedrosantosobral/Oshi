@@ -2697,6 +2697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7294287980786360047, guid: 6713ec5165e5ee448b214447f372c2ce,
         type: 3}
+      propertyPath: jumpSounds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294287980786360047, guid: 6713ec5165e5ee448b214447f372c2ce,
+        type: 3}
       propertyPath: rightInput
       value: 
       objectReference: {fileID: 506571726}
@@ -2705,5 +2710,15 @@ PrefabInstance:
       propertyPath: leftInput
       value: 
       objectReference: {fileID: 1057934520}
+    - target: {fileID: 7294287980786360047, guid: 6713ec5165e5ee448b214447f372c2ce,
+        type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c9ab05cba56d44e4a842889092665697, type: 3}
+    - target: {fileID: 7294287980786360047, guid: 6713ec5165e5ee448b214447f372c2ce,
+        type: 3}
+      propertyPath: jumpSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6713ec5165e5ee448b214447f372c2ce, type: 3}

@@ -2,8 +2,11 @@
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] jumpSounds;
     [SerializeField] private Animator animator;
     private bool animRunning;
+
+    private bool doSoundOnce = false;
 
     private InputManager _inputManagerReference;
 
@@ -50,6 +53,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+       
         animator.SetBool ("isGrounded", _isGrounded);
         animator.SetFloat("isJumping", verticalmove);
         animator.SetBool ("isRunning", animRunning);
@@ -131,6 +135,7 @@ public class PlayerController : MonoBehaviour
             _groundedRemember = 0;
             //add velocity to player rigidbody, make player jump
             rb.velocity = Vector2.up * jumpforce;
+            AudioManager.Instance.PlaySFX(jumpSounds[Random.Range(0, jumpSounds.Length)]);
         }
         
     }

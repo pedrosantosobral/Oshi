@@ -123,6 +123,7 @@ public class PlayerInteractions : MonoBehaviour
 
         if (_HP <= 0)
         {
+            Instantiate(deathFeedback, gameObject.transform.position, Quaternion.identity);
             KillPlayer();
         }
 
@@ -151,7 +152,6 @@ public class PlayerInteractions : MonoBehaviour
 
     private void KillPlayer()
     {
-        Instantiate(deathFeedback, gameObject.transform.position, Quaternion.identity);
         playerDeathFadeEvent.Raise();
         Destroy(gameObject);
 

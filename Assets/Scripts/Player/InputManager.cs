@@ -30,6 +30,7 @@ public class InputManager : MonoBehaviour
     #endregion
 
     [Header("Tweaks")]
+    
 
     [SerializeField] private float _deadZone = 100.0f;
     [SerializeField] private float _doubleTapDelta = 0.5f;
