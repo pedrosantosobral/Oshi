@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private float timeBetweenFootsteps;
+    [SerializeField] private AudioClip[] runSounds;
     [SerializeField] private AudioClip[] jumpSounds;
     [SerializeField] private Animator animator;
     private bool animRunning;
 
-    private bool doSoundOnce = false;
+    private bool playingfootSteps = false;
 
     private InputManager _inputManagerReference;
 
@@ -63,7 +66,13 @@ public class PlayerController : MonoBehaviour
 
         if((_inputManagerReference.touchingLeft == true || _inputManagerReference.touchingRight == true) && (_isGrounded == true))
         {
+            animRunning = true;
             playerDust.Play();
+            if(!playingfootSteps)
+            {
+                StartCoroutine("PlayFootstepsSound");
+            }
+
         }
 
         if ((_inputManagerReference.doubleTap == true || _inputManagerReference.swipeUp == true) && (_inputManagerReference.touchingRight == true || _inputManagerReference.touchingLeft == true)) 
@@ -90,14 +99,14 @@ public class PlayerController : MonoBehaviour
         {
             _horizontalmove = -1 * runspeed;
             lookingRight = false;
-            animRunning = true;
+            //animRunning = true;
 
         }
         else if (_inputManagerReference.touchingRight == true)
         {
             _horizontalmove = 1 * runspeed;
             lookingRight = true;
-            animRunning = true;
+            //animRunning = true;
            
 
         }
@@ -164,6 +173,14 @@ public class PlayerController : MonoBehaviour
         }
 
 
+    }
+
+    IEnumerator PlayFootstepsSound()
+    {
+        playingfootSteps = true;
+        AudioManager.Instance.PlaySFX(runSounds[Random.Range(0, runSounds.Length)],0.8f);
+        yield return new WaitForSeconds(timeBetweenFootsteps);
+        playingfootSteps = false;
     }
 
 

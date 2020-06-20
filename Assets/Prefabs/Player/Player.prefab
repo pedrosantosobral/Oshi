@@ -76,6 +76,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9fee370690ae749b89170be6a44343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBetweenFootsteps: 0.17
+  runSounds:
+  - {fileID: 8300000, guid: b7b01cf48ebfeca48b70a9a0618af5c6, type: 3}
+  - {fileID: 8300000, guid: 8bdcaeddad8c75b4e9c041f51b5aa5af, type: 3}
+  - {fileID: 8300000, guid: 46ede84b00ed4f849b86bf0c6b118f9a, type: 3}
+  - {fileID: 8300000, guid: e257182e24fb3b84d82767aaeda67353, type: 3}
+  - {fileID: 8300000, guid: ca3f07fb92c899a4cbef3afcce872bb2, type: 3}
+  - {fileID: 8300000, guid: 7f7a72c129a370241b984b43564047c2, type: 3}
+  - {fileID: 8300000, guid: 6f5c7c2350e2a8e488d8b5a7fdb85ddf, type: 3}
+  - {fileID: 8300000, guid: 3df885ac0c9187142a6db29c4514b8be, type: 3}
+  - {fileID: 8300000, guid: 465785f4c1efdf441847cbf85b7fc69a, type: 3}
+  - {fileID: 8300000, guid: 9cd81049fba04054e9cc48744bb3484d, type: 3}
+  - {fileID: 8300000, guid: 9f22954fec16d9644a72a49cbd598d6a, type: 3}
+  - {fileID: 8300000, guid: 91dd31ad05539554f9831f31aae60d91, type: 3}
+  - {fileID: 8300000, guid: fbc1ec84e331ac84385608d23c0c4185, type: 3}
+  - {fileID: 8300000, guid: 0443adf94f6d18e41aa0095650a8c739, type: 3}
   jumpSounds:
   - {fileID: 8300000, guid: c9ab05cba56d44e4a842889092665697, type: 3}
   animator: {fileID: 7516366292548875796}
