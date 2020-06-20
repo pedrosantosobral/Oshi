@@ -5,6 +5,7 @@ using UnityEngine;
 public class Colectable : MonoBehaviour
 {
     private SavedData _savedDataReference;
+    [SerializeField] private AudioClip collectableSound;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class Colectable : MonoBehaviour
     {
         if (other.CompareTag("PlayerInside"))
         {
+            AudioManager.Instance.PlaySFX(collectableSound, 0.7f);
             _savedDataReference.ActivateNextColectable();
             Debug.Log("enteredColectable");
             Destroy(this.gameObject);

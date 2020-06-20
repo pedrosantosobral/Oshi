@@ -2,7 +2,7 @@
 
 public class JumpEnemy : MonoBehaviour
 {
-    
+    [SerializeField] private AudioClip jumpSound;
     [SerializeField] private Animator animator;
     private Transform target;
     private Rigidbody2D myRigidbody;
@@ -69,6 +69,7 @@ public class JumpEnemy : MonoBehaviour
         float totalVelocity = deltaX / Mathf.Cos(throwAngle);
         finalDirection = new Vector2(totalVelocity * Mathf.Cos(throwAngle), totalVelocity * Mathf.Sin(throwAngle)) * speed;
         myRigidbody.velocity = finalDirection;
+        AudioManager.Instance.PlaySFX(jumpSound);
     }
 
     private void FixedUpdate()
