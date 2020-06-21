@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
-  parallaxHorizontalSpeed: 0.1
+  parallaxHorizontalSpeed: 0
   parallaxVerticalSpeed: 0
 --- !u!1 &4562913321923753400
 GameObject:
@@ -202,7 +202,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 845f71d5305b9b44cbf62116feef6561, type: 3}
-  m_Color: {r: 0.38679248, g: 0.36672306, b: 0.36672306, a: 1}
+  m_Color: {r: 0.79607844, g: 0.79607844, b: 0.79607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
-  parallaxHorizontalSpeed: 0.2
+  parallaxHorizontalSpeed: 0.09
   parallaxVerticalSpeed: 0
 --- !u!1 &5416766755430678895
 GameObject:
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
-  parallaxHorizontalSpeed: 0.094
+  parallaxHorizontalSpeed: 0.06
   parallaxVerticalSpeed: 0
 --- !u!1 &7269098871752483965
 GameObject:
@@ -474,7 +474,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 3b8f64f40f8256546ad0fbfd39118e44, type: 3}
-  m_Color: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 1}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -497,5 +497,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
-  parallaxHorizontalSpeed: 0.4
+  parallaxHorizontalSpeed: 0.18
   parallaxVerticalSpeed: 0
