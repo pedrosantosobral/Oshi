@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
+    [SerializeField] private AudioClip backgroundSFX;
     // play sound by doing this
     //AudioManager.Instance.Method(param,param);
 
@@ -37,6 +37,8 @@ public class AudioManager : MonoBehaviour
     private AudioSource musicSource_0;
     private AudioSource musicSource_1;
     private AudioSource sfxSource;
+
+    private AudioSource ambientSource;
     #endregion 
 
     private bool firstMusicIsON;
@@ -49,9 +51,12 @@ public class AudioManager : MonoBehaviour
         musicSource_0 = this.gameObject.AddComponent<AudioSource>();
         musicSource_1 = this.gameObject.AddComponent<AudioSource>();
         sfxSource     = this.gameObject.AddComponent<AudioSource>();
+        ambientSource = this.gameObject.AddComponent<AudioSource>();
+
 
         musicSource_0.loop = true;
         musicSource_1.loop = true;
+        ambientSource.loop = true;
 
     }
 
@@ -131,6 +136,7 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip);
     }
+
     public void PlaySFX(AudioClip clip, float volume) 
     {
         sfxSource.PlayOneShot(clip, volume);
@@ -146,6 +152,14 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.volume = volume;
     }
+
+    private void Start()
+    {
+        ambientSource.clip = backgroundSFX;
+        ambientSource.volume = 0.5f;
+        ambientSource.Play();
+    }
+
 
 
 
