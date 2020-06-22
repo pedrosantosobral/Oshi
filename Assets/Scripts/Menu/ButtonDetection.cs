@@ -5,9 +5,10 @@ using UnityEngine;
 public class ButtonDetection : MonoBehaviour
 {
     [SerializeField] private AudioClip teleportSound;
-
+    [SerializeField] private GameObject youAreHereMark;
 
     private LevelGenerator _lvlGeneratorReference;
+    private PlayerInteractions _playerReference;
     private GameObject myRoom;
     private TeleportManager _teleportManagerReference;
 
@@ -25,11 +26,35 @@ public class ButtonDetection : MonoBehaviour
         _teleportManagerReference = GameObject.Find("TeleportManager").GetComponent<TeleportManager>();
     }
 
+   
+    public void CheckForPlayer()
+    {
+        if (_playerReference == null)
+        {
+            _playerReference = GameObject.Find("Player(Clone)").GetComponent<PlayerInteractions>();
+        }
+
+        if (line == _playerReference.playerLine && column == _playerReference.playerCol)
+        {
+            youAreHereMark.SetActive(true);
+        }
+        else
+        {
+            youAreHereMark.SetActive(false);
+        }
+
+        CheckButtonActivity();
+    }
+
     public void CheckButtonActivity()
     {
         if (!_lvlGeneratorReference.teleportRoomPositions.Contains(buttonPos))
         {
             buttonToActivate.SetActive(false);
+        }
+        else
+        {
+            buttonToActivate.SetActive(true);
         }
     }
 

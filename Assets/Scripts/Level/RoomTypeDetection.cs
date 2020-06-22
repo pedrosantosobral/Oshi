@@ -21,12 +21,13 @@ public class RoomTypeDetection : MonoBehaviour
 
     private void Start()
     {
+        roomPos.column = GetRoomColumn();
+        roomPos.line = GetRoomLine();
         //_colectableToSpawn = GameObject.Find
         _lvlGeneratorReference = GameObject.Find("LevelGenerator").GetComponent<LevelGenerator>();
         _teleportReference     = GameObject.Find("TeleportManager").GetComponent<TeleportManager>();
 
-        roomPos.column = GetRoomColumn();
-        roomPos.line = GetRoomLine();
+       
     }
 
     public void DestroyRoom()

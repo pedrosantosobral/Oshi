@@ -14,7 +14,11 @@ public class TeleportManager : MonoBehaviour
 
     public void AddRoom(RoomTypeDetection room)
     {
-        roomlist.Add(room);
+        if(!roomlist.Contains(room))
+        {
+            roomlist.Add(room);
+        }
+        
     }
 
     public void GetPlayer()

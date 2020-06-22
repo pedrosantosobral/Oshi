@@ -122,6 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcb771cb02e21249906e1506d923702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  givePlayerPos: {fileID: 11400000, guid: cbb3f5e7426c85249bae366a4e72b333, type: 2}
+  playerLine: 0
+  playerCol: 0
   playerHurtFeedback: {fileID: 3140898930493282422, guid: a0cb6936ba2ca504889d4dddcc73803e,
     type: 3}
   playerLight: {fileID: 7986437916769543900}

@@ -2372,96 +2372,31 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5272200592812636929, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+    - target: {fileID: 4127967996908544157, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}
-      propertyPath: popIN
-      value: 
-      objectReference: {fileID: 8300000, guid: 89f1f32972799e9408e313981ea318f9, type: 3}
-    - target: {fileID: 5272200592812636929, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127967996908544157, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}
-      propertyPath: popOUT
-      value: 
-      objectReference: {fileID: 8300000, guid: 8eb32bb793ce1644497e8417c637d4b6, type: 3}
-    - target: {fileID: 3885005209657811246, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127967996908544157, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005209735392197, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127967996908544157, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005209866588346, guid: f60fcf2fffb8c164d964374fc9a6edc4,
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127967996908544157, guid: f60fcf2fffb8c164d964374fc9a6edc4,
         type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005209887867226, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210225137953, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210254032496, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210367996023, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210415059040, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210442854839, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 5272200591248384378, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210521412372, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210894138490, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005210918802874, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005211357073614, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005211386960433, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
-    - target: {fileID: 3885005211395333374, guid: f60fcf2fffb8c164d964374fc9a6edc4,
-        type: 3}
-      propertyPath: teleportSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ca0a443def1d2494db8947fd91828fad, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60fcf2fffb8c164d964374fc9a6edc4, type: 3}
 --- !u!1001 &7294287980666934010

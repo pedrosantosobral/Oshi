@@ -5,8 +5,9 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    [SerializeField] private int playerLine;
-    [SerializeField] private int playerCol;
+    [SerializeField] private VoidEvent givePlayerPos;
+    [SerializeField] public int playerLine;
+    [SerializeField] public int playerCol;
 
     [SerializeField] private GameObject playerHurtFeedback;
     [SerializeField] private Light2D playerLight;
@@ -39,6 +40,7 @@ public class PlayerInteractions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         _paintLightReference = GameObject.Find("PaintLight");
         _savedDataReference = GameObject.Find("SaveData").GetComponent<SavedData>();
 
@@ -47,6 +49,7 @@ public class PlayerInteractions : MonoBehaviour
         _invincibleTimeReference = invincibleTime;
         _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = true;
         //setPlayerOnTeleportManager.Raise();
+        givePlayerPos.Raise();
 
     }
 

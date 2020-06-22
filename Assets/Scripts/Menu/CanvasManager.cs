@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using CustomEventSystem;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class CanvasManager : MonoBehaviour
 
     public GameObject activeColectables;
     public GameObject disabledColectables;
+
+    [SerializeField] private VoidEvent checkPlayerPos;
 
 
     private void Start()
@@ -122,6 +125,7 @@ public class CanvasManager : MonoBehaviour
 
     public void ShowTelleportPanel()
     {
+        checkPlayerPos.Raise();
         AudioManager.Instance.PlaySFX(popIN);
         LeanTween.scale(_teleportMenu, new Vector3(0.8f,0.8f, 1), teleportPanelAnimSpeed).setEase(_teleportPanelIN);
     }
