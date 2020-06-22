@@ -5,6 +5,9 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private int playerLine;
+    [SerializeField] private int playerCol;
+
     [SerializeField] private GameObject playerHurtFeedback;
     [SerializeField] private Light2D playerLight;
     [SerializeField] private VoidEvent flyEnemyAtackAnim;
@@ -131,6 +134,10 @@ public class PlayerInteractions : MonoBehaviour
         {
             InvinciblePlayerForSomeTime();
         }
+
+        playerCol = GetPlayerColumn();
+        playerLine = GetPlayerLine();
+
     }
 
     private void InvinciblePlayerForSomeTime()
@@ -176,4 +183,54 @@ public class PlayerInteractions : MonoBehaviour
         
         
     }
+
+    private int GetPlayerLine()
+    {
+        if (gameObject.transform.position.y > -5f && gameObject.transform.position.y < 5f)
+        {
+            return 1;
+        }
+        else if (gameObject.transform.position.y < -5f && gameObject.transform.position.y > -15f)
+        {
+            return 2;
+        }
+        else if (gameObject.transform.position.y < -15f && gameObject.transform.position.y > -25f)
+        {
+            return 3;
+        }
+        else if (gameObject.transform.position.y < -25f && gameObject.transform.position.y > -35f)
+        {
+            return 4;
+        }
+        else
+        {
+            return 0;
+        }
+
+    }
+
+    private int GetPlayerColumn()
+    {
+        if (gameObject.transform.position.x > -10f && gameObject.transform.position.x < 10f)
+        {
+            return 1;
+        }
+        else if (gameObject.transform.position.x > 10f && gameObject.transform.position.x < 30f)
+        {
+            return 2;
+        }
+        else if (gameObject.transform.position.x > 30f && gameObject.transform.position.x < 50f)
+        {
+            return 3;
+        }
+        else if (gameObject.transform.position.x > 50f && gameObject.transform.position.x < 70f)
+        {
+            return 4;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
 }
