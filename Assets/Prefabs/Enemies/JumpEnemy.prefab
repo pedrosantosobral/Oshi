@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSound: {fileID: 8300000, guid: 611720d2e0d6a3f49a69fbd26ac4ab46, type: 3}
   animator: {fileID: 7946816197918611277}
+  timeBetweenJumps: 1
   isGrounded: 0
   speed: 1.79999
   groundLayerMask:
@@ -77,9 +78,9 @@ MonoBehaviour:
     m_Bits: 256
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 16896
-  ofsetFloorCheck: {x: 0.2405, y: -0.245}
-  floorCheckSize: 0.11
+    m_Bits: 25088
+  ofsetFloorCheck: {x: 0.24, y: -0.25}
+  floorCheckSize: 0.08
   ofsetTargetCheck: {x: 0, y: 0}
   jumpTimer: 2
 --- !u!58 &8673408600982009500
@@ -181,7 +182,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!68 &3550632412322165436
 EdgeCollider2D:
@@ -273,11 +274,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5007370254694892716}
     m_Modifications:
-    - target: {fileID: 3140898930493282422, guid: f2829954d51d1624f92250690571c8ff,
-        type: 3}
-      propertyPath: m_Name
-      value: JumpTrail
-      objectReference: {fileID: 0}
     - target: {fileID: 5451617510534242544, guid: f2829954d51d1624f92250690571c8ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -333,6 +329,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3140898930493282422, guid: f2829954d51d1624f92250690571c8ff,
+        type: 3}
+      propertyPath: m_Name
+      value: JumpTrail
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2829954d51d1624f92250690571c8ff, type: 3}
 --- !u!4 &6443511679050186036 stripped
@@ -348,11 +349,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2230735546497641319}
     m_Modifications:
-    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemiesLight
-      objectReference: {fileID: 0}
     - target: {fileID: 787331909187135919, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,6 +403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemiesLight
       objectReference: {fileID: 0}
     - target: {fileID: 8068625425088023072, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}

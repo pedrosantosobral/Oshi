@@ -8,9 +8,9 @@ public class JumpEnemy : MonoBehaviour
     private Rigidbody2D myRigidbody;
 
     private Vector3 finalDirection;
-    private float height;
-    private float distance;
     private float jumpTime = 1f;
+    [SerializeField]
+    private float timeBetweenJumps;
     [SerializeField]
     private bool isGrounded;
 
@@ -43,19 +43,34 @@ public class JumpEnemy : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (isGrounded && timer >= jumpTimer)
+        if (isGrounded && timer >= jumpTimer && other.tag != null)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("FlyEnemyInside"))
             {
                 timer = 0f;
                 target = other.transform;
-                Invoke("JumpToTarget", 0f);
+
+                
+                Invoke("JumpToTarget", 0.000001f);
+                Invoke("Wait", timeBetweenJumps);
+
 
             }
-            else if (other.CompareTag("FlyEnemyInside"))
+            else if (other.CompareTag("Player"))
             {
                 target = other.transform;
-                Invoke("JumpToTarget", 0f);
+
+                
+                Invoke("JumpToTarget", 0.000001f);
+                Invoke("Wait", timeBetweenJumps);
+            }
+
+            else if (other.CompareTag("light") && other.gameObject.GetComponent<CheckCollisionsForLight>()!= null )
+            {
+                target = other.transform;
+                
+                Invoke("JumpToTarget", 0.000001f);
+                Invoke("Wait", timeBetweenJumps);
             }
         }
     }
@@ -63,13 +78,18 @@ public class JumpEnemy : MonoBehaviour
     private void JumpToTarget()
     {
         animator.SetTrigger("Stop");
+        
+        AudioManager.Instance.PlaySFX(jumpSound);
         float deltaY = target.position.y - transform.position.y;
         float deltaX = target.position.x - transform.position.x;
         float throwAngle = Mathf.Atan((deltaY + 4.803f * (jumpTime * jumpTime)) / deltaX);
         float totalVelocity = deltaX / Mathf.Cos(throwAngle);
         finalDirection = new Vector2(totalVelocity * Mathf.Cos(throwAngle), totalVelocity * Mathf.Sin(throwAngle)) * speed;
         myRigidbody.velocity = finalDirection;
-        AudioManager.Instance.PlaySFX(jumpSound);
+    }
+    private void Wait()
+    {
+       
     }
 
     private void FixedUpdate()
@@ -106,9 +126,6 @@ public class JumpEnemy : MonoBehaviour
         Gizmos.DrawSphere(position2, floorCheckSize);
     }
 
-    private void DealDamageToPlayer()
-    {
-    }
 
     public void Atack()
     {
