@@ -77,6 +77,7 @@ public class JumpEnemy : MonoBehaviour
 
     private void JumpToTarget()
     {
+        animator.SetTrigger("Atack");
         animator.SetTrigger("Stop");
         
         AudioManager.Instance.PlaySFX(jumpSound);
@@ -94,6 +95,8 @@ public class JumpEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+
         timer += Time.deltaTime;
 
         IsGrounded();
