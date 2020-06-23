@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Colectable : MonoBehaviour
 {
+    [SerializeField] private GameObject particles;
     private SavedData _savedDataReference;
     [SerializeField] private AudioClip collectableSound;
 
@@ -17,6 +18,7 @@ public class Colectable : MonoBehaviour
     {
         if (other.CompareTag("PlayerInside"))
         {
+            Instantiate(particles, gameObject.transform.position, Quaternion.identity);
             AudioManager.Instance.PlaySFX(collectableSound, 0.7f);
             _savedDataReference.ActivateNextColectable();
             Debug.Log("enteredColectable");
