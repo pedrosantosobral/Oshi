@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712448070448015120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.01, z: 0}
+  m_LocalPosition: {x: -0.06, y: 0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5007370254694892716}
@@ -5128,6 +5128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2230735546497641319}
     m_Modifications:
+    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemiesLight
+      objectReference: {fileID: 0}
     - target: {fileID: 787331909187135919, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5182,11 +5187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemiesLight
       objectReference: {fileID: 0}
     - target: {fileID: 8068625425088023072, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}
