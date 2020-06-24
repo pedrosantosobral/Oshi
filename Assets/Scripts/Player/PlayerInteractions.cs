@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System;
+using System.Collections;
 using UnityEngine.SceneManagement;
 using CustomEventSystem;
 using UnityEngine.Experimental.Rendering.LWRP;
@@ -133,7 +135,7 @@ public class PlayerInteractions : MonoBehaviour
         if (_HP <= 0)
         {
             Instantiate(deathFeedback, gameObject.transform.position, Quaternion.identity);
-            KillPlayer();
+           Invoke("KillPlayer",0.1f);
         }
 
         if (invinciblePlayerForSomeTime == true)
@@ -237,6 +239,13 @@ public class PlayerInteractions : MonoBehaviour
         {
             return 0;
         }
+    }
+
+    IEnumerator KillPlayerAfterXsec()
+    {
+        yield return new WaitForSeconds(0.01f);
+        
+
     }
 
 }

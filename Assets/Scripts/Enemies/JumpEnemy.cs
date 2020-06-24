@@ -50,17 +50,14 @@ public class JumpEnemy : MonoBehaviour
                 timer = 0f;
                 target = other.transform;
 
-                
                 Invoke("JumpToTarget", 0.000001f);
                 Invoke("Wait", timeBetweenJumps);
-
 
             }
             else if (other.CompareTag("Player"))
             {
                 target = other.transform;
 
-                
                 Invoke("JumpToTarget", 0.000001f);
                 Invoke("Wait", timeBetweenJumps);
             }
@@ -74,7 +71,6 @@ public class JumpEnemy : MonoBehaviour
                     Invoke("JumpToTarget", 0.000001f);
                     Invoke("Wait", timeBetweenJumps);
                 }
-
                 
             }
         }

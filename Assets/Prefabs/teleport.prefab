@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7406112075868094416}
   - component: {fileID: 4395678198012557957}
   - component: {fileID: 8315655614924733324}
+  - component: {fileID: 3997960536511116529}
   m_Layer: 0
   m_Name: teleport
   m_TagString: teleport
@@ -107,3 +108,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.81, y: 6.43}
   m_EdgeRadius: 0
+--- !u!95 &3997960536511116529
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3271052433521655462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3a745e695afa904eb2ddf6b0926ee3a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
