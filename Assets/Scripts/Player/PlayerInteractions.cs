@@ -135,7 +135,7 @@ public class PlayerInteractions : MonoBehaviour
         if (_HP <= 0)
         {
             Instantiate(deathFeedback, gameObject.transform.position, Quaternion.identity);
-           Invoke("KillPlayer",0.1f);
+           Invoke("KillPlayer",0.01f);
         }
 
         if (invinciblePlayerForSomeTime == true)
