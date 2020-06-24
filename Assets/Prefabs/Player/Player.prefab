@@ -93,9 +93,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fbc1ec84e331ac84385608d23c0c4185, type: 3}
   - {fileID: 8300000, guid: 0443adf94f6d18e41aa0095650a8c739, type: 3}
   jumpSounds:
-  - {fileID: 8300000, guid: 65ca330a403407440800d3cd4d03fe1f, type: 3}
-  - {fileID: 8300000, guid: 4fddcab652f4da740adee564c0ee3b4a, type: 3}
-  - {fileID: 8300000, guid: 28fa9029a8be9464285b6d66c76d0df6, type: 3}
+  - {fileID: 8300000, guid: 611720d2e0d6a3f49a69fbd26ac4ab46, type: 3}
   animator: {fileID: 7516366292548875796}
   spriteToFlip: {fileID: 8665697375028322567}
   playerDust: {fileID: 7260332362966639274}
@@ -122,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcb771cb02e21249906e1506d923702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hprecharge: {fileID: 8300000, guid: 667c163438ccf824db74607b3f5b4916, type: 3}
   givePlayerPos: {fileID: 11400000, guid: cbb3f5e7426c85249bae366a4e72b333, type: 2}
   playerLine: 0
   playerCol: 0

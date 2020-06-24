@@ -5,6 +5,8 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private AudioClip hprecharge;
+
     [SerializeField] private VoidEvent givePlayerPos;
     [SerializeField] public int playerLine;
     [SerializeField] public int playerCol;
@@ -93,6 +95,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 if (_HP == 1)
                 {
+                    AudioManager.Instance.PlaySFX(hprecharge,0.3f);
                     Instantiate(playerHP_particles, other.gameObject.transform.position, Quaternion.identity);
                     _invincibleTimeReference = invincibleTime;
                     _paintLightReference.GetComponent<PaintLight>().playerIsDamaged = false;

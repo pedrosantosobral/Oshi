@@ -69,20 +69,33 @@ public class JumpEnemy : MonoBehaviour
             {
                 target = other.transform;
                 
-                Invoke("JumpToTarget", 0.000001f);
-                Invoke("Wait", timeBetweenJumps);
+                if(target != null)
+                {
+                    Invoke("JumpToTarget", 0.000001f);
+                    Invoke("Wait", timeBetweenJumps);
+                }
+
+                
             }
         }
     }
 
     private void JumpToTarget()
     {
+        float deltaY = 0;
+        float deltaX = 0;
+
         animator.SetTrigger("Atack");
         animator.SetTrigger("Stop");
         
         AudioManager.Instance.PlaySFX(jumpSound);
-        float deltaY = target.position.y - transform.position.y;
-        float deltaX = target.position.x - transform.position.x;
+       
+        if(target != null)
+        {
+            deltaY = target.position.y - transform.position.y;
+            deltaX = target.position.x - transform.position.x;
+        }
+        
         float throwAngle = Mathf.Atan((deltaY + 4.803f * (jumpTime * jumpTime)) / deltaX);
         float totalVelocity = deltaX / Mathf.Cos(throwAngle);
         finalDirection = new Vector2(totalVelocity * Mathf.Cos(throwAngle), totalVelocity * Mathf.Sin(throwAngle)) * speed;
