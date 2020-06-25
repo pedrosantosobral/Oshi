@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PatrolEnemy : MonoBehaviour
 {
+    [SerializeField] private float bite_Volume;
+    [SerializeField] private AudioClip biteSound;
     [SerializeField] private Animator animator;
     public GameObject insideToRotate;
     public GameObject spriteToRotate;
@@ -42,6 +44,7 @@ public class PatrolEnemy : MonoBehaviour
         {
             if (other.CompareTag("Player") && other.isTrigger)
             {
+                AudioManager.Instance.PlaySFX(biteSound, bite_Volume);
                 animator.SetTrigger("Atack");
                 _collidedWithPlayer = true;
                 _timeWithIncreasedSpeedReference = timeWithIncreasedSpeed;

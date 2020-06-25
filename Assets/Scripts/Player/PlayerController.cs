@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private float footSteps_Volume;
+    [SerializeField] private float jumpSounds_Volume; 
     [SerializeField] private float timeBetweenFootsteps;
     [SerializeField] private AudioClip[] runSounds;
     [SerializeField] private AudioClip[] jumpSounds;
@@ -144,7 +146,7 @@ public class PlayerController : MonoBehaviour
             _groundedRemember = 0;
             //add velocity to player rigidbody, make player jump
             rb.velocity = Vector2.up * jumpforce;
-            AudioManager.Instance.PlaySFX(jumpSounds[Random.Range(0, jumpSounds.Length)]);
+            AudioManager.Instance.PlaySFX(jumpSounds[Random.Range(0, jumpSounds.Length)],jumpSounds_Volume);
         }
         
     }
@@ -178,7 +180,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator PlayFootstepsSound()
     {
         playingfootSteps = true;
-        AudioManager.Instance.PlaySFX(runSounds[Random.Range(0, runSounds.Length)],0.8f);
+        AudioManager.Instance.PlaySFX(runSounds[Random.Range(0, runSounds.Length)],footSteps_Volume);
         yield return new WaitForSeconds(timeBetweenFootsteps);
         playingfootSteps = false;
     }

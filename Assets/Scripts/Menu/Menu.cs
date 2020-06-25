@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using CustomEventSystem;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
+
+    private bool toggle;
+    [SerializeField] private Sprite muted;
+    [SerializeField] private Sprite not_muted;
+    [SerializeField] private Image SoundButton;
 
     [SerializeField] private AudioClip popIN;
     [SerializeField] private AudioClip popOUT;
@@ -80,6 +86,7 @@ public class Menu : MonoBehaviour {
 
     private void Start()
     {
+        toggle = false;
         AudioManager.Instance.PlaySFX(popIN);
         LeanTween.alphaCanvas(blackPanel,0,0);
         LeanTween.alphaCanvas(creditsPanel, 0, 0);
@@ -103,6 +110,38 @@ public class Menu : MonoBehaviour {
     public void ButtonOUT()
     {
         AudioManager.Instance.PlaySFX(popOUT);
+    }
+
+    public void AudioControl()
+    {
+        if (AudioListener.volume == 0f)
+       {
+            AudioListener.volume = 1;
+            
+       }
+       else
+       {
+            AudioListener.volume = 0f;
+            
+        }
+    }
+
+    public void ToggleSound()
+    {
+        
+        toggle = !toggle;
+
+        if (toggle)
+        {
+            AudioListener.volume = 1f;
+            SoundButton.sprite = not_muted;
+        }
+        else
+        {
+            AudioListener.volume = 0f;
+            SoundButton.sprite = muted;
+        }
+            
     }
 
 }

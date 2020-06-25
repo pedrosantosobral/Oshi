@@ -16,7 +16,6 @@ public class Retry : MonoBehaviour
             SceneManager.LoadScene("Oshi");
         }
     }
-
     public void Menu()
     {
         SceneManager.LoadScene("Menu");

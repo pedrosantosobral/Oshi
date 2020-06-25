@@ -7,7 +7,9 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private float playerSFX_Volume;
     [SerializeField] private AudioClip hprecharge;
+    [SerializeField] private AudioClip hurtSound;
 
     [SerializeField] private VoidEvent givePlayerPos;
     [SerializeField] public int playerLine;
@@ -83,6 +85,7 @@ public class PlayerInteractions : MonoBehaviour
                 if (_HP == 2)
                 {
                     invinciblePlayerForSomeTime = true;
+                    AudioManager.Instance.PlaySFX(hurtSound,playerSFX_Volume);
                     Instantiate(playerHurtFeedback, gameObject.transform.position, Quaternion.identity);
                 }
 
@@ -134,8 +137,9 @@ public class PlayerInteractions : MonoBehaviour
 
         if (_HP <= 0)
         {
+            AudioManager.Instance.PlaySFX(hurtSound,playerSFX_Volume);
             Instantiate(deathFeedback, gameObject.transform.position, Quaternion.identity);
-           Invoke("KillPlayer",0.01f);
+            Invoke("KillPlayer",0.01f);
         }
 
         if (invinciblePlayerForSomeTime == true)
@@ -178,6 +182,7 @@ public class PlayerInteractions : MonoBehaviour
         {
             if (_HP == 2)
             {
+                AudioManager.Instance.PlaySFX(hurtSound, playerSFX_Volume);
                 Instantiate(playerHurtFeedback, gameObject.transform.position, Quaternion.identity);
                 invinciblePlayerForSomeTime = true;
 

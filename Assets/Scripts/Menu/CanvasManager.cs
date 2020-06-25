@@ -67,6 +67,7 @@ public class CanvasManager : MonoBehaviour
 
     private void GoOtherScene()
     {
+        /*
         if (SceneManager.GetActiveScene().name == "Oshi_Tutorial")
         {
             SceneManager.LoadScene("DiedTutorialScreen");
@@ -75,6 +76,10 @@ public class CanvasManager : MonoBehaviour
         {
             SceneManager.LoadScene("DiedScreen");
         }
+        */
+
+        Scene thisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(thisScene.name);
     }
 
 

@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9fee370690ae749b89170be6a44343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footSteps_Volume: 0.6
+  jumpSounds_Volume: 0.4
   timeBetweenFootsteps: 0.17
   runSounds:
   - {fileID: 8300000, guid: b7b01cf48ebfeca48b70a9a0618af5c6, type: 3}
@@ -93,7 +95,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fbc1ec84e331ac84385608d23c0c4185, type: 3}
   - {fileID: 8300000, guid: 0443adf94f6d18e41aa0095650a8c739, type: 3}
   jumpSounds:
-  - {fileID: 8300000, guid: 611720d2e0d6a3f49a69fbd26ac4ab46, type: 3}
+  - {fileID: 8300000, guid: 3e66f8dfdee3b8544ae8b9df480b3adf, type: 3}
+  - {fileID: 8300000, guid: 5f89f4016a397a546a46639e907daa0e, type: 3}
   animator: {fileID: 7516366292548875796}
   spriteToFlip: {fileID: 8665697375028322567}
   playerDust: {fileID: 7260332362966639274}
@@ -120,7 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcb771cb02e21249906e1506d923702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSFX_Volume: 0.5
   hprecharge: {fileID: 8300000, guid: 667c163438ccf824db74607b3f5b4916, type: 3}
+  hurtSound: {fileID: 8300000, guid: 160c297bd7fdc3b44ba5f0912140104f, type: 3}
   givePlayerPos: {fileID: 11400000, guid: cbb3f5e7426c85249bae366a4e72b333, type: 2}
   playerLine: 0
   playerCol: 0
@@ -640,11 +645,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2326164023390891064}
     m_Modifications:
-    - target: {fileID: 7839948353191292209, guid: a01fae9e3c385604f826a6bf0a76376f,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerLightMask
-      objectReference: {fileID: 0}
     - target: {fileID: 5791677144542935541, guid: a01fae9e3c385604f826a6bf0a76376f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -700,6 +700,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7839948353191292209, guid: a01fae9e3c385604f826a6bf0a76376f,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerLightMask
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01fae9e3c385604f826a6bf0a76376f, type: 3}
 --- !u!4 &5852311147864052558 stripped
@@ -733,11 +738,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2326164023390891064}
     m_Modifications:
-    - target: {fileID: 5726919072507719816, guid: eaa539c620b30214dbd445e5b05c876f,
-        type: 3}
-      propertyPath: m_Name
-      value: Player_Dust
-      objectReference: {fileID: 0}
     - target: {fileID: 1346452884314995085, guid: eaa539c620b30214dbd445e5b05c876f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -792,6 +792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726919072507719816, guid: eaa539c620b30214dbd445e5b05c876f,
+        type: 3}
+      propertyPath: m_Name
+      value: Player_Dust
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaa539c620b30214dbd445e5b05c876f, type: 3}
