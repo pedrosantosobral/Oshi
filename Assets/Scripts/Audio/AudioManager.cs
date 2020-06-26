@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioClip backgroundSFX;
+    [SerializeField] private float backgroudSFX_volume;
     // play sound by doing this
     //AudioManager.Instance.Method(param,param);
 
@@ -156,7 +157,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         ambientSource.clip = backgroundSFX;
-        ambientSource.volume = 0.5f;
+        ambientSource.volume = backgroudSFX_volume;
         ambientSource.Play();
     }
 
