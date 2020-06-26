@@ -11,6 +11,7 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private AudioClip hprecharge;
     [SerializeField] private AudioClip hurtSound;
 
+    [SerializeField] private VoidEvent hpRechargeAnim;
     [SerializeField] private VoidEvent givePlayerPos;
     [SerializeField] public int playerLine;
     [SerializeField] public int playerCol;
@@ -100,6 +101,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 if (_HP == 1)
                 {
+                    hpRechargeAnim.Raise();
                     AudioManager.Instance.PlaySFX(hprecharge,0.3f);
                     Instantiate(playerHP_particles, other.gameObject.transform.position, Quaternion.identity);
                     _invincibleTimeReference = invincibleTime;

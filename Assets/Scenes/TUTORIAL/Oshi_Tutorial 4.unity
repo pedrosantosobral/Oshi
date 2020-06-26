@@ -297,6 +297,24 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 177477945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &177477947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5272200592026060438, guid: bb234af57110fb645b3e27791ca656f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 177477945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &177477948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5272200591489024821, guid: bb234af57110fb645b3e27791ca656f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 177477945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &177477949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5272200592660691985, guid: bb234af57110fb645b3e27791ca656f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 177477945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &311246374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,9 +1946,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colectablesToActivate:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 177477949}
+  - {fileID: 177477948}
+  - {fileID: 177477947}
 --- !u!4 &1745882298
 Transform:
   m_ObjectHideFlags: 0
