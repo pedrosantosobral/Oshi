@@ -1151,6 +1151,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -2.37
       objectReference: {fileID: 0}
+    - target: {fileID: 7810596427219198481, guid: 40b67f5772d77114dbdc3e1b63cdacc7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.52
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b67f5772d77114dbdc3e1b63cdacc7, type: 3}
 --- !u!1001 &875910553
@@ -3432,7 +3437,7 @@ PrefabInstance:
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.52
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -3442,27 +3447,29 @@ PrefabInstance:
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_text
-      value: 'They will patrol endlessly and will attack if you get closer! '
+      value: 'There are enemies nearby!
+
+        They will patrol endlessly and will attack if you get closer! '
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 62
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
