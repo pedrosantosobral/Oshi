@@ -84,7 +84,7 @@ public class JumpEnemy : MonoBehaviour
         animator.SetTrigger("Atack");
         animator.SetTrigger("Stop");
         
-        AudioManager.Instance.PlaySFX(jumpSound);
+        
        
         if(target != null)
         {
@@ -96,6 +96,11 @@ public class JumpEnemy : MonoBehaviour
         float totalVelocity = deltaX / Mathf.Cos(throwAngle);
         finalDirection = new Vector2(totalVelocity * Mathf.Cos(throwAngle), totalVelocity * Mathf.Sin(throwAngle)) * speed;
         myRigidbody.velocity = finalDirection;
+
+        if(myRigidbody.velocity != null)
+        {
+            AudioManager.Instance.PlaySFX(jumpSound);
+        }
     }
     private void Wait()
     {
