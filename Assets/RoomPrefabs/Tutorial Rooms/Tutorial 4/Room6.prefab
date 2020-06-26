@@ -1232,7 +1232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996819945005626609}
   m_Layer: 10
-  m_Name: Room5
+  m_Name: Room6
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2021,9 +2021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilesArray:
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
+  - {fileID: 3444646933974643933, guid: 004aa7157ebdb6244bc7111048a39d13, type: 3}
 --- !u!1 &3307955002484902866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2902,9 +2900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilesArray:
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
+  - {fileID: 3444646933974643933, guid: 004aa7157ebdb6244bc7111048a39d13, type: 3}
 --- !u!1 &7466160430709834794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,11 +3306,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 996819945005626609}
     m_Modifications:
-    - target: {fileID: 5641642449143166180, guid: 7f12bf1d5702cb049b32085f2142a1cf,
-        type: 3}
-      propertyPath: m_Name
-      value: Up_trap
-      objectReference: {fileID: 0}
     - target: {fileID: 7625986873005838930, guid: 7f12bf1d5702cb049b32085f2142a1cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3370,10 +3361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 6371891119357091840, guid: 7f12bf1d5702cb049b32085f2142a1cf,
+    - target: {fileID: 5641642449143166180, guid: 7f12bf1d5702cb049b32085f2142a1cf,
         type: 3}
-      propertyPath: hitDistance
-      value: 2
+      propertyPath: m_Name
+      value: Up_trap
       objectReference: {fileID: 0}
     - target: {fileID: 5391968069298773836, guid: 7f12bf1d5702cb049b32085f2142a1cf,
         type: 3}
@@ -3384,6 +3375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.98000056
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371891119357091840, guid: 7f12bf1d5702cb049b32085f2142a1cf,
+        type: 3}
+      propertyPath: hitDistance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f12bf1d5702cb049b32085f2142a1cf, type: 3}
