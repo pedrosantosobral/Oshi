@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilesArray:
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
+  - {fileID: 5641642449143166180, guid: 6e8370943563bf545b6fdca44e39e150, type: 3}
 --- !u!1 &2223341482997109106
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,9 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilesArray:
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
-  - {fileID: 5641642449143166180, guid: e49279b5aefa09e43abbe59e5245b1eb, type: 3}
+  - {fileID: 5641642449143166180, guid: ccc5d3911509ef0429435baeb40f1b9d, type: 3}
 --- !u!1 &2357433382904913019
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,15 +5064,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8c71274a5f7ba840937f1ccf381c427, type: 3}
---- !u!1 &8815867837151554767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8848408030111942483, guid: e8c71274a5f7ba840937f1ccf381c427,
-    type: 3}
-  m_PrefabInstance: {fileID: 41549642784893852}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &521803712342852690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 553464020570599374, guid: e8c71274a5f7ba840937f1ccf381c427,
+    type: 3}
+  m_PrefabInstance: {fileID: 41549642784893852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8815867837151554767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8848408030111942483, guid: e8c71274a5f7ba840937f1ccf381c427,
     type: 3}
   m_PrefabInstance: {fileID: 41549642784893852}
   m_PrefabAsset: {fileID: 0}
@@ -5085,11 +5083,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2857739133672822092}
     m_Modifications:
-    - target: {fileID: 3271052433521655462, guid: 23212591fc37e534cb095e3646ac1444,
-        type: 3}
-      propertyPath: m_Name
-      value: teleport
-      objectReference: {fileID: 0}
     - target: {fileID: 7406112075868094416, guid: 23212591fc37e534cb095e3646ac1444,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5144,6 +5137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271052433521655462, guid: 23212591fc37e534cb095e3646ac1444,
+        type: 3}
+      propertyPath: m_Name
+      value: teleport
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23212591fc37e534cb095e3646ac1444, type: 3}
