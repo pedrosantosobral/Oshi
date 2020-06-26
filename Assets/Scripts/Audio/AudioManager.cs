@@ -70,6 +70,15 @@ public class AudioManager : MonoBehaviour
         activeSource.volume      = 1;
         activeSource.Play();
     }
+
+    public void PlayMusic(AudioClip musicClip, float volume)
+    {
+        AudioSource activeSource = (firstMusicIsON) ? musicSource_0 : musicSource_1;
+
+        activeSource.clip = musicClip;
+        activeSource.volume = volume;
+        activeSource.Play();
+    }
     public void PlayMusicWithFade(AudioClip newClip, float transitionTime = 1f)
     {
         AudioSource activeSource = (firstMusicIsON) ? musicSource_0 : musicSource_1;

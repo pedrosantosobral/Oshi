@@ -8,9 +8,13 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour {
 
     private bool toggle;
+    private bool toggleMusic;
+    [SerializeField] private AudioClip mainMenuMusic;
+    [SerializeField] private float musicVolume;
     [SerializeField] private Sprite muted;
     [SerializeField] private Sprite not_muted;
     [SerializeField] private Image SoundButton;
+    [SerializeField] private Image MusicButton;
 
     [SerializeField] private AudioClip popIN;
     [SerializeField] private AudioClip popOUT;
@@ -117,6 +121,7 @@ public class Menu : MonoBehaviour {
         LeanTween.alphaCanvas(creditsPanel, 0, 0);
         LeanTween.scale(optionsPanel,new Vector3(0f,0f,0f), 0);
         AudioManager.Instance.PlaySFX(popIN);
+        AudioManager.Instance.PlayMusic(mainMenuMusic,musicVolume);
     }
 
     private void LoadLvl1()
@@ -190,8 +195,27 @@ public class Menu : MonoBehaviour {
         {
             AudioListener.volume = 0f;
             SoundButton.sprite = muted;
+            MusicButton.sprite = muted;
         }
             
     }
+    public void ToggleMusic()
+    {
+
+        toggleMusic = !toggleMusic;
+
+        if (toggleMusic)
+        {
+            AudioManager.Instance.SetMusicVolume(musicVolume);
+            MusicButton.sprite = not_muted;
+        }
+        else
+        {
+            AudioManager.Instance.SetMusicVolume(0);
+            MusicButton.sprite = muted;
+        }
+
+    }
+
 
 }
