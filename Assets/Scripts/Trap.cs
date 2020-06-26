@@ -85,7 +85,7 @@ public class Trap : MonoBehaviour
          
                     }
 
-                if (_hitInfo.transform.tag == "JumpEnemyInside")
+                if (_hitInfo.transform.tag == "JumpEnemy")
                 {
                     print("kek3");
                     AudioManager.Instance.PlaySFX(shotSound, 0.3f);
