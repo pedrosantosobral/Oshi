@@ -85,6 +85,19 @@ public class Trap : MonoBehaviour
          
                     }
 
+                if (_hitInfo.transform.tag == "JumpEnemyInside")
+                {
+                    AudioManager.Instance.PlaySFX(shotSound, 0.3f);
+                    shotFeedBack.SetActive(true);
+
+                    _isWasted = true;
+                    lightToDisable.GetComponent<Light2D>().enabled = false;
+                    Invoke("DelayedAnim", 1f);
+                    Instantiate(JUMP_DFB, new Vector3(_hitInfo.collider.transform.position.x, _hitInfo.collider.transform.position.y, _hitInfo.collider.transform.position.z), Quaternion.identity);
+                    Destroy(_hitInfo.collider.transform.parent.gameObject);
+
+                }
+
 
                 if (_hitInfo.collider.tag == "PatrolEnemy")
                 {
