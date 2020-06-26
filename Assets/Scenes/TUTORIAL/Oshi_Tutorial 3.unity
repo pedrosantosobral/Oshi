@@ -240,12 +240,12 @@ PrefabInstance:
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 10.14
+      value: 25.14
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.69
+      value: -9.31
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -295,17 +295,17 @@ PrefabInstance:
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_Size.x
-      value: 4.29
+      value: 7.07
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.5
+      value: 5.0893497
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_Offset.y
-      value: -1.25
+      value: -2.4596748
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -325,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.76
+      value: -1.77
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -335,22 +335,22 @@ PrefabInstance:
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_text
-      value: Find the three Lost Oshis to complete the level!
+      value: Remember, lasers can be a bad OR a good thing.
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 48
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -744,6 +744,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056925940524277271, guid: 40b67f5772d77114dbdc3e1b63cdacc7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056925940524277271, guid: 40b67f5772d77114dbdc3e1b63cdacc7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b67f5772d77114dbdc3e1b63cdacc7, type: 3}
@@ -2241,7 +2251,7 @@ PrefabInstance:
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.99
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -2293,6 +2303,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 12.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.19
+      objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -2301,39 +2326,42 @@ PrefabInstance:
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.76
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.32
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_text
-      value: 'Welcome!
-
-        Use the sides of the screen to move, double tap to jump!'
+      value: 'They will patrol endlessly and will attack if you get closer! '
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 65
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 4.8266406
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518460, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}

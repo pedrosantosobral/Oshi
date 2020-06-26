@@ -410,12 +410,12 @@ PrefabInstance:
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 10.14
+      value: 6.1400003
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.69
+      value: -11.31
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -465,17 +465,17 @@ PrefabInstance:
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_Size.x
-      value: 4.29
+      value: 6.92215
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.5
+      value: 4.044956
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_Offset.y
-      value: -1.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -505,22 +505,22 @@ PrefabInstance:
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_text
-      value: Find the three Lost Oshis to complete the level!
+      value: Use your light to lure them out of they spoting range.
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 48
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -2171,6 +2171,215 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.58, y: 3.56}
   m_EdgeRadius: 0
+--- !u!1001 &2096302216
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7784517289699841112, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Name
+      value: TutorialHint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518467, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.92215
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.044956
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_text
+      value: Rememer, laser traps can kill anything, but just once.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 1.752633
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 1.324023
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517290654518460, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61afcfeac20000d469cfdd93e2dacae5, type: 3}
 --- !u!1001 &5608011915584398334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2310,12 +2519,12 @@ PrefabInstance:
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -6.99
+      value: 20.01
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.16
+      value: -12.16
       objectReference: {fileID: 0}
     - target: {fileID: 7784517289699841113, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
@@ -2362,6 +2571,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784517289699841110, guid: 61afcfeac20000d469cfdd93e2dacae5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.81
+      objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518461, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -2380,29 +2599,27 @@ PrefabInstance:
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_text
-      value: 'Welcome!
-
-        Use the sides of the screen to move, double tap to jump!'
+      value: Flying enemies will track your light until reach it.
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 65
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 13
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518465, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7784517290654518460, guid: 61afcfeac20000d469cfdd93e2dacae5,
         type: 3}
