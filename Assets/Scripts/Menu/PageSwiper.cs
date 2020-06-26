@@ -10,7 +10,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     private Vector3 panelLocation;
     public float percentThreshold = 0.2f;
     public float easing = 1;
-    private int panelAmount = 2;
+    private int panelAmount = 3;
     private int actualPanel = 1;
 
     // Start is called before the first frame update

@@ -84,6 +84,31 @@ public class Menu : MonoBehaviour {
 
     }
 
+    public void PlayLvl3()
+    {
+        LeanTween.alphaCanvas(fadeBlackPanel, 1, blackPanelFadeINTime).setEase(blackPanelINAnim).setOnComplete(LoadLvl3);
+    }
+
+    public void PlayLvl4()
+    {
+        LeanTween.alphaCanvas(fadeBlackPanel, 1, blackPanelFadeINTime).setEase(blackPanelINAnim).setOnComplete(LoadLvl4);
+    }
+
+    public void PlayLvl5()
+    {
+        LeanTween.alphaCanvas(fadeBlackPanel, 1, blackPanelFadeINTime).setEase(blackPanelINAnim).setOnComplete(LoadLvl5);
+    }
+
+    public void PlayLvl6()
+    {
+        LeanTween.alphaCanvas(fadeBlackPanel, 1, blackPanelFadeINTime).setEase(blackPanelINAnim).setOnComplete(LoadLvl6);
+    }
+
+    public void PlayLvl7()
+    {
+        LeanTween.alphaCanvas(fadeBlackPanel, 1, blackPanelFadeINTime).setEase(blackPanelINAnim).setOnComplete(LoadLvl7);
+    }
+
     private void Start()
     {
         toggle = false;
@@ -96,9 +121,34 @@ public class Menu : MonoBehaviour {
 
     private void LoadLvl1()
     {
-        SceneManager.LoadScene("Oshi_Tutorial");
+        SceneManager.LoadScene("Oshi_Tutorial 1");
     }
+
     private void LoadLvl2()
+    {
+        SceneManager.LoadScene("Oshi_Tutorial 2");
+    }
+
+    private void LoadLvl3()
+    {
+        SceneManager.LoadScene("Oshi_Tutorial 3");
+    }
+
+    private void LoadLvl4()
+    {
+        SceneManager.LoadScene("Oshi_Tutorial 4");
+    }
+    private void LoadLvl5()
+    {
+        SceneManager.LoadScene("Oshi_Tutorial 5");
+    }
+
+    private void LoadLvl6()
+    {
+        SceneManager.LoadScene("Oshi_Tutorial 6");
+    }
+
+    private void LoadLvl7()
     {
        SceneManager.LoadScene("Oshi");
     }
