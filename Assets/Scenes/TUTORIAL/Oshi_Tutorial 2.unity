@@ -285,6 +285,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb234af57110fb645b3e27791ca656f8, type: 3}
+--- !u!95 &22200881 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5272200590756285420, guid: bb234af57110fb645b3e27791ca656f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 22200880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &51003551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8859015349731563331, guid: a13893d1e29625c44b2598e33bc345d6,
@@ -1529,7 +1535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPlayerSpawn: {fileID: 11400000, guid: c511d89c59e5f0745be3162b98c88be4, type: 2}
-  loadingScreen: {fileID: 0}
+  loadingScreen: {fileID: 22200881}
   seconds: 6
   readyToPlayer: 0
   Room:
