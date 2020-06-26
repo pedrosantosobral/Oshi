@@ -60,7 +60,7 @@ public class Trap : MonoBehaviour
                 
                     if (_hitInfo.transform.tag == "Player")
                     {
-                        print("kek3");
+                        
                         //SEND EVENT NOTIFICATION TO PLAYER SAYING HE WAS HIT
                         onPlayerDamage.Raise();
                         shotFeedBack.SetActive(true);
@@ -87,6 +87,7 @@ public class Trap : MonoBehaviour
 
                 if (_hitInfo.transform.tag == "JumpEnemyInside")
                 {
+                    print("kek3");
                     AudioManager.Instance.PlaySFX(shotSound, 0.3f);
                     shotFeedBack.SetActive(true);
 
