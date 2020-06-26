@@ -6,11 +6,8 @@ public class FlowerAnimation : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Animation()
     {
-        if(collision.CompareTag("PlayerInside"))
-        {
-            animator.SetTrigger("flower");
-        }
+        animator.SetTrigger("flower");
     }
 }

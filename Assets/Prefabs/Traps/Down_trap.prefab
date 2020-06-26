@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1766690378005416725}
   - component: {fileID: -4094700614995170154}
   - component: {fileID: 3282458653963567278}
+  - component: {fileID: 8625723776230094015}
   m_Layer: 8
   m_Name: Down_trap
   m_TagString: Trap
@@ -136,6 +137,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.44, y: 3.41}
   m_EdgeRadius: 0
+--- !u!68 &8625723776230094015
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641642449143166180}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0.01
+  m_Points:
+  - {x: -1.752121, y: -1.7206464}
+  - {x: -1.7210454, y: 1.720647}
+  - {x: 1.7207345, y: 1.7024292}
+  - {x: 1.7246416, y: -1.707817}
+  - {x: -1.7495729, y: -1.7206458}
 --- !u!1 &5697004070641729065
 GameObject:
   m_ObjectHideFlags: 0
