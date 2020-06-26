@@ -190,6 +190,7 @@ public class Menu : MonoBehaviour {
         {
             AudioListener.volume = 1f;
             SoundButton.sprite = not_muted;
+            MusicButton.sprite = not_muted;
         }
         else
         {

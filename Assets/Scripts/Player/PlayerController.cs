@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private AudioClip music;
     [SerializeField] private float footSteps_Volume;
     [SerializeField] private float jumpSounds_Volume; 
     [SerializeField] private float timeBetweenFootsteps;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Instance.PlayMusicWithCrossFade(music);
         //get object to check for ground in radius
         groundCheck = GetComponentInChildren<Transform>();
         //get player rigidbody

@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9fee370690ae749b89170be6a44343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: 1ce3aebb0340f644698452925a897e49, type: 3}
   footSteps_Volume: 0.6
   jumpSounds_Volume: 0.3
   timeBetweenFootsteps: 0.17
@@ -95,8 +96,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fbc1ec84e331ac84385608d23c0c4185, type: 3}
   - {fileID: 8300000, guid: 0443adf94f6d18e41aa0095650a8c739, type: 3}
   jumpSounds:
-  - {fileID: 8300000, guid: cd0cacd684ceae24aa50ce0b8c3950e1, type: 3}
   - {fileID: 8300000, guid: 5e03a34ca6ba4464f92b309e7c566778, type: 3}
+  - {fileID: 8300000, guid: cd0cacd684ceae24aa50ce0b8c3950e1, type: 3}
+  - {fileID: 8300000, guid: ecc635e8c2df4df4aad9b3298155d05b, type: 3}
+  - {fileID: 8300000, guid: 5e03a34ca6ba4464f92b309e7c566778, type: 3}
+  - {fileID: 8300000, guid: cd0cacd684ceae24aa50ce0b8c3950e1, type: 3}
+  - {fileID: 8300000, guid: ecc635e8c2df4df4aad9b3298155d05b, type: 3}
+  - {fileID: 8300000, guid: 5e03a34ca6ba4464f92b309e7c566778, type: 3}
+  - {fileID: 8300000, guid: cd0cacd684ceae24aa50ce0b8c3950e1, type: 3}
+  - {fileID: 8300000, guid: ecc635e8c2df4df4aad9b3298155d05b, type: 3}
   animator: {fileID: 7516366292548875796}
   spriteToFlip: {fileID: 8665697375028322567}
   playerDust: {fileID: 7260332362966639274}
