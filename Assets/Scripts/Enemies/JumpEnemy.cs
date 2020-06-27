@@ -116,12 +116,6 @@ public class JumpEnemy : MonoBehaviour
         IsGrounded();
 
 
-        //if enemy collided with the player, call hit
-        if (_collidedWithPlayer == true)
-        {
-
-        }
-
     }
     private void IsGrounded()
     {

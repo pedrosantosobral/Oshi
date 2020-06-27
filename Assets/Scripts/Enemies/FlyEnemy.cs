@@ -6,6 +6,7 @@ using CustomEventSystem;
 
 public class FlyEnemy : MonoBehaviour
 {
+    [SerializeField] private float bite_volume;
     [SerializeField] private AudioClip bite;
     [SerializeField] private Animator animator;
     public Collider2D colliderToBeCheckedByThePlayer;
@@ -96,7 +97,7 @@ public class FlyEnemy : MonoBehaviour
 
     public void Atack()
     {
-        AudioManager.Instance.PlaySFX(bite);
+        AudioManager.Instance.PlaySFX(bite,bite_volume);
         animator.SetTrigger("Atack");
 
     }

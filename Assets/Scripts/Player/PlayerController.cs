@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.Instance.PlayMusicWithCrossFade(music);
+        AudioManager.Instance.PlayMusicWithCrossFade(music,2);
         //get object to check for ground in radius
         groundCheck = GetComponentInChildren<Transform>();
         //get player rigidbody
