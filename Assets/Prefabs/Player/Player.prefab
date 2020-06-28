@@ -76,7 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9fee370690ae749b89170be6a44343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 8300000, guid: a5dc2e470e8a53146a8db9c6390502cb, type: 3}
+  musicArray:
+  - {fileID: 8300000, guid: a5dc2e470e8a53146a8db9c6390502cb, type: 3}
+  - {fileID: 8300000, guid: 1ce3aebb0340f644698452925a897e49, type: 3}
   footSteps_Volume: 0.6
   jumpSounds_Volume: 0.2
   timeBetweenFootsteps: 0.17
