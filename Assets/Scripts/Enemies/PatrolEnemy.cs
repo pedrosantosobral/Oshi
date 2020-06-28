@@ -159,7 +159,14 @@ public class PatrolEnemy : MonoBehaviour
             enemyLightReference.SetActive(false); ;
 
         }
+
+        
         
     }
+    public void PatrolAtack()
+    {
+        animator.SetTrigger("Atack");
+    }
+
 }
 

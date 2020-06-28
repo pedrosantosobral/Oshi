@@ -243,7 +243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyAtack: {fileID: 0}
+  biteSound: {fileID: 8300000, guid: 05d5e8c39ea821045a342f8e97d6bd5e, type: 3}
+  bite_volume: 0.4
+  flyAtack: {fileID: 11400000, guid: 3cdbab4ee64bbe9498e391df874b352c, type: 2}
   deathFB: {fileID: 521534613690177431, guid: f505a7f6bf29c9449be59d40abdc2b6d, type: 3}
   selectedTag: PatrolEnemy
   destroyCollidedObject: 3
@@ -274,6 +276,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5007370254694892716}
     m_Modifications:
+    - target: {fileID: 3140898930493282422, guid: f2829954d51d1624f92250690571c8ff,
+        type: 3}
+      propertyPath: m_Name
+      value: JumpTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 5451617510534242544, guid: f2829954d51d1624f92250690571c8ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -329,11 +336,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3140898930493282422, guid: f2829954d51d1624f92250690571c8ff,
-        type: 3}
-      propertyPath: m_Name
-      value: JumpTrail
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2829954d51d1624f92250690571c8ff, type: 3}
 --- !u!4 &6443511679050186036 stripped
@@ -349,6 +351,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2230735546497641319}
     m_Modifications:
+    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemiesLight
+      objectReference: {fileID: 0}
     - target: {fileID: 787331909187135919, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -403,11 +410,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125795772780563848, guid: cc75534c595f79b40acbbe7d26f21d71,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemiesLight
       objectReference: {fileID: 0}
     - target: {fileID: 8068625425088023072, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}

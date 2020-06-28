@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7578178130976824364}
   - component: {fileID: 6327071703520502732}
   - component: {fileID: 5686782373558898830}
+  - component: {fileID: 3098970019740053329}
   m_Layer: 14
   m_Name: PatrolEnemy
   m_TagString: PatrolEnemy
@@ -158,11 +159,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  biteSound: {fileID: 0}
+  bite_volume: 0.4
   flyAtack: {fileID: 11400000, guid: 09b5d1051bf1b4045aabbe7a33eb5c77, type: 2}
   deathFB: {fileID: 521534613690177431, guid: 11a1cc1b23d4535458ddbe3f38cc3e90, type: 3}
   selectedTag: FlyEnemyInside
   destroyCollidedObject: 0
   objectToReference: {fileID: 0}
+--- !u!114 &3098970019740053329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444646933974643933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64bc25fa47c341b41a6b752874c7aac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 3cdbab4ee64bbe9498e391df874b352c, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3873423216042292008}
+        m_MethodName: PatrolAtack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5537189979199749399
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +438,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8068625425088023263, guid: cc75534c595f79b40acbbe7d26f21d71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8068625425088023073, guid: cc75534c595f79b40acbbe7d26f21d71,
         type: 3}
       propertyPath: m_FrontSortingOrder
@@ -417,11 +452,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068625425088023263, guid: cc75534c595f79b40acbbe7d26f21d71,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc75534c595f79b40acbbe7d26f21d71, type: 3}

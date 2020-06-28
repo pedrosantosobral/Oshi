@@ -5083,6 +5083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd075f3bf08252469f6d4a5c16145a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  biteSound: {fileID: 8300000, guid: 528a52d4c76e62242a42bd0534ef1721, type: 3}
+  bite_volume: 0.4
   flyAtack: {fileID: 0}
   deathFB: {fileID: 521534613690177431, guid: a5c10abf85afe47408d48219da8a1457, type: 3}
   selectedTag: JumpEnemyInside
